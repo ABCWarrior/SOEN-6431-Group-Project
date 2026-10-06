@@ -1,488 +1,202 @@
-### 1. Step-by-Step Execution Call Trace
-
-`Authorization:Bearer_token` is a plain header item, because `:` is `SEPARATOR_HEADER`. It is not `-A bearer`, so `BearerAuthPlugin` is never involved. The value is the literal string `Bearer_token` (underscore, no space).
-
-#### Phase 1: Ingestion (httpie/__main__.py, `core.py`, `cli/*`)
-
-1. The
-
-    
-
-   ```
-   http
-   ```
-
-    
-
-   console script calls
-
-    
-
-   ```
-   httpie.__main__:main
-   ```
-
-   , which calls
-
-    
-
-   ```
-   core.main()
-   ```
-
-    
-
-   (
-
-   core.py:146
-
-   ).
-
-   - `main` imports the pre-built parser (`definition.parser = to_argparse(options)`, definition.py:956).
-   - It calls `raw_main(parser, program, sys.argv, Environment())`.
-
-2. ```
-   raw_main
-   ```
-
-    
-
-   (
-
-   core.py:32
-
-   ) prepares the run:
-
-   - `decode_raw_args` turns every argument into `str`.
-   - The `--daemon` check is skipped.
-   - `plugin_manager.load_installed_plugins(env.config.plugins_dir)` loads installed plugins. The built-in plugins were already registered at import time (registry.py:13).
-   - `env.config.default_options` is prepended to the arguments.
-
-3. ```
-   HTTPieArgumentParser.parse_args(env, args)
-   ```
-
-    
-
-   (
-
-   argparser.py:151
-
-   ) runs
-
-    
-
-   ```
-   parse_known_args
-   ```
-
-   . The positionals are declared at
-
-    
-
-   definition.py:57-94
-
-   :
-
-   - `method='GET'` (the `?` quantifier is `nargs=OPTIONAL`).
-   - `url='https://httpbin.org/get'`.
-   - `request_items` is built by `KeyValueArgType(*SEPARATOR_GROUP_ALL_ITEMS).__call__`.
-
-4. ```
-   KeyValueArgType.__call__
-   ```
-
-    
-
-   (
-
-   argtypes.py:64
-
-   ) tokenizes the item, honoring
-
-    
-
-   ```
-   \
-   ```
-
-    
-
-   escapes, then picks the earliest and longest separator.
-
-   - `Authorization:Bearer_token` becomes `KeyValueArg(key='Authorization', value='Bearer_token', sep=':', orig=...)`.
-
-5. Post-processing in
-
-    
-
-   argparser.py:169-180
-
-   , in this order:
-
-   - `_process_request_type`.
-   - `_process_download_options`.
-   - `_setup_standard_streams`.
-   - `_process_output_options`: a TTY gets `'hb'`; redirected stdout gets `'b'`.
-   - `_process_pretty_options`: a TTY sets `prettify=['format','colors']`.
-   - `_process_format_options`.
-   - `_guess_method`: `GET` matches `^[a-zA-Z]+$`, so it is kept.
-   - `_parse_items`.
-   - `_process_url`: the scheme is already present.
-   - `_process_auth`: a no-op, because `args.auth is None` and no `--auth-type` was given.
-   - `_process_ssl_cert`: sets `cert_key_pass=SSLCredentials(None)`.
-
-6. ```
-   _parse_items
-   ```
-
-    
-
-   calls
-
-    
-
-   ```
-   RequestItems.from_args
-   ```
-
-    
-
-   (
-
-   requestitems.py:36
-
-   ).
-
-   - The rules table maps `':'` to `process_header_arg` plus `instance.headers`.
-   - The value goes in via `HTTPHeadersDict.add('Authorization','Bearer_token')` (dicts.py:18).
-   - `headers`, `data`, `files`, `params` and `multipart_data` are copied onto the `Namespace`.
-
-7. Back in `raw_main`, `check_updates(env)` (update_warnings.py:141) runs. It can print an update warning and spawn a detached `fetch_updates` daemon every 2 weeks. Then `program(args, env)` runs (core.py:170).
-
-#### Phase 2: Transport assembly and dispatch (`client.py`, `ssl_.py`, `adapters.py`)
-
-`collect_messages` is a generator, so nothing runs until the first `next()` in `for message in messages` (core.py:213).
-
-1. `program` first builds `ProcessingOptions.from_raw_args(args)` (output/models.py:35).
-
-2. First
-
-    
-
-   ```
-   next()
-   ```
-
-    
-
-   on
-
-    
-
-   ```
-   collect_messages
-   ```
-
-    
-
-   (
-
-   client.py:43
-
-   ). Session handling is skipped. It runs:
-
-   - ```
-     make_request_kwargs
-     ```
-
-      
-
-     (
-
-     client.py:325
-
-     ):
-
-     - `make_default_headers` gives `User-Agent: HTTPie/<ver>`. No `Accept` or `Content-Type` is added, because there is no data.
-     - `headers.update(args.headers)`.
-     - `finalize_headers` strips the values and encodes them to `bytes`.
-     - `prepare_request_body` receives an empty `RequestJSONDataDict` and passes it through unchanged.
-     - The result is `{method:'get', url, headers, data:{}, auth:None, params:<empty iterator>}`.
-
-   - `make_send_kwargs` gives `{timeout:None, allow_redirects:False}`.
-
-   - `make_send_kwargs_mergeable_from_env` gives `{proxies:{}, stream:True, verify:True, cert:None}`.
-
-   - ```
-     build_requests_session(verify=True, ssl_version=None, ciphers=None)
-     ```
-
-      
-
-     (
-
-     client.py:156
-
-     ):
-
-     - It builds a `requests.Session`.
-     - It mounts `HTTPieHTTPAdapter` on `http://`.
-     - It mounts `HTTPieHTTPSAdapter` on `https://` (httpie/ssl_.py:40). Its constructor builds one shared `SSLContext` via `create_urllib3_context(cert_reqs=CERT_REQUIRED)` plus `ensure_default_certs_loaded`.
-     - It mounts any transport plugins.
-
-   - ```
-     requests.Request(**kwargs)
-     ```
-
-     , then
-
-      
-
-     ```
-     Session.prepare_request
-     ```
-
-     :
-
-     - This merges the session defaults (`Accept: */*`, `Accept-Encoding`, `Connection`).
-     - It also does the netrc lookup, which is the caveat in the observations below.
-     - It produces a `PreparedRequest` with the upper-cased method.
-
-   - `transform_headers` / `apply_missing_repeated_headers` (client.py:212).
-
-   - `yield prepared_request` (client.py:107).
-
-3. `core.program` stores `initial_request`. `OutputOptions.from_message(msg, 'hb')` gives `headers=False, body=False`, because `H` and `B` are absent from `'hb'`. `write_message` returns immediately, so the request is not printed by default.
-
-4. Second
-
-    
-
-   ```
-   next()
-   ```
-
-    
-
-   resumes the generator (
-
-   client.py:108-133
-
-   ):
-
-   - `merge_environment_settings` merges env proxies, CA bundle and cert settings.
-   - The `max_headers(0)` context manager sets `http.client._MAXHEADERS = inf`.
-   - `Session.send(...)` picks the adapter by longest prefix, here `HTTPieHTTPSAdapter`.
-   - `cert_verify` (httpie/ssl_.py:63) and `init_poolmanager` (httpie/ssl_.py:55) inject the shared context.
-   - urllib3 then does DNS, TCP, the TLS handshake and `GET /get`. With `stream=True` the body is left unread.
-   - `response._httpie_headers_parsed_at = monotonic()`.
-   - `response.next` is `None`, because `allow_redirects=False` and there is no 3xx. So the generator does `yield response` and breaks.
-
-#### Phase 3: Egress and rendering (`output/*`)
-
-1. `OutputOptions.from_message(response, 'hb')` gives `(RESPONSE, headers=True, body=True, meta=False)`. `write_message` is called (core.py:234).
-
-2. ```
-   build_output_stream_for_message
-   ```
-
-    
-
-   (
-
-   writer.py:122
-
-   ) calls
-
-    
-
-   ```
-   get_stream_type_and_kwargs
-   ```
-
-    
-
-   (
-
-   writer.py:153
-
-   ).
-
-   - `Content-Type: application/json` is not `text/event-stream`, so `is_stream=False`.
-   - A TTY with `['format','colors']` selects `BufferedPrettyStream`.
-   - `Formatting(groups, env, color_scheme, explicit_json, format_options)` (processing.py:26) instantiates `HeadersFormatter`, `JSONFormatter`, `XMLFormatter` and `ColorFormatter`.
-   - It also creates a `Conversion()`.
-
-3. ```
-   BufferedPrettyStream(msg=HTTPResponse(response), ...)
-   ```
-
-    
-
-   is built, and
-
-    
-
-   ```
-   BaseStream.__iter__
-   ```
-
-    
-
-   (
-
-   streams.py:63
-
-   ) runs:
-
-   - Headers:
-
-      
-
-     ```
-     HTTPResponse.headers
-     ```
-
-      
-
-     builds
-
-      
-
-     ```
-     HTTP/1.1 200 OK\r\n...
-     ```
-
-     . Then
-
-      
-
-     ```
-     Formatting.format_headers
-     ```
-
-      
-
-     runs.
-
-     - `HeadersFormatter` sorts the lines.
-     - `ColorFormatter.format_headers` calls `pygments.highlight(HttpLexer, TerminalFormatter)`. `auto` style is the default, so this is the plain 16-colour formatter (colors.py:64).
-     - The result is encoded to `bytes`, followed by `\r\n\r\n`.
-
-   - Body: `BufferedPrettyStream.iter_body` (streams.py:238) pulls `response.iter_content(10240)`. This is the first body read from the socket. It accumulates a `bytearray` and raises `BinarySuppressedError` on a NUL byte.
-
-   - ```
-     process_body
-     ```
-
-      
-
-     runs
-
-      
-
-     ```
-     smart_decode
-     ```
-
-     , then
-
-      
-
-     ```
-     Formatting.format_body(content, 'application/json')
-     ```
-
-     .
-
-     - `JSONFormatter` runs `json.dumps(indent=4, sort_keys=True, ensure_ascii=False)`.
-     - `ColorFormatter.get_lexer` resolves `JsonLexer` and swaps in `EnhancedJsonLexer`. It then highlights the body.
-     - The result goes through `smart_encode`.
-
-   - A trailing `\n\n` is yielded because stdout is a TTY (writer.py:146).
-
-4. ```
-   write_message
-   ```
-
-    
-
-   picks the writer (
-
-   writer.py:49
-
-   ). This host is Windows and
-
-    
-
-   ```
-   'colors'
-   ```
-
-    
-
-   is in the prettify groups, so it uses
-
-    
-
-   ```
-   write_stream_with_colors_win
-   ```
-
-   .
-
-   - Chunks containing `\x1b[` are decoded and written as text to the colorama-wrapped stdout.
-   - Other chunks go to `stdout.buffer`.
-   - Each chunk is flushed because stdout is a TTY.
-   - On POSIX it would use `write_stream`.
-
-5. The third `next()` exhausts the generator, so `StopIteration` is raised. `program` returns `ExitStatus.SUCCESS`. `__main__.main` returns `.value` and the process exits with code 0.
-
-#### Observations
-
-- **netrc override:** `args.auth` is `None` and `--ignore-netrc` is not set. `requests.Session.prepare_request` can therefore run `get_netrc_auth(url)`. A `.netrc` entry for `httpbin.org` would overwrite the `Authorization` header with Basic auth.
-- **HTTPS adapter inheritance:** `HTTPieHTTPSAdapter` extends `requests.adapters.HTTPAdapter` (re-exported via adapters.py), not `HTTPieHTTPAdapter`. So the `build_response` override (adapters.py:7) that wraps headers in `HTTPHeadersDict` only applies to `http://`, not `https://`.
-- **Request not shown:** the request, including `Authorization`, is only shown with `-v` or `--print=H`.
-
-### 2. State & Data Transformation Table
-
-| Execution Stage             | Input Data Structure                                         | Output Data Structure                                        | Governing Class / File                                       |
-| --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Entry / decode              | `sys.argv: List[str|bytes]`                                  | `List[str]`, plus `Environment` (stdio, `Config`, `colors`)  | `__main__.main`, `core.raw_main`, `decode_raw_args`, `context.Environment` |
-| Plugin and config bootstrap | `env.config.plugins_dir`, `default_options`                  | Populated `plugin_manager` (`PluginManager(list)`), args with defaults prepended | plugins/manager.py, plugins/registry.py                      |
-| Token parsing               | `['GET', url, 'Authorization:Bearer_token']`                 | `Namespace(method='GET', url, request_items=[KeyValueArg(key, value, sep=':', orig)])` | `argparse` + `KeyValueArgType.__call__/tokenize` (cli/argtypes.py) |
-| Request-item classification | `List[KeyValueArg]`                                          | `RequestItems{headers: HTTPHeadersDict, data: RequestJSONDataDict({}), params, files, multipart_data}` | `RequestItems.from_args` (cli/requestitems.py), cli/dicts.py |
-| Namespace normalization     | Raw `Namespace` + `Environment` TTY state                    | Mutated `Namespace`: `output_options='hb'`, `prettify=['format','colors']`, `format_options` dict, `auth=None`, `cert_key_pass=SSLCredentials(None)` | `HTTPieArgumentParser._process_*` (cli/argparser.py)         |
-| Processing options          | `Namespace`                                                  | `ProcessingOptions` NamedTuple (`stream`, `style`, `prettify`, `format_options`, ...) | output/models.py                                             |
-| Request kwargs              | `Namespace`, `Environment`                                   | `dict{method:'get', url, headers: HTTPHeadersDict(bytes values), data:{}, auth:None, params: iterator}` | `client.make_request_kwargs`, `make_default_headers`, `finalize_headers`, `uploads.prepare_request_body` |
-| Send kwargs                 | `Namespace`                                                  | `{timeout:None, allow_redirects:False}` and `{proxies:{}, stream:True, verify:True, cert:None}` | `client.make_send_kwargs*`                                   |
-| Transport assembly          | `verify, ssl_version, ciphers`                               | `requests.Session` with mounted `HTTPieHTTPAdapter`, `HTTPieHTTPSAdapter(ssl_context)` | `client.build_requests_session`, `ssl_.py`                   |
-| Request preparation         | `requests.Request(**kwargs)`                                 | `requests.PreparedRequest` (headers re-merged with repeated headers) | `Session.prepare_request`, `client.transform_headers`        |
-| Message emission            | `PreparedRequest`                                            | `Iterable[RequestsMessage]` item (generator `yield`)         | `client.collect_messages`                                    |
-| Output gating               | `RequestsMessage`, `'hb'`                                    | `OutputOptions(kind, headers, body, meta)`                   | `models.OutputOptions.from_message`                          |
-| Dispatch                    | `PreparedRequest`, `send_kwargs_merged`                      | `requests.Response` (`stream=True`, body unread, `_httpie_headers_parsed_at`) | `Session.send`, `HTTPieHTTPSAdapter`, urllib3                |
-| Stream selection            | `Response`, `OutputOptions`, `ProcessingOptions`, `Environment` | `(BufferedPrettyStream, kwargs{conversion, formatting})`     | `writer.get_stream_type_and_kwargs`, output/processing.py    |
-| Header rendering            | `HTTPResponse.headers: str` (CRLF status line + headers)     | `bytes` (sorted, ANSI-highlighted, `output_encoding`)        | `HTTPResponse` (`models.py`), `HeadersFormatter`, `ColorFormatter.format_headers` |
-| Body rendering              | `iter_content(10240): Iterator[bytes]` → `bytearray`         | `str` → pretty JSON `str` → ANSI `str` → `bytes`             | `BufferedPrettyStream.iter_body/process_body`, `JSONFormatter`, `ColorFormatter.format_body/get_lexer` |
-| Terminal write              | `Iterator[bytes]`                                            | Bytes on `env.stdout.buffer`, colored chunks as text via colorama on Windows | `writer.write_stream_with_colors_win` (`write_stream` on POSIX) |
-| Exit                        | `ExitStatus`                                                 | Process exit code (`int`)                                    | `core.program`, `__main__.main`                              |
-
-
-
-### 3. PlantUML Sequence Diagram
-
+# Task 3: Feature Tracing & Dynamic Execution Flow
+
+# HTTPie Feature Trace: `http GET https://httpbin.org/get Authorization:Bearer_token`
+
+Static trace of the source tree (`httpie/`, version 3.2.4). Line numbers refer to the checked-out files.
+
+## 0. Key observations
+
+- **`Authorization:Bearer_token` is a header request item, not `--auth`.** The `:` separator classifies it as a header, so the value is sent as the literal string `Bearer_token` (no `Bearer ` prefix is added). `BearerAuthPlugin` (`plugins/builtin.py`) runs only for `--auth-type=bearer --auth=...`, and it is not invoked here.
+- **No request is printed by default.** On a TTY the default `output_options` is `hb` (response headers and body). The request message is yielded, but `OutputOptions(headers=False, body=False).any()` is false, so `write_message` returns immediately.
+- **The response body is read lazily.** `stream=True` is forced in `make_send_kwargs_mergeable_from_env`. The body bytes are not consumed until the output stream calls `Response.iter_content()` during rendering.
+- **`HTTPieHTTPSAdapter` does not inherit `HTTPieHTTPAdapter`.** `ssl_.py` imports `HTTPAdapter` from `.adapters`, which is a re-export of `requests.adapters.HTTPAdapter`. The `build_response` override that wraps headers in `HTTPHeadersDict` therefore applies to `http://` only, not `https://`.
+
+---
+
+## 1. Step-by-Step Execution Call Trace
+
+### Phase 0: Process bootstrap
+
+| # | Call | File |
+|---|------|------|
+| 0.1 | Console script `http = httpie.__main__:main` | `setup.cfg` (`[options.entry_points]`) |
+| 0.2 | `__main__.main()` → `from httpie.core import main` → `main()` | `httpie/__main__.py:6` |
+| 0.3 | `core.main(args=sys.argv, env=Environment())` imports the module-level `parser` (`to_argparse(options)`, an `HTTPieArgumentParser`) and calls `raw_main(parser, main_program=program, args, env)` | `httpie/core.py:146`, `httpie/cli/definition.py:956` |
+| 0.4 | `raw_main()` splits `program_name, *args`, calls `decode_raw_args(args, env.stdin_encoding)`, and checks `is_daemon_mode(args)` | `httpie/core.py:32` |
+| 0.5 | `plugin_manager.load_installed_plugins(env.config.plugins_dir)` loads third-party plugins on top of the built-ins registered in `plugins/registry.py` (Basic, Digest and Bearer auth; Headers, JSON, XML and Color formatters) | `httpie/plugins/manager.py:66` |
+| 0.6 | `config.default_options` are prepended if present. `parser.parse_args(args=args, env=env)` is called inside `try/except`. On success `check_updates(env)` runs, then `main_program(args=parsed_args, env=env)` | `httpie/core.py:46-103` |
+
+### Phase 1: Ingestion (CLI tokens → request structures)
+
+| # | Call | What happens |
+|---|------|--------------|
+| 1.1 | `HTTPieArgumentParser.parse_args(env, args)` (`cli/argparser.py:151`) → `argparse.parse_known_args` | Three positionals are defined in `cli/definition.py:57-94`: `method` (`nargs='?'`), `url`, and `request_items` (`nargs='*'`, `type=KeyValueArgType(*SEPARATOR_GROUP_ALL_ITEMS)`). Tokens bind as `method='GET'`, `url='https://httpbin.org/get'`, `request_items=['Authorization:Bearer_token']`. |
+| 1.2 | `KeyValueArgType.__call__('Authorization:Bearer_token')` (`cli/argtypes.py:64`) → `tokenize()` | It looks for the earliest and longest separator among `:`, `;`, `:@`, `==`, `=`, `:=`, `@` and others. It finds `:` at position 13 and returns `KeyValueArg(key='Authorization', value='Bearer_token', sep=':', orig=...)`. The URL is never passed through this type, so the `://` in it is not mistaken for a separator. |
+| 1.3 | `_apply_no_options` → `_process_request_type` | `args.json = args.form = args.multipart = False`. |
+| 1.4 | `_process_download_options`, `_setup_standard_streams` | No `--download`, `--output` or `--quiet`, so `env.stdout` is unchanged. |
+| 1.5 | `_process_output_options` (`argparser.py:492`) | `output_options = OUTPUT_OPTIONS_DEFAULT = 'hb'` on a TTY, or `'b'` when stdout is redirected. |
+| 1.6 | `_process_pretty_options` → `_process_format_options` | `prettify = PRETTY_MAP['all'] = ['format','colors']` on a TTY, or `[]` when redirected. `format_options` is parsed into a dict (`headers.sort`, `json.format`, `json.indent=4`, `json.sort_keys`, `xml.*`). |
+| 1.7 | `_guess_method` (`argparser.py:409`) | `'GET'` matches `^[a-zA-Z]+$`, so it is kept as the method. |
+| 1.8 | `_parse_items` (`argparser.py:448`) → `RequestItems.from_args(request_item_args, request_type)` (`cli/requestitems.py:37`) | The rules table maps `':'` to `(process_header_arg, instance.headers)`. `process_header_arg` returns `arg.value or None`. The value is stored via `HTTPHeadersDict.add('Authorization', 'Bearer_token')`. Result: `args.headers`, `args.data` (empty `RequestJSONDataDict`), `args.files`, `args.params` and `args.multipart_data` are set. |
+| 1.9 | `_process_url` (`argparser.py:205`) | The URL already matches `URL_SCHEME_RE`, so it is unchanged. |
+| 1.10 | `_process_auth` (`argparser.py:282`) | `args.auth is None`, `auth_type is None` and the URL has no `user:pass@`, so no auth plugin is selected and `args.auth` stays `None`. |
+| 1.11 | `_process_ssl_cert` | `cert_key_pass = SSLCredentials(None)`. No key is set, so there is no prompt. |
+| 1.12 | Stdin check (`parse_args`) | If stdin is not a TTY and `--ignore-stdin` is absent, `_body_from_file(env.stdin)` is called. This is the environmental trap in scripts and CI: the body is read from stdin and the method may be forced to POST when it is not given. |
+| 1.13 | Returns the finalized `argparse.Namespace` to `raw_main`, then to `program(args, env)` | `httpie/core.py:170` |
+
+### Phase 2: Transport assembly and dispatch
+
+| # | Call | What happens |
+|---|------|--------------|
+| 2.1 | `ProcessingOptions.from_raw_args(args)` (`output/models.py:35`) | Copies `debug, traceback, stream, style, prettify, response_mime, response_charset, json, format_options` into a `NamedTuple`. |
+| 2.2 | `collect_messages(env, args, request_body_read_callback)` (`client.py:43`), a **generator** | Nothing runs until the first `next()` in `program()`'s `for message in messages` loop. No `--session` is used, so the session branch is skipped. |
+| 2.3 | `make_request_kwargs(env, args, base_headers=None, ...)` (`client.py:325`) | `make_default_headers` gives `{'User-Agent': 'HTTPie/<version>'}`. No `Accept` or `Content-Type` is added because `args.data` is empty. `headers.update(args.headers)` adds `Authorization`. `finalize_headers` strips and `.encode()`s values (`b'Bearer_token'`). `prepare_request_body` leaves the empty body falsy. Result: `{'method':'get','url':...,'headers':HTTPHeadersDict,'data':<empty>,'auth':None,'params':[]}`. |
+| 2.4 | `make_send_kwargs(args)` (`client.py:281`) | `{'timeout': args.timeout or None, 'allow_redirects': False}`. HTTPie handles redirects itself. |
+| 2.5 | `make_send_kwargs_mergeable_from_env(args)` (`client.py:288`) | `{'proxies': {}, 'stream': True, 'verify': True, 'cert': None}`. The `--verify` string is mapped via `{'yes':True,'no':False,...}`. |
+| 2.6 | `build_requests_session(ssl_version, ciphers, verify)` (`client.py:156`) | Creates `requests.Session()` and mounts `HTTPieHTTPAdapter` on `http://` and `HTTPieHTTPSAdapter(ciphers, verify, ssl_version)` on `https://`. Then it mounts every `plugin_manager.get_transport_plugins()` adapter at its prefix. |
+| 2.7 | `HTTPieHTTPSAdapter.__init__` → `_create_ssl_context` (`ssl_.py:40,71`) | `create_urllib3_context(ciphers, ssl_version=resolve_ssl_version(...), cert_reqs=CERT_REQUIRED)` and `ensure_default_certs_loaded(ctx)`. `init_poolmanager` and `proxy_manager_for` inject this `ssl_context` into the urllib3 pool manager. `cert_verify` handles the `HTTPieCertificate` wrapper. |
+| 2.8 | `requests.Request(**request_kwargs)` → `requests_session.prepare_request(request)` | Session defaults are merged (`Accept-Encoding`, `Accept`, `Connection`; HTTPie's `User-Agent` wins). requests may also look up `.netrc` credentials when `auth` is empty and `trust_env` is on. The result is a `PreparedRequest`. |
+| 2.9 | `transform_headers(request, prepared_request)` (`client.py:212`) | Fixes `Content-Length` for `OPTIONS` and calls `apply_missing_repeated_headers` to restore repeated headers. `--path-as-is` and `--compress` are off, so those branches are skipped. |
+| 2.10 | `yield prepared_request` (`client.py:107`) | Control returns to `program()`. `OutputOptions.from_message(message, 'hb')` gives `kind=REQUEST, headers=False, body=False`, so `write_message()` returns immediately and nothing is printed. `initial_request = message`. |
+| 2.11 | The generator resumes: `requests_session.merge_environment_settings(url, proxies, stream, verify, cert)` | Merges `HTTP(S)_PROXY`, `REQUESTS_CA_BUNDLE` and `CURL_CA_BUNDLE` from the environment. |
+| 2.12 | `with max_headers(args.max_headers): requests_session.send(prepared_request, **merged, timeout=..., allow_redirects=False)` (`client.py:113`) | `Session.send` → `get_adapter('https://...')` → `HTTPieHTTPSAdapter.send` → `cert_verify` → urllib3 `HTTPSConnectionPool.urlopen`. The steps are DNS (`getaddrinfo`), TCP connect to `:443`, TLS handshake using the injected `SSLContext`, then the request line and headers are written. With `stream=True` the call returns once the response headers are parsed. |
+| 2.13 | `response._httpie_headers_parsed_at = monotonic()`. `get_expired_cookies(response.headers.get('Set-Cookie',''))`. `response.next` is `None` (200, no redirect), so the code reaches `yield response` and then `break` | `client.py:119-134`. A DNS or connect failure would surface as `requests.exceptions.ConnectionError`, mapped in `raw_main` (`core.py:124-137`) to a friendly message and `ExitStatus.ERROR`. |
+
+### Phase 3: Egress and rendering
+
+| # | Call | What happens |
+|---|------|--------------|
+| 3.1 | `program()` receives the `Response` | `OutputOptions.from_message(response, 'hb')` gives `kind=RESPONSE, headers=True, body=True, meta=False`. `final_response = message`. `check_status` is off. |
+| 3.2 | `write_message(requests_message, env, output_options, processing_options)` (`output/writer.py:27`) | Builds `write_stream_kwargs = {stream: build_output_stream_for_message(...), outfile: env.stdout, flush: env.stdout_isatty or processing_options.stream}`. |
+| 3.3 | `build_output_stream_for_message` → `get_stream_type_and_kwargs` (`writer.py:122,153`) | `message_type = HTTPResponse`. Auto-streaming is checked via `Content-Type == text/event-stream` (not the case for `application/json`). **TTY path:** `BufferedPrettyStream` with `conversion=Conversion()` and `formatting=Formatting(env, groups=['format','colors'], color_scheme, explicit_json, format_options)`. **Redirected path:** `RawStream(chunk_size=100 KiB)`, with no formatting and body only by default. |
+| 3.4 | `Formatting.__init__` (`output/processing.py:29`) | `plugin_manager.get_formatters_grouped()`. For each group, each plugin class is instantiated and kept if `p.enabled`. The `format` group gives `HeadersFormatter`, `JSONFormatter` and `XMLFormatter`. The `colors` group gives `ColorFormatter`, which disables itself if `env.colors` is falsy. |
+| 3.5 | `yield from BufferedPrettyStream(msg=HTTPResponse(response), output_options, **kwargs)`, driven by `BaseStream.__iter__` (`output/streams.py:63`) | Yields in order: headers, `b'\r\n\r\n'`, body chunks, then the trailing `\n\n` separator (TTY only). |
+| 3.6 | Headers: `PrettyStream.get_headers()` → `HTTPResponse.headers` (`models.py:70`) | Builds the `HTTP/<version> 200 OK` status line plus `Name: value` lines from `response.headers`. `Formatting.format_headers` then runs `HeadersFormatter.format_headers` (sorts lines after the status line), then `ColorFormatter.format_headers` (`pygments.highlight` with `HttpLexer` and `TerminalFormatter` or `Terminal256Formatter`). The result is `.encode(output_encoding)`. |
+| 3.7 | Body: `BufferedPrettyStream.iter_body()` (`streams.py:238`) → `HTTPResponse.iter_body(10 KiB)` → `requests.Response.iter_content()` | **This is where the body bytes are actually read from the socket.** Chunks are accumulated into a `bytearray` and checked for NUL bytes (binary suppression). |
+| 3.8 | `process_body(body)` → `decode_chunk` → `smart_decode(bytes, charset)` → `formatting.format_body(content, mime='application/json')` | `JSONFormatter` (`formatters/json.py`) runs `load_prefixed_json` then `json.dumps(indent=4, sort_keys=True, ensure_ascii=False)`. `XMLFormatter` skips (mime mismatch). `ColorFormatter.format_body` → `get_lexer('application/json')` → `EnhancedJsonLexer` → `pygments.highlight`. The result is `smart_encode(..., output_encoding)`. |
+| 3.9 | `write_stream(stream, outfile=env.stdout, flush=True)` (`writer.py:61`) | `buf = outfile.buffer`. For each `chunk` in the stream: `buf.write(chunk)`, then `outfile.flush()`. On Windows with colors, `write_stream_with_colors_win` writes chunks containing `\x1b[` as decoded text so colorama can translate the ANSI codes. |
+| 3.10 | Return path | `program()` returns `ExitStatus.SUCCESS` and the `finally` closes `output_file` only if one was specified. `raw_main` → `core.main` → `__main__.main()` returns `exit_status.value` to `sys.exit`. |
+
+---
+
+## 2. State & Data Transformation Table
+
+| Execution Stage | Input Data Structure | Output Data Structure | Governing Class / File |
+|---|---|---|---|
+| Process entry | `sys.argv: List[str]`, `Environment()` | `args: List[str]` (decoded), `env.program_name='http'` | `core.raw_main`, `core.decode_raw_args`, `context.Environment` |
+| Plugin loading | entry-point groups `httpie.plugins.*.v1` | `plugin_manager: PluginManager(list)` of plugin classes (built-ins plus installed) | `plugins/manager.py`, `plugins/registry.py` |
+| Positional binding | `['GET','https://httpbin.org/get','Authorization:Bearer_token']` | `Namespace(method='GET', url='https://…', request_items=[…])` | `cli/definition.py` (`to_argparse`), `HTTPieArgumentParser` |
+| Item tokenization | `str 'Authorization:Bearer_token'` | `KeyValueArg(key='Authorization', value='Bearer_token', sep=':', orig=…)` | `cli/argtypes.py: KeyValueArgType` |
+| Item classification | `List[KeyValueArg]`, `request_type=None` | `RequestItems(headers=HTTPHeadersDict{Authorization:Bearer_token}, data={}, files={}, params={}, multipart_data={})` | `cli/requestitems.py: RequestItems.from_args`, `process_header_arg` |
+| Namespace finalization | raw `Namespace` + `Environment` (TTY or not) | final `Namespace`: `output_options='hb'`, `prettify=['format','colors']`, `format_options={…}`, `auth=None`, `headers`, `data`, `params` | `cli/argparser.py: _process_*`, `_parse_items`, `_guess_method` |
+| Output config capture | final `Namespace` | `ProcessingOptions` (NamedTuple) | `output/models.py` |
+| Request kwargs assembly | `Namespace`, `Environment` | `dict(method='get', url, headers=HTTPHeadersDict(bytes values), data=<empty>, auth=None, params=[])` | `client.make_request_kwargs`, `make_default_headers`, `finalize_headers`, `uploads.prepare_request_body` |
+| Send settings | `Namespace` | `send_kwargs{timeout, allow_redirects=False}`; `mergeable{proxies={}, stream=True, verify=True, cert=None}` | `client.make_send_kwargs*` |
+| Session and TLS setup | `verify, ssl_version, ciphers` | `requests.Session` with `HTTPieHTTPAdapter` (`http://`), `HTTPieHTTPSAdapter` (`https://`, holds `ssl.SSLContext`), plus plugin adapters | `client.build_requests_session`, `ssl_.py`, `adapters.py` |
+| Request preparation | `requests.Request(**request_kwargs)` | `requests.PreparedRequest` (method, URL, merged headers, empty body) | `requests.Session.prepare_request`, `client.transform_headers` |
+| Request message emission | `PreparedRequest` | generator `yield`, then `OutputOptions(REQUEST, headers=False, body=False)`, so write is skipped | `client.collect_messages`, `models.OutputOptions.from_message`, `core.program` |
+| Env-merged send | `PreparedRequest` + `mergeable` kwargs | merged `proxies, stream, verify, cert` | `Session.merge_environment_settings` |
+| Network dispatch | `PreparedRequest` | TLS-encrypted bytes on the wire, then `requests.Response` (`stream=True`, body unread, `raw`=urllib3 response) | `HTTPieHTTPSAdapter.send`, `cert_verify` (`ssl_.py`), urllib3 pool |
+| Response emission | `requests.Response` | generator `yield response`; `_httpie_headers_parsed_at` set; `OutputOptions(RESPONSE, headers=True, body=True)` | `client.collect_messages`, `core.program` |
+| Stream selection | `Response`, `OutputOptions`, `ProcessingOptions`, `Environment` | `BufferedPrettyStream` (TTY) or `RawStream` (piped) | `output/writer.py: get_stream_type_and_kwargs` |
+| Formatter assembly | `groups=['format','colors']`, `format_options` | `Formatting.enabled_plugins=[HeadersFormatter, JSONFormatter, XMLFormatter, ColorFormatter]` (those with `enabled=True`) | `output/processing.py: Formatting` |
+| Header rendering | `HTTPResponse.headers: str` (status line plus `Name: value`) | `bytes` (sorted, ANSI-colored, encoded to terminal encoding) | `models.HTTPResponse`, `HeadersFormatter`, `ColorFormatter` |
+| Body read | `Response.iter_content(10240)` | `bytearray` of raw JSON bytes | `streams.BufferedPrettyStream.iter_body` |
+| Body formatting | `bytes` → `str` (`smart_decode`) | pretty JSON `str` (indent 4, sorted keys) → ANSI-highlighted `str` → `bytes` | `JSONFormatter`, `ColorFormatter`, `get_lexer`/`EnhancedJsonLexer`, `encoding.smart_*` |
+| Terminal write | `Iterable[bytes]` | bytes written to `env.stdout.buffer` (flushed per chunk on TTY) | `writer.write_stream` (`write_stream_with_colors_win` on Windows with colors) |
+| Process exit | `ExitStatus` (enum) | integer process exit code | `status.ExitStatus`, `__main__.main` |
+
+---
+
+## 3. PlantUML Sequence Diagram
+
+```plantuml
+@startuml
+title HTTPie: http GET https://httpbin.org/get Authorization:Bearer_token
+autonumber
+skinparam shadowing false
+skinparam sequenceMessageAlign left
+skinparam maxMessageSize 220
+
+actor "User" as U
+
+box "CLI Ingestion & Context" #E8F1FB
+  boundary "CLI\n(__main__.py, cli/argparser.py,\nargtypes.py, requestitems.py)" as CLI
+  control "Core Dispatcher\n(core.py: raw_main / program)" as CORE
+end box
+
+box "HTTP Client & Transport" #EAF7EA
+  participant "Transport / Client\n(client.py, adapters.py, ssl_.py)" as TR
+end box
+
+entity "Remote Server\nhttpbin.org:443" as SRV
+
+box "Output & Stream Rendering" #FDF3E3
+  participant "Output Pipeline\n(writer.py, streams.py, processing.py,\nformatters/*)" as OUT
+  boundary "Terminal Output\n(env.stdout)" as TERM
+end box
+
+== Phase 0/1: Ingestion ==
+U -> CLI : shell invokes console script "http" with argv
+activate CLI
+CLI -> CORE : core.main(args=sys.argv: List[str], env=Environment())
+activate CORE
+CORE -> CORE : raw_main(parser, program, args, env)\ndecode_raw_args(args, env.stdin_encoding): List[str]
+CORE -> CORE : plugin_manager.load_installed_plugins(env.config.plugins_dir)
+CORE -> CLI : HTTPieArgumentParser.parse_args(env: Environment, args: List[str]): Namespace
+CLI -> CLI : argparse.parse_known_args() binds method='GET', url='https://httpbin.org/get', request_items=['Authorization:Bearer_token']
+CLI -> CLI : KeyValueArgType.__call__('Authorization:Bearer_token'): KeyValueArg(key='Authorization', value='Bearer_token', sep=':')
+CLI -> CLI : _process_output_options(): 'hb'; _process_pretty_options(): ['format','colors']; _guess_method(): 'GET'
+CLI -> CLI : _parse_items(): RequestItems.from_args(List[KeyValueArg], request_type) -> process_header_arg() -> HTTPHeadersDict
+CLI -> CLI : _process_url(); _process_auth() (auth stays None, no plugin); _process_ssl_cert()
+CLI --> CORE : argparse.Namespace(method, url, headers: HTTPHeadersDict, data={}, params, output_options='hb', prettify, auth=None, verify='yes', ...)
+
+== Phase 2: Transport Assembly & Dispatch ==
+CORE -> CORE : ProcessingOptions.from_raw_args(args: Namespace): ProcessingOptions
+CORE -> TR : collect_messages(env, args, request_body_read_callback): Iterable[RequestsMessage]
+activate TR
+TR -> TR : make_request_kwargs(env, args): dict(method='get', url, headers=HTTPHeadersDict, data, auth=None, params)
+TR -> TR : make_send_kwargs(args): timeout, allow_redirects=False\nmake_send_kwargs_mergeable_from_env(args): proxies, stream=True, verify=True, cert=None
+TR -> TR : build_requests_session(verify, ssl_version, ciphers): requests.Session\nmount('http://', HTTPieHTTPAdapter); mount('https://', HTTPieHTTPSAdapter(SSLContext))
+TR -> TR : requests.Request(method, url, headers, data, auth, params)\nSession.prepare_request(Request): PreparedRequest
+TR -> TR : transform_headers(request, prepared_request)
+TR -->> CORE : yield PreparedRequest (generator yield)
+CORE -> OUT : write_message(PreparedRequest, env, OutputOptions(REQUEST, headers=False, body=False), processing_options)
+activate OUT
+OUT --> CORE : return None (output_options.any() is False, nothing printed)
+deactivate OUT
+CORE -> TR : next(messages) resumes collect_messages()
+TR -> TR : Session.merge_environment_settings(url, proxies, stream, verify, cert): dict
+TR -> SRV : Session.send(PreparedRequest, stream=True, verify=True, timeout, allow_redirects=False)\nHTTPieHTTPSAdapter.send() -> cert_verify() -> DNS, TCP :443, TLS handshake (SSLContext)
+TR -> SRV : GET /get HTTP/1.1\nHost: httpbin.org\nUser-Agent: HTTPie/3.2.4\nAuthorization: Bearer_token
+SRV --> TR : HTTP/1.1 200 OK + headers (Content-Type: application/json); body left unread (stream=True)
+TR -> TR : response._httpie_headers_parsed_at = monotonic(); response.next is None
+TR -->> CORE : yield requests.Response (generator yield)
+deactivate TR
+
+== Phase 3: Egress & Rendering ==
+CORE -> OUT : write_message(Response, env, OutputOptions(RESPONSE, headers=True, body=True), ProcessingOptions)
+activate OUT
+OUT -> OUT : build_output_stream_for_message() -> get_stream_type_and_kwargs(): (BufferedPrettyStream, kwargs{env, conversion=Conversion(), formatting=Formatting(env, ['format','colors'], ...)})
+OUT -> OUT : BufferedPrettyStream(msg=HTTPResponse(Response), output_options).__iter__()
+OUT -> OUT : get_headers(): HTTPResponse.headers: str -> HeadersFormatter.format_headers() -> ColorFormatter.format_headers() (pygments HttpLexer): bytes
+OUT -> SRV : iter_body(10240) -> Response.iter_content(10240) reads the lazy body via response.raw
+SRV --> OUT : JSON body: bytes
+OUT -> OUT : process_body(bytearray): smart_decode(); JSONFormatter.format_body() (indent=4, sort_keys); ColorFormatter.format_body() (EnhancedJsonLexer); smart_encode(): bytes
+OUT -->> OUT : yield headers bytes, b'\\r\\n\\r\\n', body bytes, b'\\n\\n' (stream generator)
+loop for chunk in stream
+  OUT -> TERM : write_stream(stream, outfile=env.stdout, flush=True): buf.write(chunk: bytes); outfile.flush()
+end
+OUT --> CORE : return None
+deactivate OUT
+CORE --> CLI : ExitStatus.SUCCESS
+deactivate CORE
+CLI --> U : sys.exit(exit_status.value) = 0
+deactivate CLI
+@enduml
 ```
-@startumltitle HTTPie: http GET https://httpbin.org/get Authorization:Bearer_tokenautonumberskinparam shadowing falseskinparam sequenceMessageAlign leftskinparam responseMessageBelowArrow true
-actor "User" as User
-box "CLI Ingestion & Context" #EEF3FF  boundary "CLI\n__main__.py, cli/argparser.py" as CLI  control "Core Dispatcher\ncore.py, context.py" as Coreend box
-box "HTTP Client & Transport" #EEFAF0  participant "Transport / Client\nclient.py, ssl_.py, adapters.py" as Transportend box
-entity "Remote Server\nhttpbin.org:443" as Server
-box "Output & Stream Rendering" #FFF7E6  boundary "Terminal Output\noutput/writer.py, streams.py, formatters/" as Termend box
-== Phase 1: Ingestion ==User -> CLI : $ http GET https://httpbin.org/get Authorization:Bearer_tokenactivate CLICLI -> Core : main(args: List[str]=sys.argv, env: Environment=Environment())activate CoreCore -> Core : raw_main(parser, main_program=program, args, env)Core -> Core : decode_raw_args(args, env.stdin_encoding) : List[str]Core -> Core : plugin_manager.load_installed_plugins(env.config.plugins_dir)Core -> CLI : parse_args(env: Environment, args: List[str]) : Namespaceactivate CLICLI -> CLI : parse_known_args(args) with KeyValueArgType.__call__(s: str) : KeyValueArgnote right of CLI  "Authorization:Bearer_token" becomes  KeyValueArg(key='Authorization', value='Bearer_token', sep=':')  method='GET', url='https://httpbin.org/get'end noteCLI -> CLI : _process_request_type(), _setup_standard_streams()CLI -> CLI : _process_output_options() : output_options='hb' (TTY)CLI -> CLI : _process_pretty_options() : prettify=['format','colors']CLI -> CLI : _guess_method() : method stays 'GET'CLI -> CLI : _parse_items() calls RequestItems.from_args(List[KeyValueArg], request_type) : RequestItemsCLI -> CLI : process_header_arg(arg) : str, then HTTPHeadersDict.add('Authorization','Bearer_token')CLI -> CLI : _process_url(), _process_auth() (no-op, auth=None), _process_ssl_cert()CLI --> Core : argparse.Namespace (method, url, headers, data, params, auth, verify, output_options, prettify)deactivate CLICore -> Core : check_updates(env: Environment) : NoneCore -> Core : program(args: Namespace, env: Environment) : ExitStatusCore -> Core : ProcessingOptions.from_raw_args(args) : ProcessingOptions
-== Phase 2: Transport Assembly & Dispatch ==Core -> Transport : collect_messages(env, args, request_body_read_callback) : Iterable[RequestsMessage]note right of Transport : Generator: the body runs only on next(messages)Core -> Transport : next(messages)activate TransportTransport -> Transport : make_request_kwargs(env, args, base_headers, cb) : dictnote right of Transport  make_default_headers() adds User-Agent  finalize_headers() encodes values to bytes  prepare_request_body(env, {}, ...) passes the empty dict through  kwargs = {method:'get', url, headers, data:{}, auth:None, params}end noteTransport -> Transport : make_send_kwargs(args) and make_send_kwargs_mergeable_from_env(args) : dictTransport -> Transport : build_requests_session(verify=True, ssl_version=None, ciphers=None) : requests.SessionTransport -> Transport : HTTPieHTTPSAdapter._create_ssl_context(verify, ssl_version, ciphers) : SSLContextTransport -> Transport : Session.mount('http://', HTTPieHTTPAdapter) and mount('https://', HTTPieHTTPSAdapter)Transport -> Transport : Session.prepare_request(requests.Request(**kwargs)) : PreparedRequestTransport -> Transport : transform_headers(request, prepared_request) : NoneTransport -->> Core : yield PreparedRequestdeactivate Transport
-Core -> Core : OutputOptions.from_message(PreparedRequest, 'hb') : OutputOptions(REQUEST, headers=False, body=False)Core -> Term : write_message(requests_message, env, output_options, processing_options)activate TermTerm --> Core : None (returns early: output_options.any() is False)deactivate Term
-Core -> Transport : next(messages)activate TransportTransport -> Transport : Session.merge_environment_settings(url, proxies, stream, verify, cert) : dictTransport -> Transport : max_headers(limit=0) context managerTransport -> Transport : Session.send(request, stream=True, verify=True, cert=None, timeout=None, allow_redirects=False)Transport -> Transport : get_adapter(url) then HTTPieHTTPSAdapter.cert_verify(conn, url, verify, cert)Transport -> Server : TLS handshake (CERT_REQUIRED), then GET /get HTTP/1.1 with Authorization: Bearer_tokenactivate ServerServer --> Transport : HTTP/1.1 200 OK, headers, application/json (body unread: stream=True)deactivate ServerTransport -> Transport : HTTPAdapter.build_response(req, resp) : requests.ResponseTransport -> Transport : response._httpie_headers_parsed_at = monotonic()Transport -->> Core : yield requests.Responsedeactivate Transport
-== Phase 3: Egress & Rendering ==Core -> Core : OutputOptions.from_message(Response, 'hb') : OutputOptions(RESPONSE, headers=True, body=True)Core -> Term : write_message(requests_message=Response, env, output_options, processing_options)activate TermTerm -> Term : build_output_stream_for_message(env, msg, output_options, processing_options)Term -> Term : get_stream_type_and_kwargs(env, processing_options, HTTPResponse, headers) : (BufferedPrettyStream, kwargs)Term -> Term : Formatting(groups=['format','colors'], env, color_scheme, format_options) : Formattingnote right of Term : Enabled plugins: HeadersFormatter, JSONFormatter, XMLFormatter, ColorFormatteralt env.is_windows and 'colors' in prettify (this host)  Term -> Term : write_stream_with_colors_win(stream: Iterator[bytes], outfile=env.stdout, flush=True)else POSIX or no colors  Term -> Term : write_stream(stream: Iterator[bytes], outfile, flush)endTerm -->> Term : yield bytes (BaseStream.__iter__: PrettyStream.get_headers() : bytes)note right of Term  HTTPResponse.headers : str  HeadersFormatter.format_headers() sorts the lines  ColorFormatter.format_headers() applies the Pygments HttpLexerend noteTerm -->> Term : yield b"\r\n\r\n"Term -> Server : BufferedPrettyStream.iter_body() calls response.iter_content(chunk_size=10240)activate ServerServer --> Term : body bytes (JSON)deactivate ServerTerm -> Term : process_body(body: bytearray) : bytesnote right of Term  smart_decode(bytes) : str  JSONFormatter.format_body(content, 'application/json') : indent=4, sort_keys  ColorFormatter.format_body(): EnhancedJsonLexer + TerminalFormatter  smart_encode(str, output_encoding) : bytesend noteTerm -->> Term : yield bytes (pretty JSON body)Term -->> Term : yield MESSAGE_SEPARATOR_BYTES (TTY only)Term --> User : colorized headers + pretty JSON on stdout (colorama wraps ANSI on Windows)Term --> Core : Nonedeactivate Term
-Core -> Transport : next(messages)activate TransportTransport --> Core : StopIteration (no session, no redirect)deactivate TransportCore --> CLI : ExitStatus.SUCCESSdeactivate CoreCLI --> User : sys.exit(exit_status.value) = 0deactivate CLI@enduml
-```
+
+**Diagram notes:**
+- `Output Pipeline` is added as a lifeline inside the Output box so the rendering phase has an actor. `core.py` calls into it, and it writes to `Terminal Output`.
+- The remote server is drawn outside the three boxes because it is an external system.
+- The redirected-stdout branch (`RawStream`, body only, no formatters) and the Windows colorama writer (`write_stream_with_colors_win`) are not drawn as separate paths.
