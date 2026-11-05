@@ -1,0 +1,51 @@
+# Command: npx -y jscpd@4.0.5 httpie --format python --min-tokens 30 --min-lines 4 --reporters console,json --output track_a_analysis_windows\raw\jscpd_30 > raw\12_jscpd_30.txt 2>&1
+# Run from the repository root in cmd.exe, 2026-11-05 about 19:26 (Windows 10.0.26200, Node.js LTS with npm 11.20.0)
+# Repo commit: 5f1bfe9
+# Terminal colour codes removed; the JSON report is in the jscpd_30 folder.
+# ---------------------------------------------------------------------------
+Clone found (python):
+ - httpie\output\ui\rich_progress.py [97:16 - 101:5] (4 lines, 52 tokens)
+   httpie\output\ui\rich_progress.py [62:14 - 66:5]
+
+Clone found (python):
+ - httpie\output\lexers\metadata.py [50:23 - 55:9] (5 lines, 53 tokens)
+   httpie\output\lexers\metadata.py [39:49 - 44:18]
+
+Clone found (python):
+ - httpie\output\formatters\json.py [6:14 - 10:7] (4 lines, 45 tokens)
+   httpie\output\formatters\xml.py [53:13 - 57:6]
+
+Clone found (python):
+ - httpie\output\formatters\headers.py [4:17 - 8:10] (4 lines, 45 tokens)
+   httpie\output\formatters\xml.py [53:13 - 57:6]
+
+Clone found (python):
+ - httpie\cli\argparser.py [150:5 - 158:4] (8 lines, 61 tokens)
+   httpie\cli\argparser.py [89:5 - 97:5]
+
+Clone found (python):
+ - httpie\cli\argparser.py [159:2 - 164:5] (5 lines, 56 tokens)
+   httpie\cli\argparser.py [97:5 - 102:8]
+
+Clone found (python):
+ - httpie\cli\argparser.py [580:9 - 585:4] (5 lines, 70 tokens)
+   httpie\cli\argparser.py [59:9 - 64:2]
+
+Clone found (python):
+ - httpie\core.py [104:9 - 115:7] (11 lines, 97 tokens)
+   httpie\core.py [86:5 - 97:5]
+
+Clone found (python):
+ - httpie\core.py [146:1 - 158:8] (12 lines, 52 tokens)
+   httpie\manager\__main__.py [32:1 - 33:5]
+
+┌────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
+│ Format │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
+├────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ python │ 69             │ 9746        │ 74121        │ 9            │ 58 (0.6%)        │ 531 (0.72%)       │
+├────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total: │ 69             │ 9746        │ 74121        │ 9            │ 58 (0.6%)        │ 531 (0.72%)       │
+└────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
+Found 9 clones.
+JSON report saved to track_a_analysis_windows\raw\jscpd_30\jscpd-report.json
+Detection time:: 322.839ms

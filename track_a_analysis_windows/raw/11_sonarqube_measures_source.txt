@@ -1,0 +1,1 @@
+Source: http://localhost:9000/api/measures/component?component=httpie-cli&metricKeys=sqale_index,sqale_debt_ratio,code_smells,bugs,vulnerabilities,security_hotspots,duplicated_lines_density (opened in the browser on 2026-11-05 after the scan in 10_sonarqube_scanner.txt). sqale_index is in minutes.

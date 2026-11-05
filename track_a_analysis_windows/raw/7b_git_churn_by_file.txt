@@ -1,0 +1,30 @@
+﻿# command  : git log --since=2019-01-01 --no-merges --name-only --pretty=format: -- httpie  (commits per file, top 25)
+# run at   : 2026-11-05 13:16:31
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+   55  httpie/cli/definition.py
+   54  httpie/client.py
+   39  httpie/cli/argparser.py
+   37  httpie/core.py
+   34  httpie/__init__.py
+   27  httpie/sessions.py
+   27  httpie/cli/constants.py
+   26  httpie/utils.py
+   24  httpie/context.py
+   22  httpie/cli/requestitems.py
+   21  httpie/downloads.py
+   20  httpie/output/streams.py
+   18  httpie/models.py
+   16  httpie/config.py
+   16  httpie/output/writer.py
+   15  httpie/output/formatters/colors.py
+   15  httpie/cli/argtypes.py
+   13  httpie/uploads.py
+   12  httpie/plugins/manager.py
+   12  httpie/plugins/base.py
+   10  httpie/manager/cli.py
+    9  httpie/ssl_.py
+    9  httpie/input.py
+    9  httpie/cli/nested_json.py
+    8  httpie/output/processing.py

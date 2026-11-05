@@ -1,0 +1,15 @@
+﻿# command  : pylint httpie --disable=all --enable=cyclic-import
+# run at   : 2026-11-05 13:16:29
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+************* Module httpie.plugins.__init__
+httpie\plugins\__init__.py:1:0: R0401: Cyclic import (httpie.cli.argtypes -> httpie.sessions) (cyclic-import)
+httpie\plugins\__init__.py:1:0: R0401: Cyclic import (httpie.__main__ -> httpie.core -> httpie.internal.daemon_runner -> httpie.internal.update_warnings -> httpie.internal.daemons) (cyclic-import)
+httpie\plugins\__init__.py:1:0: R0401: Cyclic import (httpie.cli.argparser -> httpie.output.ui.rich_help -> httpie.cli.options) (cyclic-import)
+httpie\plugins\__init__.py:1:0: R0401: Cyclic import (httpie.core -> httpie.internal.daemon_runner -> httpie.internal.update_warnings -> httpie.internal.daemons) (cyclic-import)
+httpie\plugins\__init__.py:1:0: R0401: Cyclic import (httpie.__main__ -> httpie.core -> httpie.internal.update_warnings -> httpie.internal.daemons) (cyclic-import)
+
+-------------------------------------------------------------------
+Your code has been rated at 9.99/10 (previous run: 10.00/10, -0.01)
+

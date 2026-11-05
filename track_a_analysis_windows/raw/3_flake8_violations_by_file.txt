@@ -1,0 +1,11 @@
+﻿# command  : flake8 httpie --max-complexity=10, counted per file (rule violation counts)
+# run at   : 2026-11-05 13:16:22
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+    2  httpie\cli\nested_json\parse.py
+    2  httpie\core.py
+    2  httpie\cli\argparser.py
+    1  httpie\output\formatters\colors.py
+    1  httpie\cli\nested_json\interpret.py
+    1  httpie\client.py

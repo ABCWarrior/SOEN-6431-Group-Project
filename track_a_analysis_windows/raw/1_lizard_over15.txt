@@ -1,0 +1,9 @@
+﻿# command  : lizard httpie -w  (default threshold: CCN > 15)
+# run at   : 2026-11-05 13:16:18
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+httpie\cli\argparser.py:282: warning: _process_auth has 58 NLOC, 24 CCN, 422 token, 1 PARAM, 74 length, 0 ND
+httpie\client.py:43: warning: collect_messages has 89 NLOC, 21 CCN, 449 token, 3 PARAM, 98 length, 0 ND
+httpie\core.py:32: warning: raw_main has 88 NLOC, 26 CCN, 463 token, 5 PARAM, 112 length, 0 ND
+httpie\core.py:170: warning: program has 66 NLOC, 25 CCN, 425 token, 2 PARAM, 98 length, 0 ND

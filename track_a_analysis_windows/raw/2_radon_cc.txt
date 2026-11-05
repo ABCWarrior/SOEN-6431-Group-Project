@@ -1,0 +1,27 @@
+﻿# command  : radon cc httpie -s -nc  (only blocks graded C or worse)
+# run at   : 2026-11-05 13:16:18
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+httpie\client.py
+    F 43:0 collect_messages - D (21)
+    F 325:0 make_request_kwargs - C (12)
+httpie\core.py
+    F 32:0 raw_main - D (27)
+    F 170:0 program - D (24)
+httpie\sessions.py
+    M 200:4 Session._compute_new_headers - C (12)
+httpie\cli\argparser.py
+    M 282:4 HTTPieArgumentParser._process_auth - D (24)
+    M 151:4 HTTPieArgumentParser.parse_args - C (11)
+    M 409:4 HTTPieArgumentParser._guess_method - C (11)
+    M 448:4 HTTPieArgumentParser._parse_items - C (11)
+httpie\cli\options.py
+    M 113:4 Argument.serialize - C (11)
+httpie\cli\nested_json\interpret.py
+    F 30:0 interpret - C (11)
+httpie\output\formatters\colors.py
+    F 142:0 get_lexer - C (15)
+httpie\output\ui\rich_help.py
+    F 72:0 to_usage - C (12)
+    F 128:0 to_help_message - C (11)

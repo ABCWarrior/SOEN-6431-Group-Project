@@ -1,0 +1,1189 @@
+{
+  "statistics": {
+    "detectionDate": "2026-11-05T19:26:31.984Z",
+    "formats": {
+      "python": {
+        "sources": {
+          "httpie/output/ui/rich_utils.py": {
+            "lines": 33,
+            "tokens": 249,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/ui/rich_progress.py": {
+            "lines": 140,
+            "tokens": 1123,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 104,
+            "percentage": 5.71,
+            "percentageTokens": 9.26,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/ui/rich_palette.py": {
+            "lines": 72,
+            "tokens": 657,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/ui/rich_help.py": {
+            "lines": 229,
+            "tokens": 1882,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/ui/palette.py": {
+            "lines": 268,
+            "tokens": 2226,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/ui/man_pages.py": {
+            "lines": 47,
+            "tokens": 283,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/lexers/metadata.py": {
+            "lines": 58,
+            "tokens": 468,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 106,
+            "percentage": 17.24,
+            "percentageTokens": 22.65,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/lexers/json.py": {
+            "lines": 30,
+            "tokens": 188,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/lexers/http.py": {
+            "lines": 96,
+            "tokens": 808,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/lexers/common.py": {
+            "lines": 11,
+            "tokens": 81,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/formatters/xml.py": {
+            "lines": 78,
+            "tokens": 691,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 90,
+            "percentage": 10.26,
+            "percentageTokens": 13.02,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/formatters/json.py": {
+            "lines": 33,
+            "tokens": 291,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 4,
+            "duplicatedTokens": 45,
+            "percentage": 12.12,
+            "percentageTokens": 15.46,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/formatters/headers.py": {
+            "lines": 17,
+            "tokens": 159,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 4,
+            "duplicatedTokens": 45,
+            "percentage": 23.53,
+            "percentageTokens": 28.3,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/formatters/colors.py": {
+            "lines": 387,
+            "tokens": 3797,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/tasks/__init__.py": {
+            "lines": 10,
+            "tokens": 100,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/tasks/sessions.py": {
+            "lines": 85,
+            "tokens": 744,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/tasks/plugins.py": {
+            "lines": 247,
+            "tokens": 2322,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/tasks/export_args.py": {
+            "lines": 26,
+            "tokens": 210,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/tasks/check_updates.py": {
+            "lines": 9,
+            "tokens": 103,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/nested_json/__init__.py": {
+            "lines": 19,
+            "tokens": 74,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/nested_json/tokens.py": {
+            "lines": 79,
+            "tokens": 688,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/nested_json/parse.py": {
+            "lines": 192,
+            "tokens": 1586,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/nested_json/interpret.py": {
+            "lines": 128,
+            "tokens": 1284,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/nested_json/errors.py": {
+            "lines": 26,
+            "tokens": 242,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/plugins/__init__.py": {
+            "lines": 10,
+            "tokens": 48,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/plugins/registry.py": {
+            "lines": 20,
+            "tokens": 147,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/plugins/manager.py": {
+            "lines": 120,
+            "tokens": 1126,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/plugins/builtin.py": {
+            "lines": 78,
+            "tokens": 588,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/plugins/base.py": {
+            "lines": 164,
+            "tokens": 675,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/writer.py": {
+            "lines": 203,
+            "tokens": 1599,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/utils.py": {
+            "lines": 36,
+            "tokens": 249,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/streams.py": {
+            "lines": 253,
+            "tokens": 2002,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/processing.py": {
+            "lines": 57,
+            "tokens": 499,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/output/models.py": {
+            "lines": 43,
+            "tokens": 410,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/__main__.py": {
+            "lines": 60,
+            "tokens": 519,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 52,
+            "percentage": 20,
+            "percentageTokens": 10.02,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/core.py": {
+            "lines": 41,
+            "tokens": 299,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/compat.py": {
+            "lines": 67,
+            "tokens": 534,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/manager/cli.py": {
+            "lines": 180,
+            "tokens": 1176,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/legacy/v3_2_0_session_header_format.py": {
+            "lines": 72,
+            "tokens": 468,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/legacy/v3_1_0_session_cookie_format.py": {
+            "lines": 99,
+            "tokens": 615,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/internal/__build_channel__.py": {
+            "lines": 4,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/internal/update_warnings.py": {
+            "lines": 170,
+            "tokens": 1280,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/internal/daemon_runner.py": {
+            "lines": 49,
+            "tokens": 400,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/internal/daemons.py": {
+            "lines": 120,
+            "tokens": 859,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/utils.py": {
+            "lines": 78,
+            "tokens": 782,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/requestitems.py": {
+            "lines": 229,
+            "tokens": 1925,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/options.py": {
+            "lines": 248,
+            "tokens": 2287,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/dicts.py": {
+            "lines": 93,
+            "tokens": 535,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/definition.py": {
+            "lines": 955,
+            "tokens": 3876,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/constants.py": {
+            "lines": 133,
+            "tokens": 758,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/argtypes.py": {
+            "lines": 274,
+            "tokens": 1988,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cli/argparser.py": {
+            "lines": 612,
+            "tokens": 5402,
+            "sources": 1,
+            "clones": 6,
+            "duplicatedLines": 36,
+            "duplicatedTokens": 374,
+            "percentage": 5.88,
+            "percentageTokens": 6.92,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/__main__.py": {
+            "lines": 18,
+            "tokens": 111,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/__init__.py": {
+            "lines": 8,
+            "tokens": 30,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/utils.py": {
+            "lines": 308,
+            "tokens": 1956,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/uploads.py": {
+            "lines": 268,
+            "tokens": 2219,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/status.py": {
+            "lines": 39,
+            "tokens": 247,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/ssl_.py": {
+            "lines": 108,
+            "tokens": 850,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/sessions.py": {
+            "lines": 321,
+            "tokens": 2704,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/models.py": {
+            "lines": 232,
+            "tokens": 1846,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/encoding.py": {
+            "lines": 49,
+            "tokens": 262,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/downloads.py": {
+            "lines": 376,
+            "tokens": 2756,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/core.py": {
+            "lines": 297,
+            "tokens": 2469,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 34,
+            "duplicatedTokens": 246,
+            "percentage": 11.45,
+            "percentageTokens": 9.96,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/cookies.py": {
+            "lines": 24,
+            "tokens": 168,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/context.py": {
+            "lines": 216,
+            "tokens": 1822,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/config.py": {
+            "lines": 171,
+            "tokens": 1354,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/compat.py": {
+            "lines": 112,
+            "tokens": 811,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/client.py": {
+            "lines": 399,
+            "tokens": 3094,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "httpie/adapters.py": {
+            "lines": 12,
+            "tokens": 105,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 9746,
+          "tokens": 74121,
+          "sources": 69,
+          "clones": 9,
+          "duplicatedLines": 58,
+          "duplicatedTokens": 531,
+          "percentage": 0.6,
+          "percentageTokens": 0.72,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 9746,
+      "tokens": 74121,
+      "sources": 69,
+      "clones": 9,
+      "duplicatedLines": 58,
+      "duplicatedTokens": 531,
+      "percentage": 0.6,
+      "percentageTokens": 0.72,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "python",
+      "lines": 5,
+      "fragment": "(BaseDisplay):\r\n    def start(\r\n        self, *, total: Optional[float], at: float, description: str\r\n    ) -> None:\r\n        from",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\output\\ui\\rich_progress.py",
+        "start": 97,
+        "end": 101,
+        "startLoc": {
+          "line": 97,
+          "column": 16,
+          "position": 747
+        },
+        "endLoc": {
+          "line": 101,
+          "column": 5,
+          "position": 799
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\output\\ui\\rich_progress.py",
+        "start": 62,
+        "end": 66,
+        "startLoc": {
+          "line": 62,
+          "column": 14,
+          "position": 442
+        },
+        "endLoc": {
+          "line": 66,
+          "column": 5,
+          "position": 494
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 6,
+      "fragment": ", pygments.lexer.bygroups(\r\n                    pygments.token.Name.Decorator,  # Name\r\n                    pygments.token.Text,\r\n                    pygments.token.Operator,  # Colon\r\n                    pygments.token.Text,\r\n                    pygments",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\output\\lexers\\metadata.py",
+        "start": 50,
+        "end": 55,
+        "startLoc": {
+          "line": 50,
+          "column": 23,
+          "position": 392
+        },
+        "endLoc": {
+          "line": 55,
+          "column": 9,
+          "position": 445
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\output\\lexers\\metadata.py",
+        "start": 39,
+        "end": 44,
+        "startLoc": {
+          "line": 39,
+          "column": 49,
+          "position": 303
+        },
+        "endLoc": {
+          "line": 44,
+          "column": 18,
+          "position": 356
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 5,
+      "fragment": "(FormatterPlugin):\r\n\r\n    def __init__(self, **kwargs):\r\n        super().__init__(**kwargs)\r\n        self.enabled = self.format_options['json'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\output\\formatters\\json.py",
+        "start": 6,
+        "end": 10,
+        "startLoc": {
+          "line": 6,
+          "column": 14,
+          "position": 26
+        },
+        "endLoc": {
+          "line": 10,
+          "column": 7,
+          "position": 71
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\output\\formatters\\xml.py",
+        "start": 53,
+        "end": 57,
+        "startLoc": {
+          "line": 53,
+          "column": 13,
+          "position": 461
+        },
+        "endLoc": {
+          "line": 57,
+          "column": 6,
+          "position": 506
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 5,
+      "fragment": "(FormatterPlugin):\r\n\r\n    def __init__(self, **kwargs):\r\n        super().__init__(**kwargs)\r\n        self.enabled = self.format_options['headers'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\output\\formatters\\headers.py",
+        "start": 4,
+        "end": 8,
+        "startLoc": {
+          "line": 4,
+          "column": 17,
+          "position": 19
+        },
+        "endLoc": {
+          "line": 8,
+          "column": 10,
+          "position": 64
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\output\\formatters\\xml.py",
+        "start": 53,
+        "end": 57,
+        "startLoc": {
+          "line": 53,
+          "column": 13,
+          "position": 461
+        },
+        "endLoc": {
+          "line": 57,
+          "column": 6,
+          "position": 506
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 9,
+      "fragment": "# noinspection PyMethodOverriding\r\n    def parse_args(\r\n        self,\r\n        env: Environment,\r\n        args=None,\r\n        namespace=None\r\n    ) -> argparse.Namespace:\r\n        self.env = env\r\n        self.env",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\cli\\argparser.py",
+        "start": 150,
+        "end": 158,
+        "startLoc": {
+          "line": 150,
+          "column": 5,
+          "position": 1240
+        },
+        "endLoc": {
+          "line": 158,
+          "column": 4,
+          "position": 1301
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\cli\\argparser.py",
+        "start": 89,
+        "end": 97,
+        "startLoc": {
+          "line": 89,
+          "column": 5,
+          "position": 664
+        },
+        "endLoc": {
+          "line": 97,
+          "column": 5,
+          "position": 725
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 6,
+      "fragment": ".parse_known_args(args, namespace)\r\n        if self.args.debug:\r\n            self.args.traceback = True\r\n        self.has_stdin_data = (\r\n            self.env.stdin\r\n            and not self",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\cli\\argparser.py",
+        "start": 159,
+        "end": 164,
+        "startLoc": {
+          "line": 159,
+          "column": 2,
+          "position": 1335
+        },
+        "endLoc": {
+          "line": 164,
+          "column": 5,
+          "position": 1391
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\cli\\argparser.py",
+        "start": 97,
+        "end": 102,
+        "startLoc": {
+          "line": 97,
+          "column": 5,
+          "position": 733
+        },
+        "endLoc": {
+          "line": 102,
+          "column": 8,
+          "position": 789
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 6,
+      "fragment": "_, exception, _ = sys.exc_info()\r\n        if (\r\n            isinstance(exception, argparse.ArgumentError)\r\n            and len(exception.args) >= 1\r\n            and isinstance(exception.args[0], argparse.Action)\r\n            and",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\cli\\argparser.py",
+        "start": 580,
+        "end": 585,
+        "startLoc": {
+          "line": 580,
+          "column": 9,
+          "position": 5150
+        },
+        "endLoc": {
+          "line": 585,
+          "column": 4,
+          "position": 5220
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\cli\\argparser.py",
+        "start": 59,
+        "end": 64,
+        "startLoc": {
+          "line": 59,
+          "column": 9,
+          "position": 423
+        },
+        "endLoc": {
+          "line": 64,
+          "column": 2,
+          "position": 493
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 12,
+      "fragment": "except KeyboardInterrupt:\r\n            env.stderr.write('\\n')\r\n            if include_traceback:\r\n                raise\r\n            exit_status = ExitStatus.ERROR_CTRL_C\r\n        except SystemExit as e:\r\n            if e.code != ExitStatus.SUCCESS:\r\n                env.stderr.write('\\n')\r\n                if include_traceback:\r\n                    raise\r\n                exit_status = ExitStatus.ERROR\r\n        except",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\core.py",
+        "start": 104,
+        "end": 115,
+        "startLoc": {
+          "line": 104,
+          "column": 9,
+          "position": 913
+        },
+        "endLoc": {
+          "line": 115,
+          "column": 7,
+          "position": 1010
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\core.py",
+        "start": 86,
+        "end": 97,
+        "startLoc": {
+          "line": 86,
+          "column": 5,
+          "position": 772
+        },
+        "endLoc": {
+          "line": 97,
+          "column": 5,
+          "position": 869
+        }
+      }
+    },
+    {
+      "format": "python",
+      "lines": 13,
+      "fragment": "def main(\r\n    args: List[Union[str, bytes]] = sys.argv,\r\n    env: Environment = Environment()\r\n) -> ExitStatus:\r\n    \"\"\"\r\n    The main function.\r\n\r\n    Pre-process args, handle some special types of invocations,\r\n    and run the main program with error handling.\r\n\r\n    Return exit status code.\r\n\r\n    \"\"\"",
+      "tokens": 0,
+      "firstFile": {
+        "name": "httpie\\core.py",
+        "start": 146,
+        "end": 158,
+        "startLoc": {
+          "line": 146,
+          "column": 1,
+          "position": 1262
+        },
+        "endLoc": {
+          "line": 158,
+          "column": 8,
+          "position": 1314
+        }
+      },
+      "secondFile": {
+        "name": "httpie\\manager\\__main__.py",
+        "start": 32,
+        "end": 33,
+        "startLoc": {
+          "line": 32,
+          "column": 1,
+          "position": 263
+        },
+        "endLoc": {
+          "line": 33,
+          "column": 5,
+          "position": 308
+        }
+      }
+    }
+  ]
+}

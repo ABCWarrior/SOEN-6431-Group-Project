@@ -1,0 +1,85 @@
+﻿# command  : python -m pytest tests -q -p no:cacheprovider --override-ini=addopts= --cov=httpie --cov-report=term   (last 80 lines)
+# run at   : 2026-11-05 13:20:52
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+httpie\compat.py                                   56     34    39%
+httpie\config.py                                   95      8    92%
+httpie\context.py                                 120      9    92%
+httpie\cookies.py                                  11      0   100%
+httpie\core.py                                    170      8    95%
+httpie\downloads.py                               175      7    96%
+httpie\encoding.py                                 18      0   100%
+httpie\internal\__build_channel__.py                1      0   100%
+httpie\internal\__init__.py                         0      0   100%
+httpie\internal\daemon_runner.py                   28      4    86%
+httpie\internal\daemons.py                         58     25    57%
+httpie\internal\update_warnings.py                 96      5    95%
+httpie\legacy\__init__.py                           0      0   100%
+httpie\legacy\v3_1_0_session_cookie_format.py      31      0   100%
+httpie\legacy\v3_2_0_session_header_format.py      25      0   100%
+httpie\manager\__init__.py                          0      0   100%
+httpie\manager\__main__.py                         33      5    85%
+httpie\manager\cli.py                              39      0   100%
+httpie\manager\compat.py                           35     13    63%
+httpie\manager\core.py                             20      1    95%
+httpie\manager\tasks\__init__.py                    5      0   100%
+httpie\manager\tasks\check_updates.py               8      0   100%
+httpie\manager\tasks\export_args.py                14      1    93%
+httpie\manager\tasks\plugins.py                   153     70    54%
+httpie\manager\tasks\sessions.py                   43      2    95%
+httpie\models.py                                  113      5    96%
+httpie\output\__init__.py                           0      0   100%
+httpie\output\formatters\__init__.py                0      0   100%
+httpie\output\formatters\colors.py                140      0   100%
+httpie\output\formatters\headers.py                 9      0   100%
+httpie\output\formatters\json.py                   16      0   100%
+httpie\output\formatters\xml.py                    41      0   100%
+httpie\output\lexers\__init__.py                    0      0   100%
+httpie\output\lexers\common.py                      4      0   100%
+httpie\output\lexers\http.py                       22      3    86%
+httpie\output\lexers\json.py                       10      0   100%
+httpie\output\lexers\metadata.py                   17      3    82%
+httpie\output\models.py                            27      1    96%
+httpie\output\processing.py                        37      0   100%
+httpie\output\streams.py                          138      3    98%
+httpie\output\ui\__init__.py                        0      0   100%
+httpie\output\ui\man_pages.py                      16     16     0%
+httpie\output\ui\palette.py                        72      9    88%
+httpie\output\ui\rich_help.py                     104     49    53%
+httpie\output\ui\rich_palette.py                   31      2    94%
+httpie\output\ui\rich_progress.py                  54     14    74%
+httpie\output\ui\rich_utils.py                     18     18     0%
+httpie\output\utils.py                             20      0   100%
+httpie\output\writer.py                            76     13    83%
+httpie\plugins\__init__.py                          2      0   100%
+httpie\plugins\base.py                             38      4    89%
+httpie\plugins\builtin.py                          39      0   100%
+httpie\plugins\manager.py                          67      9    87%
+httpie\plugins\registry.py                          8      0   100%
+httpie\sessions.py                                155      3    98%
+httpie\ssl_.py                                     43      2    95%
+httpie\status.py                                   20      0   100%
+httpie\uploads.py                                 130     18    86%
+httpie\utils.py                                   131     15    89%
+-------------------------------------------------------------------
+TOTAL                                            4187    438    90%
+Coverage JSON written to file D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project\track_a_analysis_windows\raw\coverage.json
+=========================== short test summary info ===========================
+FAILED tests/test_cli_ui.py::test_naked_invocation[args3-expected_msg3] - Ass...
+FAILED tests/test_encoding.py::test_terminal_output_response_charset_detection[big5-\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996]
+FAILED tests/test_encoding.py::test_terminal_output_request_charset_detection[big5-\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996]
+FAILED tests/test_plugins_cli.py::test_plugins_installation[True] - UnicodeDe...
+FAILED tests/test_plugins_cli.py::test_plugins_installation[False] - UnicodeD...
+FAILED tests/test_plugins_cli.py::test_plugin_installation_with_custom_config
+FAILED tests/test_plugins_cli.py::test_plugins_listing[True] - UnicodeDecodeE...
+FAILED tests/test_plugins_cli.py::test_plugins_listing[False] - UnicodeDecode...
+FAILED tests/test_plugins_cli.py::test_plugins_listing_multiple - UnicodeDeco...
+FAILED tests/test_plugins_cli.py::test_plugins_uninstall[True] - UnicodeDecod...
+FAILED tests/test_plugins_cli.py::test_plugins_uninstall[False] - UnicodeDeco...
+FAILED tests/test_plugins_cli.py::test_plugins_listing_after_uninstall - Unic...
+FAILED tests/test_plugins_cli.py::test_plugins_uninstall_specific - UnicodeDe...
+FAILED tests/test_plugins_cli.py::test_plugins_installation_failed - UnicodeD...
+FAILED tests/test_plugins_cli.py::test_plugins_double_uninstall - UnicodeDeco...
+FAILED tests/test_plugins_cli.py::test_broken_plugins - UnicodeDecodeError: '...
+16 failed, 989 passed, 19 skipped, 4 xfailed, 2116 warnings in 250.25s (0:04:10)

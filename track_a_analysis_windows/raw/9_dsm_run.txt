@@ -1,0 +1,6 @@
+﻿# command  : python track_a_analysis\scripts\dsm.py   (copy with output folders redirected to track_a_analysis_windows)
+# run at   : 2026-11-05 13:21:32
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+modules=78 edges=208 components=27 sccs=3 largest_scc=5 component_cycles=7

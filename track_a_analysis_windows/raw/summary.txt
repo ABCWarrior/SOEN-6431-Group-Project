@@ -1,0 +1,19 @@
+﻿
+Check                                          Expected                                                          YouGot
+-----                                          --------                                                          ------
+Lizard: functions with complexity above 15     4                                                                      4
+Radon: blocks graded C or worse                about 14                                                              14
+Radon: least maintainable file                 argparser.py, about 24.7             httpie\cli\argparser.py - A (24.67)
+Flake8: C901 (too complex) warnings            about 9                                                                9
+Flake8: all violations (default rules)         9                                                                      9
+Flake8 + plugins: C901 and CCR001 (complexity) 22                                                                    22
+Flake8 + plugins: all findings                 39                                                                    39
+Vulture: unused-code candidates                about 35                                                              35
+Pylint: import-cycle paths                     5                                                                      5
+git: commits touching core.py since 2019       37                                                                    37
+pytest (Python 3.12 venv)                      1019 passed, 5 skipped, 4 xfailed ..., 989 passed, 19 skipped, 4 xfailed
+pytest-cov: line coverage of httpie            90.7%                                                              89.5%
+grimp DSM: import graph                        78 modules, 208 edges, 3 cycles          78 modules, 208 edges, 3 cycles
+
+
+

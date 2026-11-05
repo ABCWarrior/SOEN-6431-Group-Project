@@ -1,0 +1,8 @@
+﻿# command  : pip install grimp matplotlib numpy   (Python 3.12 virtual environment)
+# run at   : 2026-11-05 13:21:28
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+System.Management.Automation.RemoteException
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: C:\Users\Yourun\tda-test-venv\Scripts\python.exe -m pip install --upgrade pip

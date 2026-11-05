@@ -1,0 +1,12 @@
+# Command: npx -y jscpd@4.0.5 httpie --format python --min-tokens 50 --reporters console,json --output track_a_analysis_windows\raw\jscpd_50 --silent > raw\12_jscpd_50.txt 2>&1
+# Run from the repository root in cmd.exe, 2026-11-05 about 19:26 (Windows 10.0.26200, Node.js LTS with npm 11.20.0)
+# Repo commit: 5f1bfe9
+# Terminal colour codes removed; the JSON report is in the jscpd_50 folder.
+# ---------------------------------------------------------------------------
+JSON report saved to track_a_analysis_windows\raw\jscpd_50\jscpd-report.json
+Duplications detection: Found 1 exact clones with 11(0.11%) duplicated lines in 69 (1 formats) files.
+npm notice
+npm notice New major version of npm available! 11.20.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

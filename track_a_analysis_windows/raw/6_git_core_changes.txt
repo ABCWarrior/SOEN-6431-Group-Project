@@ -1,0 +1,42 @@
+﻿# command  : git log --oneline --no-merges --since=2019-01-01 -- httpie/core.py
+# run at   : 2026-11-05 13:16:29
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+0689b55 Clean up and refactor nested JSON parsing & interpreting (#1440)
+003f209 Automatic release update warnings. (#1336)
+f7c1bb2 Refactor palette (#1378)
+ff6f188 [Major] UI Enhancements (#1321)
+77af4c7 Decouple parser definition from argparse (#1293)
+55087a9 Introduce a mode to suppress all warnings (#1283)
+813e886 Dont apply default options on the httpie command (#1280)
+7bf3737 Implement HTTPie Nested JSON v2
+00c859c Add warnings when there is no incoming data from stdin (#1256)
+f3b5001 Implement basic metrics layout & total elapsed time (#1250)
+e0e03f3 Better DNS error handling (#1249)
+245cede cmd: Implement httpie plugins interface (#1200)
+ef62fc1 core: support custom request/response classes (#1205)
+6befaf9 Added the ability to silence warnings via double `-q` or `--quiet` (#1175)
+474093a Include plugin info in `--debug` output (#1165)
+a62391e Tiny clean-up in `program()` (#1135)
+2d55c01 Fix printing redirected prepared request in verbose mode (#1088)
+0ff0874 Modernize the code base with f-strings (#1068)
+a3a08a9 Use relative imports (#1057)
+cf78a12 Show --check-status warning with --quiet as well. (#1026)
+0f1e098 Fix incorrect separators and introduce `assert_output_matches()` (close #1027)
+9883a46 Cleanup (#993)
+1573058 v2.3.0
+32d8b48 Fix `--offline --multipart`, add more tests
+5a5b423 PEP8
+6925d93 Add support for streamed uploads, --chunked, finish --multipart, etc.
+d12af4a WIP
+cd085cb Refactor built-in plugin registry to avoid circular imports
+c9d7700 Fix 'Too many redirects' error message formatting
+f202f33 Remove automatic config file creation to avoid concurrency issues.
+d9b3a16 Make `ExitStatus` subclass `IntEnum` to allow direct `int` comparisons
+374c371 Add `httpie.status`
+bece3c7 Add one-by-one processing of each HTTP request or response and --offline
+aba3b1e Refactoring
+0f65438 Python 3 annotations, super(), pathlib, etc.
+8e04a24 Reintroduce `$ https` command alias with `https://` as default scheme
+b3d2c18 Python 2.7 support removal WIP

@@ -1,0 +1,26 @@
+﻿# command  : pylint httpie --disable=all --enable=too-many-branches,too-many-statements,too-many-arguments,too-many-locals
+# run at   : 2026-11-05 13:16:31
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+************* Module httpie.client
+httpie\client.py:43:0: R0912: Too many branches (15/12) (too-many-branches)
+httpie\client.py:43:0: R0915: Too many statements (51/50) (too-many-statements)
+************* Module httpie.core
+httpie\core.py:32:0: R0914: Too many local variables (16/15) (too-many-locals)
+httpie\core.py:32:0: R0912: Too many branches (25/12) (too-many-branches)
+httpie\core.py:32:0: R0915: Too many statements (86/50) (too-many-statements)
+httpie\core.py:170:0: R0914: Too many local variables (18/15) (too-many-locals)
+httpie\core.py:170:0: R0912: Too many branches (15/12) (too-many-branches)
+************* Module httpie.sessions
+httpie\sessions.py:92:0: R0913: Too many arguments (6/5) (too-many-arguments)
+************* Module httpie.uploads
+httpie\uploads.py:191:0: R0913: Too many arguments (6/5) (too-many-arguments)
+************* Module httpie.cli.argparser
+httpie\cli\argparser.py:282:4: R0912: Too many branches (15/12) (too-many-branches)
+************* Module httpie.cli.nested_json.parse
+httpie\cli\nested_json\parse.py:23:0: R0915: Too many statements (56/50) (too-many-statements)
+
+------------------------------------------------------------------
+Your code has been rated at 9.97/10 (previous run: 9.99/10, -0.01)
+

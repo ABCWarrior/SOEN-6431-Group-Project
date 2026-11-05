@@ -1,0 +1,104 @@
+﻿# command  : Get-Content with line numbers (see each section title)
+# run at   : 2026-11-05 13:21:32
+# platform : Windows, PowerShell 5.1.26100.8875, Python 3.14.6
+# commit   : 5f1bfe9 (repo: D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 2\SOEN-6431-Group-Project)
+# ------------------------------------------------------------
+
+=== httpie\core.py  lines 60-70  :  bare 'raise' near line 67 (the Pylint E0704 false-positive case) ===
+  60|                     f'{msg} while doing a {request.method}'
+  61|                     f' request to URL: {request.url}'
+  62|                 )
+  63|         if annotation:
+  64|             msg += annotation
+  65|         env.log_error(f'{type(e).__name__}: {msg}')
+  66|         if include_traceback:
+  67|             raise
+  68| 
+  69|     if include_debug_info:
+  70|         print_debug_info(env)
+
+=== httpie\core.py  lines 84-110  :  duplicated KeyboardInterrupt / SystemExit handlers (lines ~86-90 and ~104-108) ===
+  84|             raise
+  85|         exit_status = ExitStatus.ERROR
+  86|     except KeyboardInterrupt:
+  87|         env.stderr.write('\n')
+  88|         if include_traceback:
+  89|             raise
+  90|         exit_status = ExitStatus.ERROR_CTRL_C
+  91|     except SystemExit as e:
+  92|         if e.code != ExitStatus.SUCCESS:
+  93|             env.stderr.write('\n')
+  94|             if include_traceback:
+  95|                 raise
+  96|             exit_status = ExitStatus.ERROR
+  97|     else:
+  98|         check_updates(env)
+  99|         try:
+ 100|             exit_status = main_program(
+ 101|                 args=parsed_args,
+ 102|                 env=env,
+ 103|             )
+ 104|         except KeyboardInterrupt:
+ 105|             env.stderr.write('\n')
+ 106|             if include_traceback:
+ 107|                 raise
+ 108|             exit_status = ExitStatus.ERROR_CTRL_C
+ 109|         except SystemExit as e:
+ 110|             if e.code != ExitStatus.SUCCESS:
+
+=== httpie\internal\update_warnings.py  lines 38-50  :  requests.get(..., verify=False) near line 44 ===
+  38| 
+  39| 
+  40| def _fetch_updates(env: Environment) -> str:
+  41|     file = env.config.version_info_file
+  42|     data = _read_data_error_free(file)
+  43| 
+  44|     response = requests.get(PACKAGE_INDEX_LINK, verify=False)
+  45|     response.raise_for_status()
+  46| 
+  47|     data.setdefault('last_warned_date', None)
+  48|     data['last_fetched_date'] = datetime.now().isoformat()
+  49|     data['last_released_versions'] = response.json()
+  50| 
+
+=== httpie\ssl_.py  lines 1-40  :  file SonarQube flagged with S930 (check the flagged call yourself) ===
+   1| import ssl
+   2| from typing import NamedTuple, Optional
+   3| 
+   4| # noinspection PyPackageRequirements
+   5| from urllib3.util.ssl_ import (
+   6|     create_urllib3_context,
+   7|     resolve_ssl_version,
+   8| )
+   9| 
+  10| from .adapters import HTTPAdapter
+  11| from .compat import ensure_default_certs_loaded
+  12| 
+  13| 
+  14| SSL_VERSION_ARG_MAPPING = {
+  15|     'ssl2.3': 'PROTOCOL_SSLv23',
+  16|     'ssl3': 'PROTOCOL_SSLv3',
+  17|     'tls1': 'PROTOCOL_TLSv1',
+  18|     'tls1.1': 'PROTOCOL_TLSv1_1',
+  19|     'tls1.2': 'PROTOCOL_TLSv1_2',
+  20|     'tls1.3': 'PROTOCOL_TLSv1_3',
+  21| }
+  22| AVAILABLE_SSL_VERSION_ARG_MAPPING = {
+  23|     arg: getattr(ssl, constant_name)
+  24|     for arg, constant_name in SSL_VERSION_ARG_MAPPING.items()
+  25|     if hasattr(ssl, constant_name)
+  26| }
+  27| 
+  28| 
+  29| class HTTPieCertificate(NamedTuple):
+  30|     cert_file: Optional[str] = None
+  31|     key_file: Optional[str] = None
+  32|     key_password: Optional[str] = None
+  33| 
+  34|     def to_raw_cert(self):
+  35|         """Synthesize a requests-compatible (2-item tuple of cert and key file)
+  36|         object from HTTPie's internal representation of a certificate."""
+  37|         return self.cert_file, self.key_file
+  38| 
+  39| 
+  40| class HTTPieHTTPSAdapter(HTTPAdapter):

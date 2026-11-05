@@ -1,0 +1,134 @@
+# Command: docker run --rm -e SONAR_HOST_URL=http://host.docker.internal:9000 -e SONAR_TOKEN=<redacted> -v "%cd%:/usr/src" sonarsource/sonar-scanner-cli:11.4 -Dsonar.projectKey=httpie-cli -Dsonar.sources=httpie -Dsonar.tests=tests -Dsonar.python.version=3.11 -Dsonar.exclusions="track_a_analysis/**,track_a_analysis_windows/**"
+# Run from the repository root in cmd.exe (Windows 10.0.26200, Docker Desktop 4.98.0 / Docker 29.9.2, WSL2)
+# Server: sonarqube:25.10.0.114319-community (docker run -d --name trackA-sonarqube -p 9000:9000 -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true)
+# Date: 2026-11-05, scan started 19:15
+# Repo commit: 5f1bfe9
+# Copied from the cmd window by the author; the image-pull lines are included as printed.
+# ---------------------------------------------------------------------------
+Unable to find image 'sonarsource/sonar-scanner-cli:11.4' locally
+11.4: Pulling from sonarsource/sonar-scanner-cli
+c925b27c2060: Pull complete
+8a20229057ce: Pull complete
+4f4fb700ef54: Pull complete
+dd834b1710f9: Pull complete
+453fb62566ac: Pull complete
+4e4887849203: Pull complete
+Digest: sha256:14f46a51cbfde162e30cfd673bff542eca59860a0e904bcd2614f192605bd704
+Status: Downloaded newer image for sonarsource/sonar-scanner-cli:11.4
+19:15:05.865 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+19:15:05.869 INFO  Project root configuration file: NONE
+19:15:05.878 INFO  SonarScanner CLI 7.2.0.5079
+19:15:05.880 INFO  Linux 6.18.54.1-microsoft-standard-WSL2 amd64
+19:15:06.434 INFO  Communicating with SonarQube Community Build 25.10.0.114319
+19:15:06.435 INFO  JRE provisioning: os[linux], arch[x86_64]
+19:15:13.217 INFO  Starting SonarScanner Engine...
+19:15:13.217 INFO  Java 17.0.13 Eclipse Adoptium (64-bit)
+19:15:13.889 INFO  Load global settings
+19:15:13.962 INFO  Load global settings (done) | time=71ms
+19:15:13.965 INFO  Server id: 147B411E-AaGtH9fQmrRGosvbHCSi
+19:15:13.970 INFO  Loading required plugins
+19:15:13.971 INFO  Load plugins index
+19:15:13.993 INFO  Load plugins index (done) | time=23ms
+19:15:13.994 INFO  Load/download plugins
+19:15:15.917 INFO  Load/download plugins (done) | time=1924ms
+19:15:16.110 INFO  Process project properties
+19:15:16.126 INFO  Process project properties (done) | time=14ms
+19:15:16.138 INFO  Project key: httpie-cli
+19:15:16.138 INFO  Base dir: /usr/src
+19:15:16.138 INFO  Working dir: /tmp/.scannerwork
+19:15:16.146 INFO  Load project settings for component key: 'httpie-cli'
+19:15:16.177 INFO  Load quality profiles
+19:15:16.281 INFO  Load quality profiles (done) | time=104ms
+19:15:16.315 INFO  Load active rules
+19:15:16.566 INFO  Load active rules (done) | time=250ms
+19:15:16.570 INFO  Load analysis cache
+19:15:16.579 INFO  Load analysis cache (404) | time=9ms
+19:15:16.633 INFO  Preprocessing files...
+19:15:19.523 INFO  3 languages detected in 181 preprocessed files (done) | time=2889ms
+19:15:19.524 INFO  0 files ignored because of inclusion/exclusion patterns
+19:15:19.524 INFO  120 files ignored because of scm ignore settings
+19:15:19.525 INFO  Loading plugins for detected languages
+19:15:19.525 INFO  Load/download plugins
+19:15:20.818 INFO  Load/download plugins (done) | time=1293ms
+19:15:20.864 INFO  Load project repositories
+19:15:20.869 INFO  Load project repositories (done) | time=6ms
+19:15:20.878 INFO  Indexing files...
+19:15:20.879 INFO  Project configuration:
+19:15:20.879 INFO    Excluded sources: track_a_analysis/**, track_a_analysis_windows/**
+19:15:22.706 INFO  181 files indexed (done) | time=1827ms
+19:15:22.707 INFO  Quality profile for json: Sonar way
+19:15:22.707 INFO  Quality profile for py: Sonar way
+19:15:22.707 INFO  Quality profile for xml: Sonar way
+19:15:22.707 INFO  ------------- Run sensors on module httpie-cli
+19:15:22.729 INFO  Load metrics repository
+19:15:22.745 INFO  Load metrics repository (done) | time=16ms
+19:15:23.101 INFO  Sensor JaCoCo XML Report Importer [jacoco]
+19:15:23.103 INFO  'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+19:15:23.109 INFO  No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+19:15:23.109 INFO  Sensor JaCoCo XML Report Importer [jacoco] (done) | time=8ms
+19:15:23.109 INFO  Sensor IaC CloudFormation Sensor [iac]
+19:15:23.113 INFO  There are no files to be analyzed for the CloudFormation language
+19:15:23.113 INFO  Sensor IaC CloudFormation Sensor [iac] (done) | time=4ms
+19:15:23.113 INFO  Sensor IaC cfn-lint report Sensor [iac]
+19:15:23.114 INFO  Sensor IaC cfn-lint report Sensor [iac] (done) | time=1ms
+19:15:23.114 INFO  Sensor IaC Docker Sensor [iac]
+19:15:23.115 INFO  There are no files to be analyzed for the Docker language
+19:15:23.115 INFO  Sensor IaC Docker Sensor [iac] (done) | time=2ms
+19:15:23.115 INFO  Sensor IaC hadolint report Sensor [iac]
+19:15:23.115 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+19:15:23.116 INFO  Sensor IaC Azure Resource Manager Sensor [iac]
+19:15:23.118 INFO  There are no files to be analyzed for the Azure Resource Manager language
+19:15:23.118 INFO  Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=2ms
+19:15:23.119 INFO  Sensor Java Config Sensor [iac]
+19:15:23.123 INFO  There are no files to be analyzed for the Java language
+19:15:23.123 INFO  Sensor Java Config Sensor [iac] (done) | time=5ms
+19:15:23.123 INFO  Sensor Python Sensor [python]
+19:15:24.415 INFO  Starting global symbols computation
+19:15:24.417 INFO  122 source files to be analyzed
+19:15:25.448 INFO  122/122 source files have been analyzed
+19:15:25.451 INFO  Finished step global symbols computation in 1032ms
+19:15:25.522 INFO  Starting rules execution
+19:15:25.523 INFO  122 source files to be analyzed
+19:15:27.351 INFO  122/122 source files have been analyzed
+19:15:27.351 INFO  Finished step rules execution in 1827ms
+19:15:27.351 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 122 files. These files were not parsed.
+19:15:27.353 INFO  Sensor Python Sensor [python] (done) | time=4231ms
+19:15:27.354 INFO  Sensor Cobertura Sensor for Python coverage [python]
+19:15:29.026 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=1673ms
+19:15:29.027 INFO  Sensor PythonXUnitSensor [python]
+19:15:30.559 INFO  Sensor PythonXUnitSensor [python] (done) | time=1533ms
+19:15:30.559 INFO  Sensor Python Dependency Sensor [python]
+19:15:30.561 INFO  Sensor Python Dependency Sensor [python] (done) | time=2ms
+19:15:30.562 INFO  Sensor TextAndSecretsSensor [text]
+19:15:30.566 INFO  Available processors: 28
+19:15:30.566 INFO  Using 28 threads for analysis.
+19:15:30.770 INFO  Start fetching files for the text and secrets analysis
+19:15:30.775 INFO  Using Git CLI to retrieve untracked files
+19:15:30.786 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+19:15:30.786 INFO  Starting the text and secrets analysis
+19:15:30.788 INFO  172 source files to be analyzed for the text and secrets analysis
+19:15:31.157 INFO  172/172 source files have been analyzed for the text and secrets analysis
+19:15:31.159 INFO  Sensor TextAndSecretsSensor [text] (done) | time=598ms
+19:15:31.161 INFO  ------------- Run sensors on project
+19:15:31.230 INFO  Sensor Zero Coverage Sensor
+19:15:31.244 INFO  Sensor Zero Coverage Sensor (done) | time=15ms
+19:15:31.244 INFO  ------------- Gather SCA dependencies on project
+19:15:31.246 INFO  Dependency analysis skipped
+19:15:31.247 INFO  SCM Publisher SCM provider for this project is: git
+19:15:31.248 INFO  SCM Publisher 139 source files to be analyzed
+19:15:31.332 WARN  Thread[ForkJoinPool.commonPool-worker-1,5,main]: got smaller file timestamp on /usr/src (D:\), /usr/src/.git: 2026-11-05T19:15:31Z < 2026-11-05T19:15:31.3115826Z. Aborting measurement at resolution PT0.6884174S.
+19:15:32.874 INFO  SCM Publisher 139/139 source files have been analyzed (done) | time=1625ms
+19:15:32.885 INFO  CPD Executor 15 files had no CPD blocks
+19:15:32.885 INFO  CPD Executor Calculating CPD for 63 files
+19:15:32.909 INFO  CPD Executor CPD calculation finished (done) | time=23ms
+19:15:32.951 INFO  SCM revision ID '5f1bfe9960f6ec814baecae5b18b2e15444544d5'
+19:15:33.961 INFO  Analysis report generated in 1041ms, dir size=1.9 MB
+19:15:34.075 INFO  Analysis report compressed in 112ms, zip size=916.9 kB
+19:15:34.588 INFO  Analysis report uploaded in 512ms
+19:15:34.589 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://host.docker.internal:9000/dashboard?id=httpie-cli
+19:15:34.589 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+19:15:34.589 INFO  More about the report processing at http://host.docker.internal:9000/api/ce/task?id=ac278b8d-b781-41e5-b26e-b95f4b7702aa
+19:15:34.604 INFO  Analysis total time: 18.650 s
+19:15:34.605 INFO  SonarScanner Engine completed successfully
+19:15:34.643 INFO  EXECUTION SUCCESS
+19:15:34.644 INFO  Total time: 28.780s
