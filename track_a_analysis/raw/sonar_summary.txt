@@ -1,0 +1,39 @@
+ SonarQube 25.10 Community — project httpie-cli (Python 3.11 profile 'Sonar  
+                                    way')                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric                                  ┃                           Value ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Lines of code (ncloc)                   │                            7102 │
+│ Technical debt (SQALE index)            │ 494 min  (~8.2 h, 1.0 dev-days) │
+│ Technical debt ratio                    │                           0.2 % │
+│ Maintainability rating                  │                               A │
+│ Code smells / Bugs / Vulnerabilities    │                      61 / 3 / 1 │
+│ Reliability / Security rating           │                           E / D │
+│ Security hotspots                       │                               2 │
+│ Cyclomatic / Cognitive complexity (sum) │                     1191 / 1261 │
+│ Duplicated lines density                │                           0.0 % │
+│ Line coverage (pytest-cov import)       │                          90.7 % │
+└─────────────────────────────────────────┴─────────────────────────────────┘
+                           Top files by remediation effort (sqale_index)                           
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ File                                ┃ Debt (min) ┃ Smells ┃ Cognitive ┃ Cyclomatic ┃ Coverage % ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ httpie/core.py                      │         83 │      5 │        99 │         54 │       95.3 │
+│ httpie/cli/argparser.py             │         69 │     11 │       170 │        133 │       94.3 │
+│ httpie/client.py                    │         60 │      4 │        77 │         66 │      100.0 │
+│ httpie/plugins/builtin.py           │         60 │      4 │         0 │          7 │      100.0 │
+│ httpie/cli/nested_json/parse.py     │         29 │      2 │        52 │         25 │       95.3 │
+│ httpie/cli/nested_json/interpret.py │         23 │      1 │        40 │         21 │       96.1 │
+│ httpie/sessions.py                  │         18 │      2 │        48 │         48 │       98.1 │
+└─────────────────────────────────────┴────────────┴────────┴───────────┴────────────┴────────────┘
+                                      Top rules violated                                      
+┏━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  # ┃ Rule         ┃ Example message                                                        ┃
+┡━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 13 │ python:S3776 │ Refactor this function to reduce its Cognitive Complexity from 33 to t │
+│  9 │ python:S1135 │ Complete the task associated to this "TODO" comment.                   │
+│  8 │ python:S6546 │ Use a union type expression for this type hint.                        │
+│  5 │ python:S2638 │ Add a default value to parameter file. This method overrides argparse. │
+│  5 │ python:S1481 │ Replace the unused local variable "text" with "_".                     │
+│  4 │ python:S1134 │ Take the required action to fix the issue indicated by this "FIXME" co │
+└────┴──────────────┴────────────────────────────────────────────────────────────────────────┘

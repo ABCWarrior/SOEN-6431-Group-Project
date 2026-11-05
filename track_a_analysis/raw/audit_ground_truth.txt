@@ -1,0 +1,11 @@
+Ground-truth checks, 2026-11-05T02:19:41.471492-05:00
+
+Installed urllib3 create_urllib3_context signature: (ssl_version: 'int | None' = None, cert_reqs: 'int | None' = None, options: 'int | None' = None, ciphers: 'str | None' = None, ssl_minimum_version: 'int | None' = None, ssl_maximum_version: 'int | None' = None, verify_flags: 'int | None' = None) -> 'ssl.SSLContext'
+HTTPieHTTPSAdapter._create_ssl_context(verify=True): PASS, observed verify_mode=CERT_REQUIRED (2), expected CERT_REQUIRED (2)
+HTTPieHTTPSAdapter._create_ssl_context(verify=False): PASS, observed verify_mode=CERT_NONE (0), expected CERT_NONE (0)
+argparse.HelpFormatter._split_lines: (self, text, width)
+HTTPieHelpFormatter._split_lines: (self, text, width)
+Keyword width call: PASS, returned ['sample help', '']
+argparse.Action.__call__: (self, parser, namespace, values, option_string=None)
+Manual.__call__: (self, parser, namespace, values, option_string=None)
+LazyChoices.__call__: (self, parser, namespace, values, option_string=None)

@@ -1,0 +1,696 @@
+{
+ "httpie/__init__.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 4.0,
+  "sqale_index": 0.0
+ },
+ "httpie/__main__.py": {
+  "coverage": 100.0,
+  "complexity": 2.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 2.0,
+  "ncloc": 11.0,
+  "sqale_index": 0.0
+ },
+ "httpie/adapters.py": {
+  "coverage": 100.0,
+  "complexity": 1.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 7.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/argparser.py": {
+  "coverage": 94.3,
+  "complexity": 133.0,
+  "code_smells": 11.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 170.0,
+  "ncloc": 435.0,
+  "sqale_index": 69.0
+ },
+ "httpie/cli/argtypes.py": {
+  "coverage": 94.9,
+  "complexity": 38.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 47.0,
+  "ncloc": 162.0,
+  "sqale_index": 10.0
+ },
+ "httpie/cli/constants.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 101.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/definition.py": {
+  "coverage": 92.6,
+  "complexity": 9.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 6.0,
+  "ncloc": 859.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/dicts.py": {
+  "coverage": 97.5,
+  "complexity": 13.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 13.0,
+  "ncloc": 41.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/exceptions.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 2.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/nested_json/__init__.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 10.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/nested_json/errors.py": {
+  "coverage": 100.0,
+  "complexity": 3.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 1.0,
+  "ncloc": 23.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/nested_json/interpret.py": {
+  "coverage": 96.1,
+  "complexity": 21.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 40.0,
+  "ncloc": 107.0,
+  "sqale_index": 23.0
+ },
+ "httpie/cli/nested_json/parse.py": {
+  "coverage": 95.3,
+  "complexity": 25.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 52.0,
+  "ncloc": 150.0,
+  "sqale_index": 29.0
+ },
+ "httpie/cli/nested_json/tokens.py": {
+  "coverage": 91.8,
+  "complexity": 9.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 10.0,
+  "ncloc": 62.0,
+  "sqale_index": 10.0
+ },
+ "httpie/cli/options.py": {
+  "coverage": 97.6,
+  "complexity": 39.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 25.0,
+  "ncloc": 192.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/requestitems.py": {
+  "coverage": 92.0,
+  "complexity": 30.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 25.0,
+  "ncloc": 178.0,
+  "sqale_index": 0.0
+ },
+ "httpie/cli/utils.py": {
+  "coverage": 95.1,
+  "complexity": 14.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 6.0,
+  "ncloc": 66.0,
+  "sqale_index": 0.0
+ },
+ "httpie/client.py": {
+  "coverage": 100.0,
+  "complexity": 66.0,
+  "code_smells": 4.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 77.0,
+  "ncloc": 285.0,
+  "sqale_index": 60.0
+ },
+ "httpie/compat.py": {
+  "coverage": 44.6,
+  "complexity": 16.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 16.0,
+  "ncloc": 65.0,
+  "sqale_index": 0.0
+ },
+ "httpie/config.py": {
+  "coverage": 97.9,
+  "complexity": 24.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 11.0,
+  "ncloc": 112.0,
+  "sqale_index": 5.0
+ },
+ "httpie/context.py": {
+  "coverage": 89.2,
+  "complexity": 29.0,
+  "code_smells": 3.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 31.0,
+  "ncloc": 160.0,
+  "sqale_index": 15.0
+ },
+ "httpie/cookies.py": {
+  "coverage": 100.0,
+  "complexity": 4.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 2.0,
+  "ncloc": 11.0,
+  "sqale_index": 0.0
+ },
+ "httpie/core.py": {
+  "coverage": 95.3,
+  "complexity": 54.0,
+  "code_smells": 5.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 99.0,
+  "ncloc": 238.0,
+  "sqale_index": 83.0
+ },
+ "httpie/downloads.py": {
+  "coverage": 96.6,
+  "complexity": 63.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 60.0,
+  "ncloc": 244.0,
+  "sqale_index": 0.0
+ },
+ "httpie/encoding.py": {
+  "coverage": 100.0,
+  "complexity": 6.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 4.0,
+  "ncloc": 18.0,
+  "sqale_index": 0.0
+ },
+ "httpie/internal/__build_channel__.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 1.0,
+  "sqale_index": 0.0
+ },
+ "httpie/internal/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/internal/daemon_runner.py": {
+  "coverage": 85.7,
+  "complexity": 4.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 31.0,
+  "sqale_index": 0.0
+ },
+ "httpie/internal/daemons.py": {
+  "coverage": 48.3,
+  "complexity": 11.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 10.0,
+  "ncloc": 71.0,
+  "sqale_index": 0.0
+ },
+ "httpie/internal/update_warnings.py": {
+  "coverage": 94.8,
+  "complexity": 23.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 18.0,
+  "ncloc": 110.0,
+  "sqale_index": 0.0
+ },
+ "httpie/legacy/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/legacy/v3_1_0_session_cookie_format.py": {
+  "coverage": 100.0,
+  "complexity": 13.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 17.0,
+  "ncloc": 78.0,
+  "sqale_index": 0.0
+ },
+ "httpie/legacy/v3_2_0_session_header_format.py": {
+  "coverage": 100.0,
+  "complexity": 9.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 9.0,
+  "ncloc": 51.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/__main__.py": {
+  "coverage": 84.8,
+  "complexity": 7.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 9.0,
+  "ncloc": 42.0,
+  "sqale_index": 5.0
+ },
+ "httpie/manager/cli.py": {
+  "coverage": 100.0,
+  "complexity": 7.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 8.0,
+  "ncloc": 163.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/compat.py": {
+  "coverage": 62.9,
+  "complexity": 9.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 9.0,
+  "ncloc": 46.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/core.py": {
+  "coverage": 95.0,
+  "complexity": 5.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 4.0,
+  "ncloc": 31.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/tasks/__init__.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 10.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/tasks/check_updates.py": {
+  "coverage": 100.0,
+  "complexity": 1.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 8.0,
+  "sqale_index": 5.0
+ },
+ "httpie/manager/tasks/export_args.py": {
+  "coverage": 92.9,
+  "complexity": 2.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 2.0,
+  "ncloc": 21.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/tasks/plugins.py": {
+  "coverage": 79.7,
+  "complexity": 44.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 54.0,
+  "ncloc": 188.0,
+  "sqale_index": 0.0
+ },
+ "httpie/manager/tasks/sessions.py": {
+  "coverage": 95.3,
+  "complexity": 12.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 10.0,
+  "ncloc": 68.0,
+  "sqale_index": 0.0
+ },
+ "httpie/models.py": {
+  "coverage": 95.6,
+  "complexity": 35.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 16.0,
+  "ncloc": 170.0,
+  "sqale_index": 10.0
+ },
+ "httpie/output/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/formatters/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/formatters/colors.py": {
+  "coverage": 100.0,
+  "complexity": 28.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 29.0,
+  "ncloc": 308.0,
+  "sqale_index": 9.0
+ },
+ "httpie/output/formatters/headers.py": {
+  "coverage": 100.0,
+  "complexity": 2.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 9.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/formatters/json.py": {
+  "coverage": 100.0,
+  "complexity": 4.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 5.0,
+  "ncloc": 27.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/formatters/xml.py": {
+  "coverage": 100.0,
+  "complexity": 14.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 13.0,
+  "ncloc": 53.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/lexers/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/lexers/common.py": {
+  "coverage": 100.0,
+  "complexity": 3.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 3.0,
+  "ncloc": 5.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/lexers/http.py": {
+  "coverage": 86.4,
+  "complexity": 3.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 1.0,
+  "ncloc": 75.0,
+  "sqale_index": 10.0
+ },
+ "httpie/output/lexers/json.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 18.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/lexers/metadata.py": {
+  "coverage": 82.4,
+  "complexity": 3.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 5.0,
+  "ncloc": 48.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/models.py": {
+  "coverage": 96.3,
+  "complexity": 6.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 5.0,
+  "ncloc": 31.0,
+  "sqale_index": 5.0
+ },
+ "httpie/output/processing.py": {
+  "coverage": 100.0,
+  "complexity": 17.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 18.0,
+  "ncloc": 37.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/streams.py": {
+  "coverage": 98.6,
+  "complexity": 45.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 51.0,
+  "ncloc": 163.0,
+  "sqale_index": 15.0
+ },
+ "httpie/output/ui/__init__.py": {
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 0.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/ui/man_pages.py": {
+  "coverage": 0.0,
+  "complexity": 4.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 4.0,
+  "ncloc": 26.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/ui/palette.py": {
+  "coverage": 87.5,
+  "complexity": 9.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 10.0,
+  "ncloc": 222.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/ui/rich_help.py": {
+  "coverage": 52.9,
+  "complexity": 22.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 41.0,
+  "ncloc": 187.0,
+  "sqale_index": 11.0
+ },
+ "httpie/output/ui/rich_palette.py": {
+  "coverage": 93.5,
+  "complexity": 8.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 9.0,
+  "ncloc": 51.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/ui/rich_progress.py": {
+  "coverage": 74.1,
+  "complexity": 16.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 7.0,
+  "ncloc": 107.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/ui/rich_utils.py": {
+  "coverage": 0.0,
+  "complexity": 2.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 22.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/utils.py": {
+  "coverage": 100.0,
+  "complexity": 3.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 3.0,
+  "ncloc": 20.0,
+  "sqale_index": 0.0
+ },
+ "httpie/output/writer.py": {
+  "coverage": 82.9,
+  "complexity": 33.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 41.0,
+  "ncloc": 168.0,
+  "sqale_index": 11.0
+ },
+ "httpie/plugins/__init__.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 4.0,
+  "sqale_index": 0.0
+ },
+ "httpie/plugins/base.py": {
+  "coverage": 89.5,
+  "complexity": 9.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 38.0,
+  "sqale_index": 5.0
+ },
+ "httpie/plugins/builtin.py": {
+  "coverage": 100.0,
+  "complexity": 7.0,
+  "code_smells": 4.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 47.0,
+  "sqale_index": 60.0
+ },
+ "httpie/plugins/manager.py": {
+  "coverage": 98.5,
+  "complexity": 22.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 8.0,
+  "ncloc": 93.0,
+  "sqale_index": 5.0
+ },
+ "httpie/plugins/registry.py": {
+  "coverage": 100.0,
+  "complexity": 0.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 0.0,
+  "ncloc": 16.0,
+  "sqale_index": 0.0
+ },
+ "httpie/sessions.py": {
+  "coverage": 98.1,
+  "complexity": 48.0,
+  "code_smells": 2.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 48.0,
+  "ncloc": 230.0,
+  "sqale_index": 18.0
+ },
+ "httpie/ssl_.py": {
+  "coverage": 95.3,
+  "complexity": 13.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 5.0,
+  "ncloc": 74.0,
+  "sqale_index": 0.0
+ },
+ "httpie/status.py": {
+  "coverage": 100.0,
+  "complexity": 3.0,
+  "code_smells": 0.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 5.0,
+  "ncloc": 21.0,
+  "sqale_index": 0.0
+ },
+ "httpie/uploads.py": {
+  "coverage": 86.2,
+  "complexity": 44.0,
+  "code_smells": 4.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 51.0,
+  "ncloc": 204.0,
+  "sqale_index": 15.0
+ },
+ "httpie/utils.py": {
+  "coverage": 88.5,
+  "complexity": 42.0,
+  "code_smells": 1.0,
+  "duplicated_lines": 0.0,
+  "cognitive_complexity": 36.0,
+  "ncloc": 166.0,
+  "sqale_index": 1.0
+ }
+}

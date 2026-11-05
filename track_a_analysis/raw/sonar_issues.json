@@ -1,0 +1,6281 @@
+[
+ {
+  "key": "a18304d0-c8d4-4e03-a233-47a522b0bb1f",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+  "project": "httpie-cli",
+  "line": 30,
+  "hash": "af74ee4b01c719bec782e9e376a94da4",
+  "textRange": {
+   "startLine": 30,
+   "endLine": 30,
+   "startOffset": 4,
+   "endOffset": 13
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 37,
+       "endLine": 37,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 38,
+       "endLine": 38,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 45,
+       "endLine": 45,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 61,
+       "endLine": 61,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 63,
+       "endLine": 63,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 65,
+       "endLine": 65,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 68,
+       "endLine": 68,
+       "startOffset": 4,
+       "endOffset": 7
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 70,
+       "endLine": 70,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 72,
+       "endLine": 72,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 74,
+       "endLine": 74,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 78,
+       "endLine": 78,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 80,
+       "endLine": 80,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 88,
+       "endLine": 88,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 91,
+       "endLine": 91,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 94,
+       "endLine": 94,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 96,
+       "endLine": 96,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/interpret.py",
+      "textRange": {
+       "startLine": 101,
+       "endLine": 101,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 33 to the 15 allowed.",
+  "effort": "23min",
+  "debt": "23min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-10-01T10:38:19+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "4e90d494-6ddb-4f05-993c-b904f0476836",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+  "project": "httpie-cli",
+  "line": 23,
+  "hash": "18e8ec7c294645400522daa79c15d156",
+  "textRange": {
+   "startLine": 23,
+   "endLine": 23,
+   "startOffset": 4,
+   "endOffset": 9
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 49,
+       "endLine": 49,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 52,
+       "endLine": 52,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 54,
+       "endLine": 54,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 59,
+       "endLine": 59,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 61,
+       "endLine": 61,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 63,
+       "endLine": 63,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 72,
+       "endLine": 72,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 81,
+       "endLine": 81,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 84,
+       "endLine": 84,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 87,
+       "endLine": 87,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 91,
+       "endLine": 91,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 94,
+       "endLine": 94,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 96,
+       "endLine": 96,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 109,
+       "endLine": 109,
+       "startOffset": 4,
+       "endOffset": 9
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 113,
+       "endLine": 113,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 115,
+       "endLine": 115,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 118,
+       "endLine": 118,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 121,
+       "endLine": 121,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.",
+  "effort": "17min",
+  "debt": "17min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-10-01T10:38:19+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "a4b2f145-b8b9-4804-a46c-cfa1a4ea2aa1",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+  "project": "httpie-cli",
+  "line": 127,
+  "hash": "4e8ad66fad5d7c962f47bbcf3a45c69e",
+  "textRange": {
+   "startLine": 127,
+   "endLine": 127,
+   "startOffset": 4,
+   "endOffset": 12
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 134,
+       "endLine": 134,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 139,
+       "endLine": 139,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 140,
+       "endLine": 140,
+       "startOffset": 12,
+       "endOffset": 15
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 146,
+       "endLine": 146,
+       "startOffset": 16,
+       "endOffset": 22
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 148,
+       "endLine": 148,
+       "startOffset": 16,
+       "endOffset": 20
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 162,
+       "endLine": 162,
+       "startOffset": 4,
+       "endOffset": 9
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 164,
+       "endLine": 164,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 167,
+       "endLine": 167,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 167,
+       "endLine": 167,
+       "startOffset": 32,
+       "endOffset": 35
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 168,
+       "endLine": 168,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 170,
+       "endLine": 170,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/nested_json/parse.py",
+      "textRange": {
+       "startLine": 174,
+       "endLine": 174,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+  "effort": "12min",
+  "debt": "12min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-10-01T10:38:19+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "19191bd8-40c4-4340-ab79-8761e27031c1",
+  "rule": "python:S2836",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/cli/nested_json/tokens.py",
+  "project": "httpie-cli",
+  "line": 22,
+  "hash": "f680da5198ab96a274e835cc5f7ec6aa",
+  "textRange": {
+   "startLine": 22,
+   "endLine": 22,
+   "startOffset": 8,
+   "endOffset": 12
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Add a \"break\" statement or remove this \"else\" clause.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2022-10-01T10:38:19+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "d013ecb1-3dee-487d-8523-b6dd86369dc6",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/cli/nested_json/tokens.py",
+  "project": "httpie-cli",
+  "line": 39,
+  "hash": "9e2eb4a6353ef1be47234752618f06e5",
+  "textRange": {
+   "startLine": 39,
+   "endLine": 39,
+   "startOffset": 11,
+   "endOffset": 26
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2022-10-01T10:38:19+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "c0d09988-79b9-48aa-887a-c2a165058a4b",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/core.py",
+  "project": "httpie-cli",
+  "line": 32,
+  "hash": "0791c2b5bc7756ead7249b26ba37a939",
+  "textRange": {
+   "startLine": 32,
+   "endLine": 32,
+   "startOffset": 4,
+   "endOffset": 12
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 43,
+       "endLine": 43,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 48,
+       "endLine": 48,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 48,
+       "endLine": 48,
+       "startOffset": 27,
+       "endOffset": 30
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 52,
+       "endLine": 52,
+       "startOffset": 43,
+       "endOffset": 45
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 56,
+       "endLine": 56,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 58,
+       "endLine": 58,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 63,
+       "endLine": 63,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 66,
+       "endLine": 66,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 69,
+       "endLine": 69,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 71,
+       "endLine": 71,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 81,
+       "endLine": 81,
+       "startOffset": 4,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 83,
+       "endLine": 83,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 86,
+       "endLine": 86,
+       "startOffset": 4,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 88,
+       "endLine": 88,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 91,
+       "endLine": 91,
+       "startOffset": 4,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 92,
+       "endLine": 92,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 94,
+       "endLine": 94,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 97,
+       "endLine": 97,
+       "startOffset": 4,
+       "endOffset": 8
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 104,
+       "endLine": 104,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 106,
+       "endLine": 106,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 109,
+       "endLine": 109,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 110,
+       "endLine": 110,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 112,
+       "endLine": 112,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 115,
+       "endLine": 115,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 118,
+       "endLine": 118,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 124,
+       "endLine": 124,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 127,
+       "endLine": 127,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 128,
+       "endLine": 128,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 130,
+       "endLine": 130,
+       "startOffset": 16,
+       "endOffset": 20
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 133,
+       "endLine": 133,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 138,
+       "endLine": 138,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 60 to the 15 allowed.",
+  "effort": "50min",
+  "debt": "50min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-10-01T10:38:19+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "c7fdeb34-c714-4388-8f3a-3abd8c817769",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/output/writer.py",
+  "project": "httpie-cli",
+  "line": 153,
+  "hash": "bee229d132bce42e1d6b41f1ef42c283",
+  "textRange": {
+   "startLine": 153,
+   "endLine": 153,
+   "startOffset": 4,
+   "endOffset": 30
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 164,
+       "endLine": 164,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 164,
+       "endLine": 164,
+       "startOffset": 21,
+       "endOffset": 24
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 168,
+       "endLine": 168,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 172,
+       "endLine": 172,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 172,
+       "endLine": 172,
+       "startOffset": 29,
+       "endOffset": 32
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 177,
+       "endLine": 177,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 181,
+       "endLine": 181,
+       "startOffset": 4,
+       "endOffset": 8
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 186,
+       "endLine": 186,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 191,
+       "endLine": 191,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/writer.py",
+      "textRange": {
+       "startLine": 192,
+       "endLine": 192,
+       "startOffset": 40,
+       "endOffset": 42
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+  "effort": "6min",
+  "debt": "6min",
+  "author": "github@kamash.com",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-05-06T06:59:22+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "e6ae6d01-a3b9-44a3-b0a3-756d75c5b1f3",
+  "rule": "python:S4830",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/internal/update_warnings.py",
+  "project": "httpie-cli",
+  "line": 44,
+  "hash": "183b0be08217dd909a262ee7af1afe1d",
+  "textRange": {
+   "startLine": 44,
+   "endLine": 44,
+   "startOffset": 55,
+   "endOffset": 60
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Enable server certificate validation on this SSL/TLS connection.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "cwe",
+   "privacy",
+   "ssl"
+  ],
+  "creationDate": "2022-05-05T18:18:20+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "VULNERABILITY",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "TRUSTWORTHY",
+  "cleanCodeAttributeCategory": "RESPONSIBLE",
+  "impacts": [
+   {
+    "softwareQuality": "SECURITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "004bb4ee-40b6-4fb9-b547-c33c12f3e12d",
+  "rule": "python:S1172",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/manager/tasks/check_updates.py",
+  "project": "httpie-cli",
+  "line": 7,
+  "hash": "d5246c5c6362f3f5e8846c64bfacf17f",
+  "textRange": {
+   "startLine": 7,
+   "endLine": 7,
+   "startOffset": 40,
+   "endOffset": 64
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove the unused function parameter \"args\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2022-05-05T18:18:20+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "5786c0b9-6e62-4f6f-b746-126fc6a9459d",
+  "rule": "python:S1854",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/utils.py",
+  "project": "httpie-cli",
+  "line": 237,
+  "hash": "7aad5c8ae86b7122fed95261083c1036",
+  "textRange": {
+   "startLine": 237,
+   "endLine": 237,
+   "startOffset": 8,
+   "endOffset": 53
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/utils.py",
+      "textRange": {
+       "startLine": 238,
+       "endLine": 238,
+       "startOffset": 8,
+       "endOffset": 53
+      },
+      "msg": "'major' is reassigned here.",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Remove this assignment to local variable 'major'; the value is never used.",
+  "effort": "1min",
+  "debt": "1min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "cwe",
+   "unused"
+  ],
+  "creationDate": "2022-04-14T15:11:12+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "b805935a-13e8-4400-8231-5afadc10f8eb",
+  "rule": "python:S2638",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 575,
+  "hash": "3211a7ef2d52e80d46042d274f6af1b0",
+  "textRange": {
+   "startLine": 575,
+   "endLine": 575,
+   "startOffset": 26,
+   "endOffset": 30
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Add a default value to parameter file. This method overrides argparse.ArgumentParser.print_usage.",
+  "effort": "15min",
+  "debt": "15min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2022-04-14T14:43:10+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "46f13113-f1d1-40be-b979-cb0849c3dffc",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/output/ui/rich_help.py",
+  "project": "httpie-cli",
+  "line": 128,
+  "hash": "b2f84b8e90827caba05194ea1cb425ed",
+  "textRange": {
+   "startLine": 128,
+   "endLine": 128,
+   "startOffset": 4,
+   "endOffset": 19
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 143,
+       "endLine": 143,
+       "startOffset": 4,
+       "endOffset": 7
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 146,
+       "endLine": 146,
+       "startOffset": 8,
+       "endOffset": 11
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 147,
+       "endLine": 147,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 151,
+       "endLine": 151,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 159,
+       "endLine": 159,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 164,
+       "endLine": 164,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 182,
+       "endLine": 182,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 203,
+       "endLine": 203,
+       "startOffset": 4,
+       "endOffset": 7
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/ui/rich_help.py",
+      "textRange": {
+       "startLine": 211,
+       "endLine": 211,
+       "startOffset": 8,
+       "endOffset": 11
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.",
+  "effort": "11min",
+  "debt": "11min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-04-14T14:43:10+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "0232d9b1-b774-4c8d-b513-6c6964fe78cd",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/sessions.py",
+  "project": "httpie-cli",
+  "line": 200,
+  "hash": "4725b1948f2d8ca0809a59131ef7df02",
+  "textRange": {
+   "startLine": 200,
+   "endLine": 200,
+   "startOffset": 8,
+   "endOffset": 28
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 202,
+       "endLine": 202,
+       "startOffset": 8,
+       "endOffset": 11
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 203,
+       "endLine": 203,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 207,
+       "endLine": 207,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 210,
+       "endLine": 210,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 210,
+       "endLine": 210,
+       "startOffset": 44,
+       "endOffset": 47
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 213,
+       "endLine": 213,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 214,
+       "endLine": 214,
+       "startOffset": 16,
+       "endOffset": 19
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 215,
+       "endLine": 215,
+       "startOffset": 20,
+       "endOffset": 22
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 222,
+       "endLine": 222,
+       "startOffset": 12,
+       "endOffset": 15
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 223,
+       "endLine": 223,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/sessions.py",
+      "textRange": {
+       "startLine": 225,
+       "endLine": 225,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.",
+  "effort": "13min",
+  "debt": "13min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2022-04-03T13:48:31+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "d9da099b-0549-456e-9b26-8ee7422cfad7",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/output/models.py",
+  "project": "httpie-cli",
+  "line": 20,
+  "hash": "eba8b152ba670e44ca33a31cb1dad403",
+  "textRange": {
+   "startLine": 20,
+   "endLine": 20,
+   "startOffset": 14,
+   "endOffset": 45
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2022-03-07T22:34:04+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "7f7a2e59-4cde-45ed-91aa-1134065fbaf9",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/sessions.py",
+  "project": "httpie-cli",
+  "line": 130,
+  "hash": "59e518d54ac73af5ce1b9fdfb0b09df0",
+  "textRange": {
+   "startLine": 130,
+   "endLine": 130,
+   "startOffset": 14,
+   "endOffset": 30
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2022-03-07T20:29:48+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "420ca9e7-f1c0-487d-84b6-c1a406c28b92",
+  "rule": "python:S1172",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/uploads.py",
+  "project": "httpie-cli",
+  "line": 99,
+  "hash": "9091837dff6faefadc0c2cce63fb5d83",
+  "textRange": {
+   "startLine": 99,
+   "endLine": 99,
+   "startOffset": 52,
+   "endOffset": 60
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove the unused function parameter \"file\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2022-03-07T13:01:29+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "37a4ddad-e135-4916-9446-764a23dbfe24",
+  "rule": "python:S5717",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/core.py",
+  "project": "httpie-cli",
+  "line": 36,
+  "hash": "0e4c3808d490434df3f4cb306c8d4f32",
+  "textRange": {
+   "startLine": 36,
+   "endLine": 36,
+   "startOffset": 4,
+   "endOffset": 36
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 40,
+       "endLine": 40,
+       "startOffset": 4,
+       "endOffset": 7
+      },
+      "msg": "The parameter is modified.",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Change this default value to \"None\" and initialize this parameter inside the function/method.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "bad-practice",
+   "pitfall"
+  ],
+  "creationDate": "2022-01-24T18:13:47+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "02117878-c448-43c2-880c-b642acae6248",
+  "rule": "python:S125",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/models.py",
+  "project": "httpie-cli",
+  "line": 95,
+  "hash": "1f5896286f3f073e058ea3869c835d99",
+  "textRange": {
+   "startLine": 95,
+   "endLine": 95,
+   "startOffset": 8,
+   "endOffset": 75
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove this commented out code.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2022-01-23T12:52:38+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "a51e92ed-c3af-454e-b5a7-a1249b880d1f",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/uploads.py",
+  "project": "httpie-cli",
+  "line": 65,
+  "hash": "acc5581cb27dd04daf147610847b148e",
+  "textRange": {
+   "startLine": 65,
+   "endLine": 65,
+   "startOffset": 19,
+   "endOffset": 36
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2021-12-29T09:41:44+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "0a0dc463-4d0e-4eb0-aadd-d63ba218224e",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/uploads.py",
+  "project": "httpie-cli",
+  "line": 152,
+  "hash": "88591a74a795cd7e9df0b331ed2d2d7d",
+  "textRange": {
+   "startLine": 152,
+   "endLine": 152,
+   "startOffset": 5,
+   "endOffset": 36
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2021-12-29T09:41:44+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "c9cb23f1-a884-4e3a-96ea-1b1943a41cfd",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 282,
+  "hash": "8c2884b71486dd096b01e7b337328af7",
+  "textRange": {
+   "startLine": 282,
+   "endLine": 282,
+   "startOffset": 8,
+   "endOffset": 21
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 289,
+       "endLine": 289,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 289,
+       "endLine": 289,
+       "startOffset": 34,
+       "endOffset": 37
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 290,
+       "endLine": 290,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 293,
+       "endLine": 293,
+       "startOffset": 40,
+       "endOffset": 42
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 301,
+       "endLine": 301,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 301,
+       "endLine": 301,
+       "startOffset": 38,
+       "endOffset": 40
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 302,
+       "endLine": 302,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 306,
+       "endLine": 306,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 308,
+       "endLine": 308,
+       "startOffset": 20,
+       "endOffset": 23
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 311,
+       "endLine": 311,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 319,
+       "endLine": 319,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 319,
+       "endLine": 319,
+       "startOffset": 35,
+       "endOffset": 38
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 326,
+       "endLine": 326,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 326,
+       "endLine": 326,
+       "startOffset": 38,
+       "endOffset": 40
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 328,
+       "endLine": 328,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 329,
+       "endLine": 329,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 332,
+       "endLine": 332,
+       "startOffset": 16,
+       "endOffset": 20
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 335,
+       "endLine": 335,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 336,
+       "endLine": 336,
+       "startOffset": 24,
+       "endOffset": 27
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 337,
+       "endLine": 337,
+       "startOffset": 20,
+       "endOffset": 22
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 345,
+       "endLine": 345,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 345,
+       "endLine": 345,
+       "startOffset": 36,
+       "endOffset": 39
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 352,
+       "endLine": 352,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 352,
+       "endLine": 352,
+       "startOffset": 30,
+       "endOffset": 33
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 40 to the 15 allowed.",
+  "effort": "30min",
+  "debt": "30min",
+  "author": "sebaczech@gmail.com",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2021-12-29T09:00:47+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "277afa93-0763-47be-8294-b47fc7ed43ea",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/core.py",
+  "project": "httpie-cli",
+  "line": 170,
+  "hash": "454db36b16add3fdcf5713da9bb0a362",
+  "textRange": {
+   "startLine": 170,
+   "endLine": 170,
+   "startOffset": 4,
+   "endOffset": 11
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 192,
+       "endLine": 192,
+       "startOffset": 12,
+       "endOffset": 15
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 194,
+       "endLine": 194,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 203,
+       "endLine": 203,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 213,
+       "endLine": 213,
+       "startOffset": 8,
+       "endOffset": 11
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 217,
+       "endLine": 217,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 217,
+       "endLine": 217,
+       "startOffset": 55,
+       "endOffset": 58
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 217,
+       "endLine": 217,
+       "startOffset": 76,
+       "endOffset": 78
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 221,
+       "endLine": 221,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 222,
+       "endLine": 222,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 224,
+       "endLine": 224,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 227,
+       "endLine": 227,
+       "startOffset": 57,
+       "endOffset": 60
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 228,
+       "endLine": 228,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 230,
+       "endLine": 230,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 230,
+       "endLine": 230,
+       "startOffset": 37,
+       "endOffset": 39
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 232,
+       "endLine": 232,
+       "startOffset": 20,
+       "endOffset": 22
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 232,
+       "endLine": 232,
+       "startOffset": 57,
+       "endOffset": 60
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 232,
+       "endLine": 232,
+       "startOffset": 84,
+       "endOffset": 86
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 245,
+       "endLine": 245,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 247,
+       "endLine": 247,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 247,
+       "endLine": 247,
+       "startOffset": 22,
+       "endOffset": 25
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 255,
+       "endLine": 255,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 264,
+       "endLine": 264,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 264,
+       "endLine": 264,
+       "startOffset": 22,
+       "endOffset": 25
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 266,
+       "endLine": 266,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/core.py",
+      "textRange": {
+       "startLine": 266,
+       "endLine": 266,
+       "startOffset": 28,
+       "endOffset": 31
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 38 to the 15 allowed.",
+  "effort": "28min",
+  "debt": "28min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2021-12-23T20:13:25+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "0ef5ffe2-c237-4d8a-b8ac-d5fc0f5dc7d9",
+  "rule": "python:S1481",
+  "severity": "MINOR",
+  "component": "httpie-cli:httpie/output/lexers/http.py",
+  "project": "httpie-cli",
+  "line": 30,
+  "hash": "a4d69ae64999de079369b6b138cff507",
+  "textRange": {
+   "startLine": 30,
+   "endLine": 30,
+   "startOffset": 17,
+   "endOffset": 21
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Replace the unused local variable \"text\" with \"_\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2021-12-19T10:41:42+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "LOW"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "2887d135-f9c8-4435-82b8-cd1d94515bb6",
+  "rule": "python:S1481",
+  "severity": "MINOR",
+  "component": "httpie-cli:httpie/output/lexers/http.py",
+  "project": "httpie-cli",
+  "line": 30,
+  "hash": "a4d69ae64999de079369b6b138cff507",
+  "textRange": {
+   "startLine": 30,
+   "endLine": 30,
+   "startOffset": 23,
+   "endOffset": 29
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Replace the unused local variable \"reason\" with \"_\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2021-12-19T10:41:42+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "LOW"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "5ffb423d-6492-433b-87c7-cf83adc123cb",
+  "rule": "python:S5754",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/plugins/manager.py",
+  "project": "httpie-cli",
+  "line": 71,
+  "hash": "3263a0f2e515d52afdba06c03d02b373",
+  "textRange": {
+   "startLine": 71,
+   "endLine": 71,
+   "startOffset": 19,
+   "endOffset": 32
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Catch a more specific exception or reraise the exception",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "error-handling",
+   "bad-practice",
+   "suspicious"
+  ],
+  "creationDate": "2021-12-08T15:45:07+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "e83d0a07-9788-4019-b6e7-c42b8de64b31",
+  "rule": "python:S1481",
+  "severity": "MINOR",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 97,
+  "hash": "fde5bb6d8e4a549256ccc3bd854abc7f",
+  "textRange": {
+   "startLine": 97,
+   "endLine": 97,
+   "startOffset": 19,
+   "endOffset": 29
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Replace the unused local variable \"no_options\" with \"_\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2021-11-30T08:12:51+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "LOW"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "0a017f16-5ddf-4850-a8ad-a9e118d09683",
+  "rule": "python:S5754",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/manager/__main__.py",
+  "project": "httpie-cli",
+  "line": 26,
+  "hash": "0595855554cd1e385313a337d5393f9e",
+  "textRange": {
+   "startLine": 26,
+   "endLine": 26,
+   "startOffset": 27,
+   "endOffset": 37
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Reraise this exception to stop the application as the user expects",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "error-handling",
+   "bad-practice",
+   "suspicious"
+  ],
+  "creationDate": "2021-11-30T08:12:51+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "de4937f1-1fb7-46e4-9948-6cdf24bdd858",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/manager/tasks/plugins.py",
+  "project": "httpie-cli",
+  "line": 167,
+  "hash": "ac198e0aadfd51caf4f82a9cb562cebe",
+  "textRange": {
+   "startLine": 167,
+   "endLine": 167,
+   "startOffset": 8,
+   "endOffset": 65
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2021-11-30T08:12:51+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "e9e91b5e-455d-4056-a410-6ae407007a51",
+  "rule": "python:S1515",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/client.py",
+  "project": "httpie-cli",
+  "line": 247,
+  "hash": "ae0960a3f7ba220c4f941f0109273770",
+  "textRange": {
+   "startLine": 247,
+   "endLine": 247,
+   "startOffset": 47,
+   "endOffset": 60
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 247,
+       "endLine": 247,
+       "startOffset": 12,
+       "endOffset": 18
+      },
+      "msg": "Lambda capturing the variable",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 242,
+       "endLine": 242,
+       "startOffset": 8,
+       "endOffset": 21
+      },
+      "msg": "Assignment in the loop",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Add a parameter to the parent lambda function and use variable \"prepared_name\" as its default value; The value of \"prepared_name\" might change at the next loop iteration.",
+  "effort": "30min",
+  "debt": "30min",
+  "author": "isidentical@gmail.com",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2021-10-31T14:04:39+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "1f3ab7a0-ddf8-490f-8f70-8c6a6f3519a0",
+  "rule": "python:S1481",
+  "severity": "MINOR",
+  "component": "httpie-cli:httpie/models.py",
+  "project": "httpie-cli",
+  "line": 49,
+  "hash": "913f2cd3c9f5f98d8605300e12b31146",
+  "textRange": {
+   "startLine": 49,
+   "endLine": 49,
+   "startOffset": 8,
+   "endOffset": 10
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Replace the unused local variable \"ct\" with \"_\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "contact@tiger-222.fr",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2021-10-06T15:27:07+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "LOW"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "772a1c64-1e2d-4fbc-b8d6-392d0c38bb50",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/output/formatters/colors.py",
+  "project": "httpie-cli",
+  "line": 142,
+  "hash": "f53468fb77762c5a600bdf72350afefa",
+  "textRange": {
+   "startLine": 142,
+   "endLine": 142,
+   "startOffset": 4,
+   "endOffset": 13
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 150,
+       "endLine": 150,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 152,
+       "endLine": 152,
+       "startOffset": 4,
+       "endOffset": 8
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 162,
+       "endLine": 162,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 167,
+       "endLine": 167,
+       "startOffset": 4,
+       "endOffset": 7
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 171,
+       "endLine": 171,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 173,
+       "endLine": 173,
+       "startOffset": 4,
+       "endOffset": 8
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 174,
+       "endLine": 174,
+       "startOffset": 8,
+       "endOffset": 11
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 177,
+       "endLine": 177,
+       "startOffset": 12,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 180,
+       "endLine": 180,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 180,
+       "endLine": 180,
+       "startOffset": 30,
+       "endOffset": 33
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 180,
+       "endLine": 180,
+       "startOffset": 45,
+       "endOffset": 47
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 184,
+       "endLine": 184,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 186,
+       "endLine": 186,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/formatters/colors.py",
+      "textRange": {
+       "startLine": 191,
+       "endLine": 191,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.",
+  "effort": "9min",
+  "debt": "9min",
+  "author": "contact@tiger-222.fr",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2021-09-21T09:15:43+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "05866fee-fc9a-4296-a254-eeb93fb1a4f3",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 448,
+  "hash": "015a499d58cb514cb87ab0255304ff8a",
+  "textRange": {
+   "startLine": 448,
+   "endLine": 448,
+   "startOffset": 8,
+   "endOffset": 20
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 459,
+       "endLine": 459,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 460,
+       "endLine": 460,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 463,
+       "endLine": 463,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 470,
+       "endLine": 470,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 470,
+       "endLine": 470,
+       "startOffset": 27,
+       "endOffset": 30
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 473,
+       "endLine": 473,
+       "startOffset": 12,
+       "endOffset": 15
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 474,
+       "endLine": 474,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 478,
+       "endLine": 478,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 487,
+       "endLine": 487,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 489,
+       "endLine": 489,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.",
+  "effort": "9min",
+  "debt": "9min",
+  "author": "jan.verbeek@posteo.nl",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2021-04-15T07:35:50+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "dc1ef1cd-88f4-4ea0-b860-f498e2196e18",
+  "rule": "python:S1481",
+  "severity": "MINOR",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 482,
+  "hash": "4c282f76459221ac2fed5d3f2066a688",
+  "textRange": {
+   "startLine": 482,
+   "endLine": 482,
+   "startOffset": 20,
+   "endOffset": 22
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Replace the unused local variable \"ct\" with \"_\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jan.verbeek@posteo.nl",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2021-04-15T07:35:50+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "LOW"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "da264a3e-f0e3-4774-92c4-7de0f4657947",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/core.py",
+  "project": "httpie-cli",
+  "line": 175,
+  "hash": "0f3443a8ba39d95c329d33c5d72d9025",
+  "textRange": {
+   "startLine": 175,
+   "endLine": 175,
+   "startOffset": 4,
+   "endOffset": 99
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2021-01-30T21:14:57+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "0bbd83b2-fa07-402a-81e5-2f3b43b1f7ab",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 188,
+  "hash": "9e86f7647a0104c4b16b04ea8a936848",
+  "textRange": {
+   "startLine": 188,
+   "endLine": 188,
+   "startOffset": 12,
+   "endOffset": 65
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-09-28T10:16:57+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "6700cae3-1354-438d-9010-923fcb0d893f",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/uploads.py",
+  "project": "httpie-cli",
+  "line": 162,
+  "hash": "64b28858853359ec8c293bed45fe44be",
+  "textRange": {
+   "startLine": 162,
+   "endLine": 162,
+   "startOffset": 12,
+   "endOffset": 64
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-09-28T10:16:57+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "ea16e603-3df8-4aa0-b6ea-4fef5efa74d1",
+  "rule": "python:S5914",
+  "severity": "MAJOR",
+  "component": "httpie-cli:tests/test_uploads.py",
+  "project": "httpie-cli",
+  "line": 314,
+  "hash": "aa6b4d52d4d9d80bd32e68dbcc4ec8b9",
+  "textRange": {
+   "startLine": 314,
+   "endLine": 314,
+   "startOffset": 15,
+   "endOffset": 29
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Replace this expression; its boolean value is constant.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "tests",
+   "confusing",
+   "suspicious"
+  ],
+  "creationDate": "2020-09-28T10:16:57+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "TEST",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "10d9c52b-6faf-4cc5-bbd8-84334ce1ddb0",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 79,
+  "hash": "a060ff27c05ae8637790819e5c7e8c8b",
+  "textRange": {
+   "startLine": 79,
+   "endLine": 79,
+   "startOffset": 0,
+   "endOffset": 58
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-06-16T10:20:13+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "d14e3cb0-8109-4f7a-a4f8-fba53ff165ad",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 283,
+  "hash": "9664c2177ac634207a24c25e999aee69",
+  "textRange": {
+   "startLine": 283,
+   "endLine": 283,
+   "startOffset": 8,
+   "endOffset": 48
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-06-16T09:05:00+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "ec25f6d7-c98b-4473-a8d7-7c05c74dab18",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/cli/argtypes.py",
+  "project": "httpie-cli",
+  "line": 202,
+  "hash": "1bbabf3d3923e17bceb4c880ee76a71a",
+  "textRange": {
+   "startLine": 202,
+   "endLine": 202,
+   "startOffset": 4,
+   "endOffset": 24
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 217,
+       "endLine": 217,
+       "startOffset": 32,
+       "endOffset": 34
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 218,
+       "endLine": 218,
+       "startOffset": 4,
+       "endOffset": 7
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 222,
+       "endLine": 222,
+       "startOffset": 8,
+       "endOffset": 14
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 225,
+       "endLine": 225,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 227,
+       "endLine": 227,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 228,
+       "endLine": 228,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 230,
+       "endLine": 230,
+       "startOffset": 12,
+       "endOffset": 16
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 233,
+       "endLine": 233,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 235,
+       "endLine": 235,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 238,
+       "endLine": 238,
+       "startOffset": 12,
+       "endOffset": 18
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argtypes.py",
+      "textRange": {
+       "startLine": 243,
+       "endLine": 243,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.",
+  "effort": "10min",
+  "debt": "10min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2020-05-27T14:01:17+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "014a6d9d-1641-4222-ac6e-fa3ed47f6cae",
+  "rule": "python:S930",
+  "severity": "BLOCKER",
+  "component": "httpie-cli:httpie/ssl_.py",
+  "project": "httpie-cli",
+  "line": 77,
+  "hash": "766265701de22aa002258416ef8f4e32",
+  "textRange": {
+   "startLine": 77,
+   "endLine": 77,
+   "startOffset": 12,
+   "endOffset": 27
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove this unexpected named argument 'ciphers'.",
+  "effort": "10min",
+  "debt": "10min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-05-23T18:30:25+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "BUG",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "RELIABILITY",
+    "severity": "BLOCKER"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "9ab8628c-1a90-4414-9574-925900bc3361",
+  "rule": "python:S930",
+  "severity": "BLOCKER",
+  "component": "httpie-cli:httpie/ssl_.py",
+  "project": "httpie-cli",
+  "line": 78,
+  "hash": "6174124448145e3002888bca2d34f9ea",
+  "textRange": {
+   "startLine": 78,
+   "endLine": 78,
+   "startOffset": 12,
+   "endOffset": 56
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove this unexpected named argument 'ssl_version'.",
+  "effort": "10min",
+  "debt": "10min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-05-23T18:30:25+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "BUG",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "RELIABILITY",
+    "severity": "BLOCKER"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "d46a49c6-e100-41df-9012-53ecece24a14",
+  "rule": "python:S930",
+  "severity": "BLOCKER",
+  "component": "httpie-cli:httpie/ssl_.py",
+  "project": "httpie-cli",
+  "line": 82,
+  "hash": "4aabbf4af59b6ce7f065919bc391f951",
+  "textRange": {
+   "startLine": 82,
+   "endLine": 82,
+   "startOffset": 12,
+   "endOffset": 68
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove this unexpected named argument 'cert_reqs'.",
+  "effort": "10min",
+  "debt": "10min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2020-05-23T18:30:25+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "BUG",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "RELIABILITY",
+    "severity": "BLOCKER"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "b907c182-745c-4e40-94ad-c33f16015007",
+  "rule": "python:S3776",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/client.py",
+  "project": "httpie-cli",
+  "line": 43,
+  "hash": "4e4faaae353218263195a26b5193489b",
+  "textRange": {
+   "startLine": 43,
+   "endLine": 43,
+   "startOffset": 4,
+   "endOffset": 20
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 50,
+       "endLine": 50,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 50,
+       "endLine": 50,
+       "startOffset": 20,
+       "endOffset": 22
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 54,
+       "endLine": 54,
+       "startOffset": 38,
+       "endOffset": 40
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 74,
+       "endLine": 74,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 77,
+       "endLine": 77,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 83,
+       "endLine": 83,
+       "startOffset": 8,
+       "endOffset": 12
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 87,
+       "endLine": 87,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 94,
+       "endLine": 94,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 99,
+       "endLine": 99,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 99,
+       "endLine": 99,
+       "startOffset": 21,
+       "endOffset": 24
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 106,
+       "endLine": 106,
+       "startOffset": 4,
+       "endOffset": 9
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 108,
+       "endLine": 108,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 125,
+       "endLine": 125,
+       "startOffset": 12,
+       "endOffset": 14
+      },
+      "msg": "+3 (incl 2 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 126,
+       "endLine": 126,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 126,
+       "endLine": 126,
+       "startOffset": 38,
+       "endOffset": 41
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 128,
+       "endLine": 128,
+       "startOffset": 16,
+       "endOffset": 18
+      },
+      "msg": "+4 (incl 3 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 130,
+       "endLine": 130,
+       "startOffset": 20,
+       "endOffset": 22
+      },
+      "msg": "+5 (incl 4 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 136,
+       "endLine": 136,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 137,
+       "endLine": 137,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "+2 (incl 1 for nesting)",
+      "msgFormattings": []
+     }
+    ]
+   },
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 137,
+       "endLine": 137,
+       "startOffset": 35,
+       "endOffset": 37
+      },
+      "msg": "+1",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Refactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.",
+  "effort": "25min",
+  "debt": "25min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "brain-overload",
+   "architecture"
+  ],
+  "creationDate": "2020-04-13T18:18:56+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "FOCUSED",
+  "cleanCodeAttributeCategory": "ADAPTABLE",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "c77c02fa-3688-4253-892e-e34fa02b8c53",
+  "rule": "python:S5890",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/context.py",
+  "project": "httpie-cli",
+  "line": 137,
+  "hash": "8de2022badb3f16c916c3161559c6718",
+  "textRange": {
+   "startLine": 137,
+   "endLine": 137,
+   "startOffset": 22,
+   "endOffset": 26
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/context.py",
+      "textRange": {
+       "startLine": 137,
+       "endLine": 137,
+       "startOffset": 13,
+       "endOffset": 19
+      },
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Replace the type hint \"Config\" with \"Optional[Config]\" or don't assign \"None\" to \"_config\"",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing",
+   "confusing"
+  ],
+  "creationDate": "2019-12-02T16:43:16+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "58de4668-cb80-4aff-8130-f4fd5bf6d0bf",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/client.py",
+  "project": "httpie-cli",
+  "line": 88,
+  "hash": "26d26fe3ab4a08a6e8413da72380fa4b",
+  "textRange": {
+   "startLine": 88,
+   "endLine": 88,
+   "startOffset": 8,
+   "endOffset": 66
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2019-09-03T15:14:39+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "cf029a57-2965-4082-b1ba-544a5e697ab0",
+  "rule": "python:S1066",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/client.py",
+  "project": "httpie-cli",
+  "line": 137,
+  "hash": "b9337bbe2cc7d588362708fef5928cca",
+  "textRange": {
+   "startLine": 137,
+   "endLine": 137,
+   "startOffset": 8,
+   "endOffset": 10
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/client.py",
+      "textRange": {
+       "startLine": 136,
+       "endLine": 136,
+       "startOffset": 4,
+       "endOffset": 6
+      },
+      "msg": "enclosing",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Merge this if statement with the enclosing one.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "clumsy"
+  ],
+  "creationDate": "2019-09-03T15:14:39+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "c45e9a4d-d6fa-44b9-b910-32c863204baa",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/output/writer.py",
+  "project": "httpie-cli",
+  "line": 63,
+  "hash": "b888551af81bbfedf388f77ecc51d209",
+  "textRange": {
+   "startLine": 63,
+   "endLine": 63,
+   "startOffset": 13,
+   "endOffset": 30
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2019-09-03T15:14:39+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "90c52431-eec7-4078-abe3-10b4b3ef61c8",
+  "rule": "python:S1172",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/plugins/base.py",
+  "project": "httpie-cli",
+  "line": 150,
+  "hash": "c4bd5af9322fed09091e7898356c6380",
+  "textRange": {
+   "startLine": 150,
+   "endLine": 150,
+   "startOffset": 40,
+   "endOffset": 49
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Remove the unused function parameter \"mime\".",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "unused"
+  ],
+  "creationDate": "2019-08-31T16:33:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "b06cda06-cc06-457b-9294-c775474696bc",
+  "rule": "python:S2638",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/plugins/builtin.py",
+  "project": "httpie-cli",
+  "line": 53,
+  "hash": "6feb514b624e18cf6dc0008951b3ec40",
+  "textRange": {
+   "startLine": 53,
+   "endLine": 53,
+   "startOffset": 23,
+   "endOffset": 36
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/plugins/builtin.py",
+      "textRange": {
+       "startLine": 53,
+       "endLine": 53,
+       "startOffset": 23,
+       "endOffset": 36
+      },
+      "msg": "Add a default value to parameter username.",
+      "msgFormattings": []
+     },
+     {
+      "component": "httpie-cli:httpie/plugins/base.py",
+      "textRange": {
+       "startLine": 58,
+       "endLine": 58,
+       "startOffset": 8,
+       "endOffset": 16
+      },
+      "msg": "Overridden method's definition",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Add a default value to parameter username.",
+  "effort": "15min",
+  "debt": "15min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2019-08-31T16:33:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "e0ee4253-d562-42d7-a58b-8b528fead70b",
+  "rule": "python:S2638",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/plugins/builtin.py",
+  "project": "httpie-cli",
+  "line": 53,
+  "hash": "6feb514b624e18cf6dc0008951b3ec40",
+  "textRange": {
+   "startLine": 53,
+   "endLine": 53,
+   "startOffset": 38,
+   "endOffset": 51
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/plugins/builtin.py",
+      "textRange": {
+       "startLine": 53,
+       "endLine": 53,
+       "startOffset": 38,
+       "endOffset": 51
+      },
+      "msg": "Add a default value to parameter password.",
+      "msgFormattings": []
+     },
+     {
+      "component": "httpie-cli:httpie/plugins/base.py",
+      "textRange": {
+       "startLine": 58,
+       "endLine": 58,
+       "startOffset": 8,
+       "endOffset": 16
+      },
+      "msg": "Overridden method's definition",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Add a default value to parameter password.",
+  "effort": "15min",
+  "debt": "15min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2019-08-31T16:33:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "14527fe0-4776-4dd0-a536-5f44700e3bf3",
+  "rule": "python:S2638",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/plugins/builtin.py",
+  "project": "httpie-cli",
+  "line": 65,
+  "hash": "6b04be55e581ea5f70c20406829f506b",
+  "textRange": {
+   "startLine": 65,
+   "endLine": 65,
+   "startOffset": 8,
+   "endOffset": 21
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/plugins/builtin.py",
+      "textRange": {
+       "startLine": 65,
+       "endLine": 65,
+       "startOffset": 8,
+       "endOffset": 21
+      },
+      "msg": "Add a default value to parameter username.",
+      "msgFormattings": []
+     },
+     {
+      "component": "httpie-cli:httpie/plugins/base.py",
+      "textRange": {
+       "startLine": 58,
+       "endLine": 58,
+       "startOffset": 8,
+       "endOffset": 16
+      },
+      "msg": "Overridden method's definition",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Add a default value to parameter username.",
+  "effort": "15min",
+  "debt": "15min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2019-08-31T16:33:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "5f4c7026-ad71-40dc-b582-7252aa745597",
+  "rule": "python:S2638",
+  "severity": "CRITICAL",
+  "component": "httpie-cli:httpie/plugins/builtin.py",
+  "project": "httpie-cli",
+  "line": 66,
+  "hash": "7337e31f223237fdf4de40c69bf89153",
+  "textRange": {
+   "startLine": 66,
+   "endLine": 66,
+   "startOffset": 8,
+   "endOffset": 21
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/plugins/builtin.py",
+      "textRange": {
+       "startLine": 66,
+       "endLine": 66,
+       "startOffset": 8,
+       "endOffset": 21
+      },
+      "msg": "Add a default value to parameter password.",
+      "msgFormattings": []
+     },
+     {
+      "component": "httpie-cli:httpie/plugins/base.py",
+      "textRange": {
+       "startLine": 58,
+       "endLine": 58,
+       "startOffset": 8,
+       "endOffset": 16
+      },
+      "msg": "Overridden method's definition",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Add a default value to parameter password.",
+  "effort": "15min",
+  "debt": "15min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "suspicious"
+  ],
+  "creationDate": "2019-08-31T16:33:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "HIGH"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "a14112d9-19f2-443d-a1b8-6e3bdf28857d",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/output/streams.py",
+  "project": "httpie-cli",
+  "line": 219,
+  "hash": "041c98c33380b500e7db5cd765d14499",
+  "textRange": {
+   "startLine": 219,
+   "endLine": 219,
+   "startOffset": 34,
+   "endOffset": 51
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2019-08-31T16:21:10+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "1e8ed668-141c-486a-83f8-187327f89753",
+  "rule": "python:S1134",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 235,
+  "hash": "e580c17d304c2d7acae5ffd6cbb6aa0c",
+  "textRange": {
+   "startLine": 235,
+   "endLine": 235,
+   "startOffset": 12,
+   "endOffset": 53
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2019-08-31T13:17:10+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "834eca9f-ea28-418a-8ea3-35bbe8071640",
+  "rule": "python:S1134",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 422,
+  "hash": "04cd859cc4a916829005ae22aa796381",
+  "textRange": {
+   "startLine": 422,
+   "endLine": 422,
+   "startOffset": 8,
+   "endOffset": 78
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2019-08-31T13:17:10+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "18571ccc-2fc4-42a3-8184-0b7b334f922d",
+  "rule": "python:S1066",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/cli/argparser.py",
+  "project": "httpie-cli",
+  "line": 548,
+  "hash": "f1ee87aa9c4cd29584db5f01b76a6347",
+  "textRange": {
+   "startLine": 548,
+   "endLine": 548,
+   "startOffset": 12,
+   "endOffset": 14
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/cli/argparser.py",
+      "textRange": {
+       "startLine": 547,
+       "endLine": 547,
+       "startOffset": 8,
+       "endOffset": 10
+      },
+      "msg": "enclosing",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Merge this if statement with the enclosing one.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "clumsy"
+  ],
+  "creationDate": "2019-08-31T13:17:10+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "d5716c26-25dd-4ecf-9d84-51f8a4aef537",
+  "rule": "python:S6546",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/config.py",
+  "project": "httpie-cli",
+  "line": 143,
+  "hash": "225ecba8270e44ec94b9dd23ad08cac0",
+  "textRange": {
+   "startLine": 143,
+   "endLine": 143,
+   "startOffset": 34,
+   "endOffset": 50
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Use a union type expression for this type hint.",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing"
+  ],
+  "creationDate": "2019-08-30T13:14:51+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "CLEAR",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "e3559a8f-780a-4a3e-981a-187859b36569",
+  "rule": "python:S5890",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/context.py",
+  "project": "httpie-cli",
+  "line": 61,
+  "hash": "43ae62a163378cc6b05e038c38fc5455",
+  "textRange": {
+   "startLine": 61,
+   "endLine": 61,
+   "startOffset": 26,
+   "endOffset": 30
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/context.py",
+      "textRange": {
+       "startLine": 61,
+       "endLine": 61,
+       "startOffset": 20,
+       "endOffset": 23
+      },
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Replace the type hint \"str\" with \"Optional[str]\" or don't assign \"None\" to \"stdin_encoding\"",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing",
+   "confusing"
+  ],
+  "creationDate": "2019-08-30T13:14:51+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "282884fb-c2f2-4a16-b4e0-abbd9ec43646",
+  "rule": "python:S5890",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/context.py",
+  "project": "httpie-cli",
+  "line": 64,
+  "hash": "25e0b9f5f112b6f7eca6cb4e6746ecb3",
+  "textRange": {
+   "startLine": 64,
+   "endLine": 64,
+   "startOffset": 27,
+   "endOffset": 31
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/context.py",
+      "textRange": {
+       "startLine": 64,
+       "endLine": 64,
+       "startOffset": 21,
+       "endOffset": 24
+      },
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Replace the type hint \"str\" with \"Optional[str]\" or don't assign \"None\" to \"stdout_encoding\"",
+  "effort": "5min",
+  "debt": "5min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "typing",
+   "confusing"
+  ],
+  "creationDate": "2019-08-30T13:14:51+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "LOGICAL",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "a1009a7f-f7b1-4078-be42-089b405f7f61",
+  "rule": "python:S1134",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/downloads.py",
+  "project": "httpie-cli",
+  "line": 219,
+  "hash": "7fe02838dccef1490fd4c0ad9d39a152",
+  "textRange": {
+   "startLine": 219,
+   "endLine": 219,
+   "startOffset": 8,
+   "endOffset": 69
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2016-03-07T03:46:59+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "738f05f3-9a4c-4975-8aa6-37e0f64d3a2e",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/core.py",
+  "project": "httpie-cli",
+  "line": 139,
+  "hash": "4797905594b98fbc3773d517a9918c32",
+  "textRange": {
+   "startLine": 139,
+   "endLine": 139,
+   "startOffset": 12,
+   "endOffset": 79
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2016-03-01T13:10:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "956b70f6-b13b-46ca-954b-644cd5fc9253",
+  "rule": "python:S1134",
+  "severity": "MAJOR",
+  "component": "httpie-cli:httpie/output/formatters/colors.py",
+  "project": "httpie-cli",
+  "line": 183,
+  "hash": "bd998dc938063fbe41f7d7a799364838",
+  "textRange": {
+   "startLine": 183,
+   "endLine": 183,
+   "startOffset": 30,
+   "endOffset": 75
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.co",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2016-03-01T08:22:54+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "MEDIUM"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "30e1c752-2d48-4a8c-8842-9d0e9da7f3e7",
+  "rule": "python:S1845",
+  "severity": "BLOCKER",
+  "component": "httpie-cli:httpie/output/streams.py",
+  "project": "httpie-cli",
+  "line": 96,
+  "hash": "7798636b8bfccaa0200302a337cf2cbc",
+  "textRange": {
+   "startLine": 96,
+   "endLine": 96,
+   "startOffset": 13,
+   "endOffset": 23
+  },
+  "flows": [
+   {
+    "locations": [
+     {
+      "component": "httpie-cli:httpie/output/streams.py",
+      "textRange": {
+       "startLine": 91,
+       "endLine": 91,
+       "startOffset": 4,
+       "endOffset": 14
+      },
+      "msg": "Original",
+      "msgFormattings": []
+     }
+    ]
+   }
+  ],
+  "status": "OPEN",
+  "message": "Rename field \"chunk_size\" to prevent any misunderstanding/clash with field \"CHUNK_SIZE\" defined on line 91",
+  "effort": "10min",
+  "debt": "10min",
+  "author": "jakub@roztocil.name",
+  "tags": [
+   "convention",
+   "confusing"
+  ],
+  "creationDate": "2014-04-27T19:58:00+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "IDENTIFIABLE",
+  "cleanCodeAttributeCategory": "CONSISTENT",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "BLOCKER"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ },
+ {
+  "key": "3f67e40c-207c-405d-90e8-ac4622d08af1",
+  "rule": "python:S1135",
+  "severity": "INFO",
+  "component": "httpie-cli:httpie/downloads.py",
+  "project": "httpie-cli",
+  "line": 198,
+  "hash": "d669b51b939003d0d0ef86e49731ef93",
+  "textRange": {
+   "startLine": 198,
+   "endLine": 198,
+   "startOffset": 16,
+   "endOffset": 70
+  },
+  "flows": [],
+  "status": "OPEN",
+  "message": "Complete the task associated to this \"TODO\" comment.",
+  "effort": "0min",
+  "debt": "0min",
+  "author": "jakub@roztocil.name",
+  "tags": [
+   "cwe"
+  ],
+  "creationDate": "2013-04-11T19:23:15+0000",
+  "updateDate": "2026-11-05T05:25:38+0000",
+  "type": "CODE_SMELL",
+  "scope": "MAIN",
+  "quickFixAvailable": false,
+  "messageFormattings": [],
+  "codeVariants": [],
+  "cleanCodeAttribute": "COMPLETE",
+  "cleanCodeAttributeCategory": "INTENTIONAL",
+  "impacts": [
+   {
+    "softwareQuality": "MAINTAINABILITY",
+    "severity": "INFO"
+   }
+  ],
+  "issueStatus": "OPEN",
+  "prioritizedRule": false,
+  "fromSonarQubeUpdate": false,
+  "internalTags": []
+ }
+]

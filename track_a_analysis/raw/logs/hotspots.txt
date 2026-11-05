@@ -1,0 +1,12 @@
+                                nloc  max_ccn  complexity_debt  violations  dup_lines  churn_commits  coverage_pct  coupling  debt_score
+file                                                                                                                                    
+httpie/core.py                 216.0     26.0             31.0        24.0       37.0           37.0          95.3        18        76.6
+httpie/cli/argparser.py        398.0     24.0             15.0        22.0       42.0           39.0          94.3        12        62.7
+httpie/client.py               252.0     21.0             13.0        10.0        0.0           54.0         100.0        14        44.0
+httpie/cli/definition.py        65.0      7.0              0.0         6.0        0.0           54.0          92.6        11        30.3
+httpie/context.py               88.0      9.0              0.0         8.0        0.0           24.0          89.2        27        27.9
+httpie/uploads.py              186.0      7.0              0.0        18.0        0.0           13.0          86.2         4        23.1
+httpie/utils.py                142.0      5.0              0.0         5.0        0.0           26.0          88.5        15        22.9
+httpie/compat.py                45.0      5.0              0.0        11.0        0.0            6.0          44.6        11        22.7
+httpie/output/ui/rich_help.py  148.0     12.0              3.0         2.0        0.0            3.0          52.9         4        21.7
+httpie/sessions.py             198.0     11.0              1.0         7.0        0.0           27.0          98.1        14        21.4

@@ -1,0 +1,106 @@
+=== SOEN 6431 Track A - static analysis of HTTPie ===
+Tool logs: track_a_analysis/raw/logs/
+
+[0] Python environment
+    → Python 3.11.6, venv: venv
+  ✔ SUCCESS - Python environment (0s)
+
+[1] Complexity metrics (Lizard, Radon, TODO/FIXME)
+    ✔ Lizard per-function metrics    track_a_analysis/raw/lizard_functions.csv
+    ✔ Lizard threshold warnings      track_a_analysis/raw/lizard_warnings.txt
+    ✔ Radon cyclomatic complexity    track_a_analysis/raw/radon_cc.json
+    ✔ Radon maintainability index    track_a_analysis/raw/radon_mi.json
+    ✔ TODO/FIXME markers             track_a_analysis/raw/todo_fixme.txt
+    → 461 functions analysed, 18 over thresholds, 16 TODO/FIXME markers
+  ✔ SUCCESS - Complexity metrics (Lizard, Radon, TODO/FIXME) (2s)
+
+[2] Linters & code smells (Flake8, Pylint, Vulture)
+    ✔ Flake8 complexity + smells     track_a_analysis/raw/flake8_complexity.txt
+    ✔ Pylint full report             track_a_analysis/raw/pylint_full.json
+    ✔ Pylint design checks           track_a_analysis/raw/pylint_design.txt
+    ✔ Vulture dead code              track_a_analysis/raw/vulture_dead_code.txt
+    → Flake8: 39 violations, Pylint: 609 messages, Vulture: 35 dead-code hits
+  ✔ SUCCESS - Linters & code smells (Flake8, Pylint, Vulture) (14s)
+
+[3] Code duplication (jscpd)
+    ✔ jscpd report (50 tokens)       track_a_analysis/raw/jscpd_50/jscpd-report.json
+    ✔ jscpd report (30 tokens)       track_a_analysis/raw/jscpd_30/jscpd-report.json
+    → 50 tokens: 1 clones | 30 tokens: 9 clones, 58 duplicated lines (0.6 %)
+  ✔ SUCCESS - Code duplication (jscpd) (2s)
+
+[4] Git churn & test coverage (pytest-cov)
+    → running the test suite (takes about a minute)...
+    ✔ Git churn per file             track_a_analysis/raw/git_churn_since2019.csv
+    ✔ Coverage (JSON)                track_a_analysis/raw/coverage.json
+    ✔ Coverage (XML, for Sonar)      track_a_analysis/raw/coverage.xml
+    → 85 files with churn since 2019, line coverage 90.7 %, tests: 1019 passed, 5 skipped, 4 xfailed, 134 warnings in 72.13s (0:01:12)
+  ✔ SUCCESS - Git churn & test coverage (pytest-cov) (73s)
+
+[5] Dependencies, coupling & DSM heatmaps (pydeps, grimp)
+    ✔ Dependency graph               track_a_analysis/figures/pydeps_graph.svg
+    ✔ Import cycles graph            track_a_analysis/figures/pydeps_cycles.svg
+    ✔ DSM heatmap (components)       track_a_analysis/figures/dsm_heatmap.png
+    ✔ DSM heatmap (modules)          track_a_analysis/figures/dsm_modules_heatmap.png
+    ✔ Coupling (Ca/Ce) per module    track_a_analysis/raw/coupling_modules.csv
+    ✔ Import cycles list             track_a_analysis/raw/import_cycles.txt
+    → modules=78 edges=208 components=27 sccs=3 largest_scc=5 component_cycles=7
+  ✔ SUCCESS - Dependencies, coupling & DSM heatmaps (pydeps, grimp) (7s)
+
+[6] SonarQube technical debt (SQALE)
+    → server is UP at http://localhost:9000
+    → scanning (takes about a minute)...
+    → scan uploaded, waiting for the server to process it...
+    → token cannot read task status - waiting 60 s instead
+    ✔ Scanner log                    track_a_analysis/raw/sonar_scanner_log.txt
+    ✔ Project measures               track_a_analysis/raw/sonar_project_measures.json
+    ✔ Per-file measures              track_a_analysis/raw/sonar_files.json
+    ✔ Issues                         track_a_analysis/raw/sonar_issues.json
+    ✔ Readable summary               track_a_analysis/raw/sonar_summary.txt
+    → exported 78 files, 65 issues; debt 494 min, debt ratio 0.2 %
+  ✔ SUCCESS - SonarQube technical debt (SQALE) (134s)
+
+[7] Debt summary table & heatmaps (hotspots.py)
+    ✔ Summary table (markdown)       track_a_analysis/debt_summary_table.md
+    ✔ Summary table (CSV)            track_a_analysis/raw/debt_summary_by_file.csv
+    ✔ Debt heatmap                   track_a_analysis/figures/debt_heatmap.png
+    ✔ CCN histogram                  track_a_analysis/figures/ccn_histogram.png
+    ✔ Top functions by CCN           track_a_analysis/figures/top_functions_ccn.png
+    ✔ Churn vs complexity            track_a_analysis/figures/churn_vs_complexity.png
+    → heatmap includes the SonarQube debt column
+  ✔ SUCCESS - Debt summary table & heatmaps (hotspots.py) (2s)
+
+=== Recap (234s) ===
+  ✔ OK       [0] Python environment
+  ✔ OK       [1] Complexity metrics (Lizard, Radon, TODO/FIXME)
+  ✔ OK       [2] Linters & code smells (Flake8, Pylint, Vulture)
+  ✔ OK       [3] Code duplication (jscpd)
+  ✔ OK       [4] Git churn & test coverage (pytest-cov)
+  ✔ OK       [5] Dependencies, coupling & DSM heatmaps (pydeps, grimp)
+  ✔ OK       [6] SonarQube technical debt (SQALE)
+  ✔ OK       [7] Debt summary table & heatmaps (hotspots.py)
+
+--- debt_summary_table.md ---
+| Rank | File | NLOC (in funcs) | Funcs | Avg CCN | Max CCN | Funcs CCN>10 | MI (radon) | Rule violations | Dup lines | Churn (commits) | Coverage % | Ce | Ca | Sonar debt (min) | Debt score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `httpie/core.py` ⟳ | 216 | 8 | 8.2 | 26 | 2 | 42.3 | 24 | 37 | 37 | 95.3 | 15 | 3 | 83 | 76.6 |
+| 2 | `httpie/cli/argparser.py` ⟳ | 398 | 28 | 5.2 | 24 | 2 | 24.7 | 22 | 42 | 39 | 94.3 | 10 | 2 | 69 | 62.7 |
+| 3 | `httpie/client.py` | 252 | 13 | 5.5 | 21 | 2 | 45.9 | 10 | 0 | 54 | 100.0 | 13 | 1 | 60 | 44.0 |
+| 4 | `httpie/cli/definition.py` | 65 | 2 | 5.5 | 7 | 0 | 52.7 | 6 | 0 | 54 | 92.6 | 8 | 3 | 0 | 30.3 |
+| 5 | `httpie/context.py` | 88 | 11 | 2.6 | 9 | 0 | 54.1 | 8 | 0 | 24 | 89.2 | 6 | 21 | 15 | 27.9 |
+| 6 | `httpie/uploads.py` | 186 | 16 | 2.9 | 7 | 0 | 49.1 | 18 | 0 | 13 | 86.2 | 3 | 1 | 15 | 23.1 |
+| 7 | `httpie/utils.py` | 142 | 21 | 2.2 | 5 | 0 | 59.2 | 5 | 0 | 26 | 88.5 | 1 | 14 | 1 | 22.9 |
+| 8 | `httpie/compat.py` | 45 | 7 | 2.4 | 5 | 0 | 72.3 | 11 | 0 | 6 | 44.6 | 1 | 10 | 0 | 22.7 |
+| 9 | `httpie/output/ui/rich_help.py` ⟳ | 148 | 3 | 8.7 | 12 | 2 | 46.3 | 2 | 0 | 3 | 52.9 | 3 | 1 | 11 | 21.7 |
+| 10 | `httpie/sessions.py` ⟳ | 198 | 21 | 2.5 | 11 | 1 | 46.7 | 7 | 0 | 27 | 98.1 | 9 | 5 | 18 | 21.4 |
+| 11 | `httpie/cli/requestitems.py` | 158 | 17 | 2.1 | 7 | 0 | 49.7 | 8 | 0 | 22 | 92.0 | 6 | 1 | 0 | 18.2 |
+| 12 | `httpie/manager/tasks/plugins.py` | 136 | 12 | 3.8 | 8 | 0 | 42.2 | 7 | 0 | 2 | 79.7 | 8 | 1 | 0 | 17.9 |
+| 13 | `httpie/output/ui/rich_progress.py` | 96 | 11 | 1.4 | 3 | 0 | 58.9 | 15 | 10 | 2 | 74.1 | 1 | 1 | 0 | 17.5 |
+| 14 | `httpie/models.py` | 122 | 19 | 2.3 | 8 | 0 | 43.6 | 8 | 0 | 18 | 95.6 | 3 | 6 | 10 | 16.5 |
+| 15 | `httpie/downloads.py` | 225 | 23 | 2.8 | 10 | 0 | 45.2 | 8 | 0 | 21 | 96.6 | 4 | 1 | 0 | 16.5 |
+
+**Codebase totals (httpie/ package, 78 modules):** function NLOC 4534 (Lizard total NLOC 6988), functions 461, avg CCN 2.88, functions with CCN>10: 12, CCN>15: 4, rule violations 318, duplicated lines 123, modules in import cycles 12.
+
+⟳ = module participates in an import cycle (grimp SCC / pylint R0401).
+
+✔ ALL SECTIONS COMPLETED SUCCESSFULLY
+  Heatmap: track_a_analysis/figures/debt_heatmap.png   Table: track_a_analysis/debt_summary_table.md

@@ -1,0 +1,12 @@
+{
+  "formal_sections": 5,
+  "local_links_checked": 57,
+  "fresh_screenshots": 6,
+  "top_table_rows_checked": 10,
+  "pipeline_exit_code": 0,
+  "pytest_passed": 1019,
+  "coverage_percent": 90.70933842846907,
+  "sonar_processing_verified": true,
+  "original_script_and_test_change_preserved": true,
+  "credential_scan": "passed"
+}

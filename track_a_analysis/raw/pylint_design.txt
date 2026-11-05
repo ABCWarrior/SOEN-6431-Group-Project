@@ -1,0 +1,120 @@
+************* Module httpie.sessions
+httpie/sessions.py:67:8: W0212: Access to a protected member _rest of a client class (protected-access)
+httpie/sessions.py:92:0: R0913: Too many arguments (6/5) (too-many-arguments)
+************* Module httpie.compat
+httpie/compat.py:44:33: W0613: Unused argument 'name' (unused-argument)
+httpie/compat.py:21:4: W0611: Unused cached_property imported from functools (unused-import)
+************* Module httpie.models
+httpie/models.py:49:8: W0612: Unused variable 'ct' (unused-variable)
+httpie/models.py:93:50: W0212: Access to a protected member _httpie_headers_parsed_at of a client class (protected-access)
+************* Module httpie.client
+httpie/client.py:88:9: W0511: TODO: reflect the split between request and send kwargs. (fixme)
+httpie/client.py:119:12: W0212: Access to a protected member _httpie_headers_parsed_at of a client class (protected-access)
+httpie/client.py:43:0: R0912: Too many branches (15/12) (too-many-branches)
+httpie/client.py:43:0: R0915: Too many statements (51/50) (too-many-statements)
+httpie/client.py:148:11: W0212: Access to a protected member _MAXHEADERS of a client class (protected-access)
+httpie/client.py:149:4: W0212: Access to a protected member _MAXHEADERS of a client class (protected-access)
+httpie/client.py:153:8: W0212: Access to a protected member _MAXHEADERS of a client class (protected-access)
+************* Module httpie.core
+httpie/core.py:139:13: W0511: TODO: Further distinction between expected and unexpected errors. (fixme)
+httpie/core.py:175:5: W0511: TODO: Refactor and drastically simplify, especially so that the separator logic is elsewhere. (fixme)
+httpie/core.py:32:0: R0914: Too many local variables (16/15) (too-many-locals)
+httpie/core.py:138:15: W0718: Catching too general exception Exception (broad-exception-caught)
+httpie/core.py:32:0: R0912: Too many branches (25/12) (too-many-branches)
+httpie/core.py:32:0: R0915: Too many statements (86/50) (too-many-statements)
+httpie/core.py:170:0: R0914: Too many local variables (18/15) (too-many-locals)
+httpie/core.py:170:0: R0912: Too many branches (15/12) (too-many-branches)
+************* Module httpie.downloads
+httpie/downloads.py:198:17: W0511: TODO: Use "If-Range: mtime" to make sure it's fresh? (fixme)
+httpie/downloads.py:219:9: W0511: FIXME: some servers still might sent Content-Encoding: gzip (fixme)
+************* Module httpie.context
+httpie/context.py:46:0: R0902: Too many instance attributes (8/7) (too-many-instance-attributes)
+************* Module httpie.utils
+httpie/utils.py:124:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.uploads
+httpie/uploads.py:162:13: W0511: TODO: Instead of opt-in --chunked, consider making (fixme)
+httpie/uploads.py:20:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/uploads.py:25:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/uploads.py:44:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/uploads.py:90:11: W0718: Catching too general exception Exception (broad-exception-caught)
+httpie/uploads.py:99:52: W0613: Unused argument 'file' (unused-argument)
+httpie/uploads.py:191:0: R0913: Too many arguments (6/5) (too-many-arguments)
+httpie/uploads.py:191:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module httpie.plugins.builtin
+httpie/plugins/builtin.py:9:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/plugins/builtin.py:37:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/plugins/builtin.py:47:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/plugins/builtin.py:57:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/plugins/builtin.py:78:0: W0613: Unused argument 'kwargs' (unused-argument)
+httpie/plugins/builtin.py:71:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.plugins.manager
+httpie/plugins/manager.py:71:19: W0718: Catching too general exception BaseException (broad-exception-caught)
+************* Module httpie.plugins.base
+httpie/plugins/base.py:4:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+httpie/plugins/base.py:16:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/plugins/base.py:72:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/plugins/base.py:150:40: W0613: Unused argument 'mime' (unused-argument)
+************* Module httpie.internal.daemon_runner
+httpie/internal/daemon_runner.py:12:18: W0613: Unused argument 'env' (unused-argument)
+************* Module httpie.output.processing
+httpie/output/processing.py:16:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.output.ui.rich_help
+httpie/output/ui/rich_help.py:44:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.output.ui.man_pages
+httpie/output/ui/man_pages.py:30:11: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module httpie.output.ui.rich_progress
+httpie/output/ui/rich_progress.py:15:17: W0613: Unused argument 'total' (unused-argument)
+httpie/output/ui/rich_progress.py:15:41: W0613: Unused argument 'at' (unused-argument)
+httpie/output/ui/rich_progress.py:15:52: W0613: Unused argument 'description' (unused-argument)
+httpie/output/ui/rich_progress.py:19:21: W0613: Unused argument 'steps' (unused-argument)
+httpie/output/ui/rich_progress.py:22:19: W0613: Unused argument 'time_spent' (unused-argument)
+************* Module httpie.output.lexers.metadata
+httpie/output/lexers/metadata.py:13:36: W0613: Unused argument 'ctx' (unused-argument)
+************* Module httpie.output.lexers.http
+httpie/output/lexers/http.py:30:17: W0612: Unused variable 'text' (unused-variable)
+httpie/output/lexers/http.py:30:23: W0612: Unused variable 'reason' (unused-variable)
+httpie/output/lexers/http.py:45:33: W0613: Unused argument 'ctx' (unused-argument)
+************* Module httpie.output.formatters.colors
+httpie/output/formatters/colors.py:183:31: W0511: FIXME: the body also gets parsed in json.py (fixme)
+httpie/output/formatters/colors.py:197:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+************* Module httpie.legacy.v3_2_0_session_header_format
+httpie/legacy/v3_2_0_session_header_format.py:67:0: W0613: Unused argument 'args' (unused-argument)
+httpie/legacy/v3_2_0_session_header_format.py:67:0: W0613: Unused argument 'kwargs' (unused-argument)
+************* Module httpie.legacy.v3_1_0_session_cookie_format
+httpie/legacy/v3_1_0_session_cookie_format.py:100:16: W0212: Access to a protected member _rest of a client class (protected-access)
+************* Module httpie.cli.argtypes
+httpie/cli/argtypes.py:28:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+httpie/cli/argtypes.py:133:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+httpie/cli/argtypes.py:148:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.cli.requestitems
+httpie/cli/requestitems.py:24:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.cli.utils
+httpie/cli/utils.py:28:0: R0902: Too many instance attributes (8/7) (too-many-instance-attributes)
+************* Module httpie.cli.argparser
+httpie/cli/argparser.py:79:1: W0511: TODO: refactor and design type-annotated data structures (fixme)
+httpie/cli/argparser.py:188:13: W0511: TODO: allow --compress with --chunked / --multipart (fixme)
+httpie/cli/argparser.py:235:13: W0511: FIXME: Come up with a cleaner solution. (fixme)
+httpie/cli/argparser.py:283:9: W0511: TODO: refactor & simplify this method. (fixme)
+httpie/cli/argparser.py:422:9: W0511: FIXME: False positive, e.g., "localhost" matches but is a valid URL. (fixme)
+httpie/cli/argparser.py:97:19: W0612: Unused variable 'no_options' (unused-variable)
+httpie/cli/argparser.py:282:4: R0912: Too many branches (15/12) (too-many-branches)
+httpie/cli/argparser.py:482:20: W0612: Unused variable 'ct' (unused-variable)
+************* Module httpie.cli.nested_json.tokens
+httpie/cli/nested_json/tokens.py:55:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module httpie.cli.nested_json.parse
+httpie/cli/nested_json/parse.py:23:0: R0915: Too many statements (56/50) (too-many-statements)
+************* Module httpie.manager.__main__
+httpie/manager/__main__.py:26:15: W0718: Catching too general exception Exception (broad-exception-caught)
+************* Module httpie.manager.tasks.plugins
+httpie/manager/tasks/plugins.py:167:9: W0511: TODO: Consider handling failures here (e.g if it fails, (fixme)
+************* Module httpie.manager.tasks.check_updates
+httpie/manager/tasks/check_updates.py:7:40: W0613: Unused argument 'args' (unused-argument)
+httpie/manager/tasks/check_updates.py:1:0: R0401: Cyclic import (httpie.cli.argtypes -> httpie.sessions) (cyclic-import)
+httpie/manager/tasks/check_updates.py:1:0: R0401: Cyclic import (httpie.cli.argparser -> httpie.output.ui.rich_help -> httpie.cli.options) (cyclic-import)
+httpie/manager/tasks/check_updates.py:1:0: R0401: Cyclic import (httpie.__main__ -> httpie.core -> httpie.internal.update_warnings -> httpie.internal.daemons) (cyclic-import)
+httpie/manager/tasks/check_updates.py:1:0: R0401: Cyclic import (httpie.core -> httpie.internal.update_warnings -> httpie.internal.daemons) (cyclic-import)
+httpie/manager/tasks/check_updates.py:1:0: R0401: Cyclic import (httpie.__main__ -> httpie.core -> httpie.internal.daemon_runner -> httpie.internal.update_warnings -> httpie.internal.daemons) (cyclic-import)
+
+------------------------------------------------------------------
+Your code has been rated at 9.80/10 (previous run: 8.47/10, +1.33)
+

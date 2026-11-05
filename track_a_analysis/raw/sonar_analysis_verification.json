@@ -1,0 +1,9 @@
+{
+  "task_id": "94fc4fcd-e51a-4626-ab79-a5b18442c061",
+  "verification_source": "docker logs trackA-sonarqube, filtered by the uploaded scan task ID",
+  "processing_success": true,
+  "server_log_lines": [
+    "2026.11.05 07:01:10 INFO  ce[][o.s.c.t.CeWorkerImpl] Execute task | project=httpie-cli | type=REPORT | id=94fc4fcd-e51a-4626-ab79-a5b18442c061 | submitter=admin",
+    "2026.11.05 07:01:19 INFO  ce[94fc4fcd-e51a-4626-ab79-a5b18442c061][o.s.c.t.CeWorkerImpl] Executed task | project=httpie-cli | type=REPORT | id=94fc4fcd-e51a-4626-ab79-a5b18442c061 | submitter=admin | status=SUCCESS | time=9012ms"
+  ]
+}

@@ -1,0 +1,8 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+06:53:58.466 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+06:53:58.481 INFO  Project root configuration file: NONE
+06:53:58.514 INFO  SonarScanner CLI 7.2.0.5079
+06:53:58.525 INFO  Linux 6.11.11-linuxkit amd64
+06:54:01.714 ERROR Failed to query server version: GET http://host.docker.internal:9000/api/v2/analysis/version failed with HTTP 401. Please check the property sonar.token or the environment variable SONAR_TOKEN.
+06:54:01.715 INFO  EXECUTION FAILURE
+06:54:01.725 INFO  Total time: 3.264s

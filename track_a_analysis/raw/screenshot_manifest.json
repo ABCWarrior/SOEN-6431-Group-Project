@@ -1,0 +1,92 @@
+{
+  "run_completed_at": "2026-11-05T02:02:13.450541-05:00",
+  "capture_method": "Browser screenshot of a local HTML view of fresh command output; not a native Terminal window",
+  "views": [
+    {
+      "screenshot": "screenshots/01_lizard_complexity_report.jpg",
+      "displayed_text_sha256": "6c1d2c6decef1eef804e8caf23f3364df22cbfb71c955af9713e7e29d8c5f178",
+      "selection": "Last 16 lines of the complete Lizard report.",
+      "sources": [
+        {
+          "path": "raw/lizard_full.txt",
+          "sha256": "580eebc2ed120e2b2e95e2d73ebf6bdced1130f43b21b36ed8eb7d06bbdd9ab9"
+        }
+      ],
+      "captured_at": "2026-11-05T02:10:14.802243-05:00",
+      "screenshot_sha256": "aff580a5b28fc238aac1c073b9517383df80018320de8128a01a692f9a808f24"
+    },
+    {
+      "screenshot": "screenshots/02_flake8_mccabe_cognitive.jpg",
+      "displayed_text_sha256": "183e9fe6c8badcd64d11c2d7e2ee2990673a8a08dda31f1ecb35992fb27d1174",
+      "selection": "Complexity findings selected from the complete Flake8 output.",
+      "sources": [
+        {
+          "path": "raw/flake8_complexity.txt",
+          "sha256": "edba936390793fefc819d713c1528aaff787bbaf2386e7adba95779b3dda88aa"
+        }
+      ],
+      "captured_at": "2026-11-05T02:11:07.164559-05:00",
+      "screenshot_sha256": "29b37d51b25db06bd8bc3c3cd38cc830ec7f7bc3f879952182e47a5a72ff571d"
+    },
+    {
+      "screenshot": "screenshots/03_radon_cc_ranked.jpg",
+      "displayed_text_sha256": "88084330ed97575337eaef837214223bdb8fdedf78e49906343c9230a99d58a7",
+      "selection": "Complete report of blocks ranked C or worse.",
+      "sources": [
+        {
+          "path": "raw/radon_cc_C_plus.txt",
+          "sha256": "88084330ed97575337eaef837214223bdb8fdedf78e49906343c9230a99d58a7"
+        }
+      ],
+      "captured_at": "2026-11-05T02:11:18.663980-05:00",
+      "screenshot_sha256": "fcaf7f4c7692389883d0dc13f607d42eb2596ffc3e85edc7f6d33237df2e3fbf"
+    },
+    {
+      "screenshot": "screenshots/04_pylint_cycles_jscpd_duplication.jpg",
+      "displayed_text_sha256": "2d37aaeda53bbd34811abbc5cfbefdbe2d30d85a37d3498edde733547955c9f8",
+      "selection": "Pylint R0401, R0912, and R0915 findings, followed by the jscpd summary.",
+      "sources": [
+        {
+          "path": "raw/pylint_design.txt",
+          "sha256": "b66946fe9098b2ba7056f1f6a0c868e593af9ac3c64f7b7c3396283eed062fca"
+        },
+        {
+          "path": "raw/logs/jscpd_30.txt",
+          "sha256": "6278f0ffd83dfb27badb8034d0a1f194b444331304a46c211dbef2048f7a849b"
+        }
+      ],
+      "captured_at": "2026-11-05T02:12:11.011339-05:00",
+      "screenshot_sha256": "bcf159d26e57889608466c097bf218306fec55222fa0270dd5782273692db596"
+    },
+    {
+      "screenshot": "screenshots/05_sonarqube_debt_summary.jpg",
+      "displayed_text_sha256": "f8581ef7deb874cff0a14e0407dd2da551cf40ee2dffa4cd01146a75b05a0e8e",
+      "selection": "Complete summary of the refreshed SonarQube API exports.",
+      "sources": [
+        {
+          "path": "raw/sonar_summary.txt",
+          "sha256": "f8581ef7deb874cff0a14e0407dd2da551cf40ee2dffa4cd01146a75b05a0e8e"
+        }
+      ],
+      "captured_at": "2026-11-05T02:12:19.384059-05:00",
+      "screenshot_sha256": "28e7a989426fc313dcab0794d2ba084b50d7a637d8ea27a4f980d847171c9f95"
+    },
+    {
+      "screenshot": "screenshots/06_pipeline_recap.jpg",
+      "displayed_text_sha256": "0273a430b90fd6ab525d2e8252cb9344b4b6d285a2abe5c38a237f2ff2cb3aef",
+      "selection": "Recap excerpt from run_log.txt and the final result from pytest_coverage.txt.",
+      "sources": [
+        {
+          "path": "raw/run_log.txt",
+          "sha256": "c1a9cadecab61a292f9de3916b8ddf16f7f04878a05312f4725708d61b4740d9"
+        },
+        {
+          "path": "raw/pytest_coverage.txt",
+          "sha256": "45b4efe489117bc2899fb9b0156a3bfed6e53e34d67ebaa8d034e6ea7bc8f4db"
+        }
+      ],
+      "captured_at": "2026-11-05T02:12:31.350435-05:00",
+      "screenshot_sha256": "7094b7b611b979cdcb3c0444d7931584f6721b3bd1dc0695e0a047a16830205f"
+    }
+  ]
+}

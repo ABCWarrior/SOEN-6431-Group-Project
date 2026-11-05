@@ -1,0 +1,4 @@
+/Users/cq/Desktop/SOEN6431/case study/case study /SOEN-6431-Group-Project/venv/lib/python3.11/site-packages/pydeps/configs.py:106: UserWarning: Couldn't find a [pydeps] section in your config files '/Users/cq/Desktop/SOEN6431/case study/case study /SOEN-6431-Group-Project/setup.cfg' -- or it was empty
+  warnings.warn(' '.join("""
+/Users/cq/Desktop/SOEN6431/case study/case study /SOEN-6431-Group-Project/venv/lib/python3.11/site-packages/pydeps/configs.py:106: UserWarning: Couldn't find a [pydeps] section in your config files '/Users/cq/Desktop/SOEN6431/case study/case study /SOEN-6431-Group-Project/setup.cfg' -- or it was empty
+  warnings.warn(' '.join("""

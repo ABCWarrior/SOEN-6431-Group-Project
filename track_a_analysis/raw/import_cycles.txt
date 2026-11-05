@@ -1,0 +1,29 @@
+Modules: 78   import edges: 208
+Module-level strongly connected components (cycles): 3
+
+SCC #1 (5 modules):
+  httpie.__main__
+  httpie.core
+  httpie.internal.daemon_runner
+  httpie.internal.daemons
+  httpie.internal.update_warnings
+
+SCC #2 (4 modules):
+  httpie.cli.argtypes
+  httpie.legacy.v3_1_0_session_cookie_format
+  httpie.legacy.v3_2_0_session_header_format
+  httpie.sessions
+
+SCC #3 (3 modules):
+  httpie.cli.argparser
+  httpie.cli.options
+  httpie.output.ui.rich_help
+
+Component-level bidirectional dependencies: 7
+  core <-> internal   (2 / 1 import lines)
+  sessions <-> cli   (2 / 1 import lines)
+  sessions <-> legacy   (2 / 3 import lines)
+  context <-> output.ui   (2 / 2 import lines)
+  cli <-> output.ui   (2 / 2 import lines)
+  output <-> output.formatters   (1 / 1 import lines)
+  output.formatters <-> plugins   (4 / 4 import lines)

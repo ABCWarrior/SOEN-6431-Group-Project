@@ -1,0 +1,16 @@
+httpie/sessions.py:103:        # HACK/FIXME: httpie-unixsocket's URLs have no hostname.
+httpie/client.py:88:        # TODO: reflect the split between request and send kwargs.
+httpie/output/formatters/colors.py:183:            json.loads(body)  # FIXME: the body also gets parsed in json.py
+httpie/core.py:139:            # TODO: Further distinction between expected and unexpected errors.
+httpie/core.py:175:    # TODO: Refactor and drastically simplify, especially so that the separator logic is elsewhere.
+httpie/cli/argparser.py:79:# TODO: refactor and design type-annotated data structures
+httpie/cli/argparser.py:188:            # TODO: allow --compress with --chunked / --multipart
+httpie/cli/argparser.py:235:            # FIXME: Come up with a cleaner solution.
+httpie/cli/argparser.py:283:        # TODO: refactor & simplify this method.
+httpie/cli/argparser.py:422:        # FIXME: False positive, e.g., "localhost" matches but is a valid URL.
+httpie/downloads.py:198:                # TODO: Use "If-Range: mtime" to make sure it's fresh?
+httpie/downloads.py:219:        # FIXME: some servers still might sent Content-Encoding: gzip
+httpie/manager/tasks/plugins.py:167:        # TODO: Consider handling failures here (e.g if it fails,
+httpie/utils.py:41:        """HACK: Force `json.dumps()` to use `self.items()` instead of an empty dict.
+httpie/utils.py:192:    HACK/FIXME: <https://github.com/psf/requests/issues/5743>
+httpie/uploads.py:162:            # TODO: Instead of opt-in --chunked, consider making

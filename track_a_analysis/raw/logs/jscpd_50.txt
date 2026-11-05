@@ -1,0 +1,2 @@
+[32mJSON report saved to track_a_analysis/raw/jscpd_50/jscpd-report.json[39m
+Duplications detection: Found [1m1[22m exact clones with [1m11[22m(0.11%) duplicated lines in [1m69[22m (1 formats) files.

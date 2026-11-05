@@ -1,0 +1,46 @@
+Clone found (python):
+ - [1m[32mhttpie/output/ui/rich_progress.py[39m[22m [97:16 - 101:5] (4 lines, 48 tokens)
+   [1m[32mhttpie/output/ui/rich_progress.py[39m[22m [62:14 - 66:5]
+
+Clone found (python):
+ - [1m[32mhttpie/output/lexers/metadata.py[39m[22m [50:23 - 55:9] (5 lines, 48 tokens)
+   [1m[32mhttpie/output/lexers/metadata.py[39m[22m [39:49 - 44:18]
+
+Clone found (python):
+ - [1m[32mhttpie/output/formatters/json.py[39m[22m [6:14 - 10:7] (4 lines, 41 tokens)
+   [1m[32mhttpie/output/formatters/xml.py[39m[22m [53:13 - 57:6]
+
+Clone found (python):
+ - [1m[32mhttpie/output/formatters/headers.py[39m[22m [4:17 - 8:10] (4 lines, 41 tokens)
+   [1m[32mhttpie/output/formatters/xml.py[39m[22m [53:13 - 57:6]
+
+Clone found (python):
+ - [1m[32mhttpie/cli/argparser.py[39m[22m [150:5 - 158:4] (8 lines, 53 tokens)
+   [1m[32mhttpie/cli/argparser.py[39m[22m [89:5 - 97:5]
+
+Clone found (python):
+ - [1m[32mhttpie/cli/argparser.py[39m[22m [159:2 - 164:5] (5 lines, 51 tokens)
+   [1m[32mhttpie/cli/argparser.py[39m[22m [97:5 - 102:8]
+
+Clone found (python):
+ - [1m[32mhttpie/cli/argparser.py[39m[22m [580:9 - 585:4] (5 lines, 65 tokens)
+   [1m[32mhttpie/cli/argparser.py[39m[22m [59:9 - 64:2]
+
+Clone found (python):
+ - [1m[32mhttpie/core.py[39m[22m [104:9 - 115:7] (11 lines, 86 tokens)
+   [1m[32mhttpie/core.py[39m[22m [86:5 - 97:5]
+
+Clone found (python):
+ - [1m[32mhttpie/core.py[39m[22m [146:1 - 158:8] (12 lines, 48 tokens)
+   [1m[32mhttpie/manager/__main__.py[39m[22m [32:1 - 33:5]
+
+[90m┌────────[39m[90m┬────────────────[39m[90m┬─────────────[39m[90m┬──────────────[39m[90m┬──────────────[39m[90m┬──────────────────[39m[90m┬───────────────────┐[39m
+[90m│[39m[31m Format [39m[90m│[39m[31m Files analyzed [39m[90m│[39m[31m Total lines [39m[90m│[39m[31m Total tokens [39m[90m│[39m[31m Clones found [39m[90m│[39m[31m Duplicated lines [39m[90m│[39m[31m Duplicated tokens [39m[90m│[39m
+[90m├────────[39m[90m┼────────────────[39m[90m┼─────────────[39m[90m┼──────────────[39m[90m┼──────────────[39m[90m┼──────────────────[39m[90m┼───────────────────┤[39m
+[90m│[39m python [90m│[39m 69             [90m│[39m 9746        [90m│[39m 65330        [90m│[39m 9            [90m│[39m 58 (0.6%)        [90m│[39m 481 (0.74%)       [90m│[39m
+[90m├────────[39m[90m┼────────────────[39m[90m┼─────────────[39m[90m┼──────────────[39m[90m┼──────────────[39m[90m┼──────────────────[39m[90m┼───────────────────┤[39m
+[90m│[39m [1mTotal:[22m [90m│[39m 69             [90m│[39m 9746        [90m│[39m 65330        [90m│[39m 9            [90m│[39m 58 (0.6%)        [90m│[39m 481 (0.74%)       [90m│[39m
+[90m└────────[39m[90m┴────────────────[39m[90m┴─────────────[39m[90m┴──────────────[39m[90m┴──────────────[39m[90m┴──────────────────[39m[90m┴───────────────────┘[39m
+[90mFound 9 clones.[39m
+[32mJSON report saved to track_a_analysis/raw/jscpd_30/jscpd-report.json[39m
+[3m[90mDetection time:[39m[23m: 319.105ms
