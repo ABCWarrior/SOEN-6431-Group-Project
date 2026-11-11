@@ -5,6 +5,7 @@ import re
 import sys
 from argparse import RawDescriptionHelpFormatter
 from textwrap import dedent
+from typing import List, Optional
 from urllib.parse import urlsplit
 
 from requests.utils import get_netrc_auth
@@ -27,6 +28,25 @@ from .requestitems import RequestItems
 from ..context import Environment
 from ..plugins.registry import plugin_manager
 from ..utils import ExplicitNullAuth, get_content_type
+
+
+def get_failed_action() -> Optional[argparse.Action]:
+    """
+    Return the action that caused the argparse error currently being
+    handled (e.g., the option in `--style=invalid`), if there is one.
+
+    The usage-rendering path is also taken when an invalid option is
+    passed, in which case we want to include that action in the usage.
+
+    """
+    _, exception, _ = sys.exc_info()
+    if (
+        isinstance(exception, argparse.ArgumentError)
+        and len(exception.args) >= 1
+        and isinstance(exception.args[0], argparse.Action)
+    ):
+        return exception.args[0]
+    return None
 
 
 class HTTPieHelpFormatter(RawDescriptionHelpFormatter):
@@ -56,17 +76,9 @@ class HTTPieHelpFormatter(RawDescriptionHelpFormatter):
             if not action.option_strings
         ]
 
-        _, exception, _ = sys.exc_info()
-        if (
-            isinstance(exception, argparse.ArgumentError)
-            and len(exception.args) >= 1
-            and isinstance(exception.args[0], argparse.Action)
-        ):
-            # add_usage path is also taken when you pass an invalid option,
-            # e.g --style=invalid. If something like that happens, we want
-            # to include to action that caused to the invalid usage into
-            # the list of actions we are displaying.
-            displayed_actions.insert(0, exception.args[0])
+        failed_action = get_failed_action()
+        if failed_action is not None:
+            displayed_actions.insert(0, failed_action)
 
         super().add_usage(
             usage,
@@ -93,6 +105,22 @@ class BaseHTTPieArgumentParser(argparse.ArgumentParser):
         args=None,
         namespace=None
     ) -> argparse.Namespace:
+        self._parse_common_args(env, args, namespace)
+        return self.args
+
+    def _parse_common_args(
+        self,
+        env: Environment,
+        args=None,
+        namespace=None
+    ) -> List[str]:
+        """
+        The parsing steps shared by all HTTPie parsers: parse the known
+        args, apply `--debug`, and detect stdin/`--raw` input data.
+
+        Return the leftover (unknown) option strings.
+
+        """
         self.env = env
         self.args, no_options = self.parse_known_args(args, namespace)
         if self.args.debug:
@@ -103,7 +131,7 @@ class BaseHTTPieArgumentParser(argparse.ArgumentParser):
             and not self.env.stdin_isatty
         )
         self.has_input_data = self.has_stdin_data or getattr(self.args, 'raw', None) is not None
-        return self.args
+        return no_options
 
     # noinspection PyShadowingBuiltins
     def _print_message(self, message, file=None):
@@ -154,17 +182,8 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
         args=None,
         namespace=None
     ) -> argparse.Namespace:
-        self.env = env
-        self.env.args = namespace = namespace or argparse.Namespace()
-        self.args, no_options = super().parse_known_args(args, namespace)
-        if self.args.debug:
-            self.args.traceback = True
-        self.has_stdin_data = (
-            self.env.stdin
-            and not self.args.ignore_stdin
-            and not self.env.stdin_isatty
-        )
-        self.has_input_data = self.has_stdin_data or self.args.raw is not None
+        env.args = namespace = namespace or argparse.Namespace()
+        no_options = self._parse_common_args(env, args, namespace)
         # Arguments processing and environment setup.
         self._apply_no_options(no_options)
         self._process_request_type()
@@ -577,18 +596,9 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
         from httpie.output.ui import rich_help
 
         whitelist = set()
-        _, exception, _ = sys.exc_info()
-        if (
-            isinstance(exception, argparse.ArgumentError)
-            and len(exception.args) >= 1
-            and isinstance(exception.args[0], argparse.Action)
-            and exception.args[0].option_strings
-        ):
-            # add_usage path is also taken when you pass an invalid option,
-            # e.g --style=invalid. If something like that happens, we want
-            # to include to action that caused to the invalid usage into
-            # the list of actions we are displaying.
-            whitelist.add(exception.args[0].option_strings[0])
+        failed_action = get_failed_action()
+        if failed_action is not None and failed_action.option_strings:
+            whitelist.add(failed_action.option_strings[0])
 
         usage_text = Text('usage', style='bold')
         usage_text.append(':\n    ')
