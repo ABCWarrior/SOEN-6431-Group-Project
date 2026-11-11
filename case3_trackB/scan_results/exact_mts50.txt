@@ -1,0 +1,2 @@
+# token_clone_scan  min_tokens=50  mode=exact  files=78  tokens=39112  duplications=1
+   51 tokens   11 lines  httpie/core.py:86-96  <->  httpie/core.py:104-114

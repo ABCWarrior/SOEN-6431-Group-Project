@@ -1,0 +1,8 @@
+# token_clone_scan  min_tokens=100  mode=ignore-ids+literals  files=78  tokens=39112  duplications=7
+  205 tokens   53 lines  httpie/output/ui/palette.py:114-166  <->  httpie/output/ui/palette.py:179-231
+  204 tokens   53 lines  httpie/output/ui/palette.py:114-166  <->  httpie/output/ui/palette.py:166-218
+  154 tokens   40 lines  httpie/output/ui/palette.py:114-153  <->  httpie/output/ui/palette.py:192-231
+  153 tokens   40 lines  httpie/output/ui/palette.py:114-153  <->  httpie/output/ui/palette.py:153-192
+  108 tokens   11 lines  httpie/output/formatters/colors.py:235-245  <->  httpie/output/formatters/colors.py:255-265
+  103 tokens   27 lines  httpie/output/ui/palette.py:114-140  <->  httpie/output/ui/palette.py:205-231
+  102 tokens   27 lines  httpie/output/ui/palette.py:114-140  <->  httpie/output/ui/palette.py:140-166

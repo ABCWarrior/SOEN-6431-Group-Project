@@ -1,0 +1,17 @@
+pair       exact_mts25       exact_mts50      exact_mts100   ignoreids_mts25   ignoreids_mts50  ignoreids_mts100
+C01           YES (51)          YES (51)                no          YES (51)          YES (51)                no
+C02           YES (33)                no                no          YES (34)                no                no
+C03           YES (44)                no                no          YES (44)                no                no
+C04                 no                no                no          YES (27)                no                no
+C05                 no                no                no          YES (80)          YES (80)                no
+C06           YES (28)                no                no          YES (34)                no                no
+C07                 no                no                no          YES (29)                no                no
+C08                 no                no                no                no                no                no
+C09                 no                no                no                no                no                no
+C10                 no                no                no                no                no                no
+C11                 no                no                no          YES (50)          YES (50)                no
+C12                 no                no                no                no                no                no
+C13                 no                no                no                no                no                no
+C14                 no                no                no          YES (43)                no                no
+C15                 no                no                no                no                no                no
+C16                 no                no                no                no                no                no
