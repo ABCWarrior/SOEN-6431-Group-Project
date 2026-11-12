@@ -398,22 +398,32 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
         if invalid:
             self.error(f'unrecognized arguments: {" ".join(invalid)}')
 
+    def _set_request_body(self, data, *conflicting_sources):
+        self._ensure_one_data_source(*conflicting_sources)
+        self.args.data = data
+
     def _body_from_file(self, fd):
         """Read the data from a file-like object.
 
         Bytes are always read.
 
         """
-        self._ensure_one_data_source(self.args.data, self.args.files)
-        self.args.data = getattr(fd, 'buffer', fd)
+        self._set_request_body(
+            getattr(fd, 'buffer', fd),
+            self.args.data,
+            self.args.files,
+        )
 
     def _body_from_input(self, data):
         """Read the data from the CLI.
 
         """
-        self._ensure_one_data_source(self.has_stdin_data, self.args.data,
-                                     self.args.files)
-        self.args.data = data.encode()
+        self._set_request_body(
+            data.encode(),
+            self.has_stdin_data,
+            self.args.data,
+            self.args.files,
+        )
 
     def _ensure_one_data_source(self, *other_sources):
         """There can only be one source of input request data.
