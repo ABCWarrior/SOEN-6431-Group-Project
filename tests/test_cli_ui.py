@@ -1,6 +1,9 @@
+import argparse
 import pytest
 import shutil
 import os
+
+from httpie.cli.constants import PRETTY_MAP
 from tests.utils import http
 
 NAKED_BASE_TEMPLATE = """\
@@ -25,9 +28,22 @@ NAKED_HELP_MESSAGE_PRETTY_WITH_NO_ARG = NAKED_BASE_TEMPLATE.format(
     error_msg="argument --pretty: expected one argument"
 )
 
+
+def _invalid_choice_error(value, choices):
+    # The wording differs between Python releases: recent 3.12 releases
+    # print the choices without quotes, 3.11 and 3.14 quote them. Ask the
+    # running argparse for its own wording instead of hard-coding one.
+    parser = argparse.ArgumentParser(exit_on_error=False)
+    parser.add_argument('--pretty', choices=choices)
+    try:
+        parser.parse_args(['--pretty', value])
+    except argparse.ArgumentError as exc:
+        return str(exc)
+
+
 NAKED_HELP_MESSAGE_PRETTY_WITH_INVALID_ARG = NAKED_BASE_TEMPLATE.format(
     extra_args="--pretty {all, colors, format, none} ",
-    error_msg="argument --pretty: invalid choice: '$invalid' (choose from 'all', 'colors', 'format', 'none')"
+    error_msg=_invalid_choice_error('$invalid', sorted(PRETTY_MAP)),
 )
 
 
