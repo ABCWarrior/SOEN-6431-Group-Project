@@ -1,0 +1,1 @@
+# token_clone_scan  min_tokens=50  mode=exact  files=78  tokens=39047  duplications=0

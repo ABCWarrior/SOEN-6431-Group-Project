@@ -1,0 +1,276 @@
+diff --git a/extras/man/httpie.1 b/extras/man/httpie.1
+index b441729..a68c824 100644
+--- a/extras/man/httpie.1
++++ b/extras/man/httpie.1
+@@ -68,7 +68,7 @@ targets to upgrade
+ Uninstall the given HTTPie plugins.
+ .IP "\fB\,TARGET\/\fR"
+ 
+-targets to install
++targets to uninstall
+ 
+ .PP
+ .SH httpie cli plugins list
+@@ -92,7 +92,7 @@ targets to upgrade
+ Uninstall the given HTTPie plugins.
+ .IP "\fB\,TARGET\/\fR"
+ 
+-targets to install
++targets to uninstall
+ 
+ .PP
+ .SH httpie plugins list
+diff --git a/httpie/cli/argparser.py b/httpie/cli/argparser.py
+index 9bf09b3..e1cac5f 100644
+--- a/httpie/cli/argparser.py
++++ b/httpie/cli/argparser.py
+@@ -5,6 +5,7 @@ import re
+ import sys
+ from argparse import RawDescriptionHelpFormatter
+ from textwrap import dedent
++from typing import List, Optional
+ from urllib.parse import urlsplit
+ 
+ from requests.utils import get_netrc_auth
+@@ -29,6 +30,25 @@ from ..plugins.registry import plugin_manager
+ from ..utils import ExplicitNullAuth, get_content_type
+ 
+ 
++def get_failed_action() -> Optional[argparse.Action]:
++    """
++    Return the action that caused the argparse error currently being
++    handled (e.g., the option in `--style=invalid`), if there is one.
++
++    The usage-rendering path is also taken when an invalid option is
++    passed, in which case we want to include that action in the usage.
++
++    """
++    _, exception, _ = sys.exc_info()
++    if (
++        isinstance(exception, argparse.ArgumentError)
++        and len(exception.args) >= 1
++        and isinstance(exception.args[0], argparse.Action)
++    ):
++        return exception.args[0]
++    return None
++
++
+ class HTTPieHelpFormatter(RawDescriptionHelpFormatter):
+     """A nicer help formatter.
+ 
+@@ -56,17 +76,9 @@ class HTTPieHelpFormatter(RawDescriptionHelpFormatter):
+             if not action.option_strings
+         ]
+ 
+-        _, exception, _ = sys.exc_info()
+-        if (
+-            isinstance(exception, argparse.ArgumentError)
+-            and len(exception.args) >= 1
+-            and isinstance(exception.args[0], argparse.Action)
+-        ):
+-            # add_usage path is also taken when you pass an invalid option,
+-            # e.g --style=invalid. If something like that happens, we want
+-            # to include to action that caused to the invalid usage into
+-            # the list of actions we are displaying.
+-            displayed_actions.insert(0, exception.args[0])
++        failed_action = get_failed_action()
++        if failed_action is not None:
++            displayed_actions.insert(0, failed_action)
+ 
+         super().add_usage(
+             usage,
+@@ -93,6 +105,22 @@ class BaseHTTPieArgumentParser(argparse.ArgumentParser):
+         args=None,
+         namespace=None
+     ) -> argparse.Namespace:
++        self._parse_common_args(env, args, namespace)
++        return self.args
++
++    def _parse_common_args(
++        self,
++        env: Environment,
++        args=None,
++        namespace=None
++    ) -> List[str]:
++        """
++        The parsing steps shared by all HTTPie parsers: parse the known
++        args, apply `--debug`, and detect stdin/`--raw` input data.
++
++        Return the leftover (unknown) option strings.
++
++        """
+         self.env = env
+         self.args, no_options = self.parse_known_args(args, namespace)
+         if self.args.debug:
+@@ -103,7 +131,7 @@ class BaseHTTPieArgumentParser(argparse.ArgumentParser):
+             and not self.env.stdin_isatty
+         )
+         self.has_input_data = self.has_stdin_data or getattr(self.args, 'raw', None) is not None
+-        return self.args
++        return no_options
+ 
+     # noinspection PyShadowingBuiltins
+     def _print_message(self, message, file=None):
+@@ -154,17 +182,8 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
+         args=None,
+         namespace=None
+     ) -> argparse.Namespace:
+-        self.env = env
+-        self.env.args = namespace = namespace or argparse.Namespace()
+-        self.args, no_options = super().parse_known_args(args, namespace)
+-        if self.args.debug:
+-            self.args.traceback = True
+-        self.has_stdin_data = (
+-            self.env.stdin
+-            and not self.args.ignore_stdin
+-            and not self.env.stdin_isatty
+-        )
+-        self.has_input_data = self.has_stdin_data or self.args.raw is not None
++        env.args = namespace = namespace or argparse.Namespace()
++        no_options = self._parse_common_args(env, args, namespace)
+         # Arguments processing and environment setup.
+         self._apply_no_options(no_options)
+         self._process_request_type()
+@@ -577,18 +596,9 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
+         from httpie.output.ui import rich_help
+ 
+         whitelist = set()
+-        _, exception, _ = sys.exc_info()
+-        if (
+-            isinstance(exception, argparse.ArgumentError)
+-            and len(exception.args) >= 1
+-            and isinstance(exception.args[0], argparse.Action)
+-            and exception.args[0].option_strings
+-        ):
+-            # add_usage path is also taken when you pass an invalid option,
+-            # e.g --style=invalid. If something like that happens, we want
+-            # to include to action that caused to the invalid usage into
+-            # the list of actions we are displaying.
+-            whitelist.add(exception.args[0].option_strings[0])
++        failed_action = get_failed_action()
++        if failed_action is not None and failed_action.option_strings:
++            whitelist.add(failed_action.option_strings[0])
+ 
+         usage_text = Text('usage', style='bold')
+         usage_text.append(':\n    ')
+diff --git a/httpie/core.py b/httpie/core.py
+index d0c26dc..1400da0 100644
+--- a/httpie/core.py
++++ b/httpie/core.py
+@@ -66,6 +66,23 @@ def raw_main(
+         if include_traceback:
+             raise
+ 
++    def handle_interrupt_or_exit(e: BaseException) -> ExitStatus:
++        """
++        Shared handling of Ctrl-C and `SystemExit`, which can be raised
++        both while parsing the arguments and while running the program.
++
++        Must be called from within an `except` block (it may re-raise).
++
++        """
++        if isinstance(e, SystemExit) and e.code == ExitStatus.SUCCESS:
++            return ExitStatus.SUCCESS
++        env.stderr.write('\n')
++        if include_traceback:
++            raise
++        if isinstance(e, KeyboardInterrupt):
++            return ExitStatus.ERROR_CTRL_C
++        return ExitStatus.ERROR
++
+     if include_debug_info:
+         print_debug_info(env)
+         if args == ['--debug']:
+@@ -83,17 +100,8 @@ def raw_main(
+         if include_traceback:
+             raise
+         exit_status = ExitStatus.ERROR
+-    except KeyboardInterrupt:
+-        env.stderr.write('\n')
+-        if include_traceback:
+-            raise
+-        exit_status = ExitStatus.ERROR_CTRL_C
+-    except SystemExit as e:
+-        if e.code != ExitStatus.SUCCESS:
+-            env.stderr.write('\n')
+-            if include_traceback:
+-                raise
+-            exit_status = ExitStatus.ERROR
++    except (KeyboardInterrupt, SystemExit) as e:
++        exit_status = handle_interrupt_or_exit(e)
+     else:
+         check_updates(env)
+         try:
+@@ -101,17 +109,8 @@ def raw_main(
+                 args=parsed_args,
+                 env=env,
+             )
+-        except KeyboardInterrupt:
+-            env.stderr.write('\n')
+-            if include_traceback:
+-                raise
+-            exit_status = ExitStatus.ERROR_CTRL_C
+-        except SystemExit as e:
+-            if e.code != ExitStatus.SUCCESS:
+-                env.stderr.write('\n')
+-                if include_traceback:
+-                    raise
+-                exit_status = ExitStatus.ERROR
++        except (KeyboardInterrupt, SystemExit) as e:
++            exit_status = handle_interrupt_or_exit(e)
+         except requests.Timeout:
+             exit_status = ExitStatus.ERROR_TIMEOUT
+             env.log_error(f'Request timed out ({parsed_args.timeout}s).')
+diff --git a/httpie/manager/cli.py b/httpie/manager/cli.py
+index 248cb8b..5dc375d 100644
+--- a/httpie/manager/cli.py
++++ b/httpie/manager/cli.py
+@@ -56,35 +56,30 @@ COMMANDS = {
+ }
+ 
+ 
++def plugin_targets_argument(verb: str) -> dict:
++    """The positional `TARGET...` argument shared by the plugin sub-commands."""
++    return {
++        'dest': 'targets',
++        'metavar': 'TARGET',
++        'nargs': Qualifiers.ONE_OR_MORE,
++        'help': f'targets to {verb}'
++    }
++
++
+ COMMANDS['plugins'] = COMMANDS['cli']['plugins'] = {
+     'help': 'Manage HTTPie plugins.',
+     'install': [
+         'Install the given targets from PyPI '
+         'or from a local paths.',
+-        {
+-            'dest': 'targets',
+-            'metavar': 'TARGET',
+-            'nargs': Qualifiers.ONE_OR_MORE,
+-            'help': 'targets to install'
+-        }
++        plugin_targets_argument('install'),
+     ],
+     'upgrade': [
+         'Upgrade the given plugins',
+-        {
+-            'dest': 'targets',
+-            'metavar': 'TARGET',
+-            'nargs': Qualifiers.ONE_OR_MORE,
+-            'help': 'targets to upgrade'
+-        }
++        plugin_targets_argument('upgrade'),
+     ],
+     'uninstall': [
+         'Uninstall the given HTTPie plugins.',
+-        {
+-            'dest': 'targets',
+-            'metavar': 'TARGET',
+-            'nargs': Qualifiers.ONE_OR_MORE,
+-            'help': 'targets to install'
+-        }
++        plugin_targets_argument('uninstall'),
+     ],
+     'list': [
+         'List all installed HTTPie plugins.'

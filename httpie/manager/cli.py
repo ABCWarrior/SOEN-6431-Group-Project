@@ -56,35 +56,30 @@ COMMANDS = {
 }
 
 
+def plugin_targets_argument(verb: str) -> dict:
+    """The positional `TARGET...` argument shared by the plugin sub-commands."""
+    return {
+        'dest': 'targets',
+        'metavar': 'TARGET',
+        'nargs': Qualifiers.ONE_OR_MORE,
+        'help': f'targets to {verb}'
+    }
+
+
 COMMANDS['plugins'] = COMMANDS['cli']['plugins'] = {
     'help': 'Manage HTTPie plugins.',
     'install': [
         'Install the given targets from PyPI '
         'or from a local paths.',
-        {
-            'dest': 'targets',
-            'metavar': 'TARGET',
-            'nargs': Qualifiers.ONE_OR_MORE,
-            'help': 'targets to install'
-        }
+        plugin_targets_argument('install'),
     ],
     'upgrade': [
         'Upgrade the given plugins',
-        {
-            'dest': 'targets',
-            'metavar': 'TARGET',
-            'nargs': Qualifiers.ONE_OR_MORE,
-            'help': 'targets to upgrade'
-        }
+        plugin_targets_argument('upgrade'),
     ],
     'uninstall': [
         'Uninstall the given HTTPie plugins.',
-        {
-            'dest': 'targets',
-            'metavar': 'TARGET',
-            'nargs': Qualifiers.ONE_OR_MORE,
-            'help': 'targets to install'
-        }
+        plugin_targets_argument('uninstall'),
     ],
     'list': [
         'List all installed HTTPie plugins.'

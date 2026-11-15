@@ -66,6 +66,23 @@ def raw_main(
         if include_traceback:
             raise
 
+    def handle_interrupt_or_exit(e: BaseException) -> ExitStatus:
+        """
+        Shared handling of Ctrl-C and `SystemExit`, which can be raised
+        both while parsing the arguments and while running the program.
+
+        Must be called from within an `except` block (it may re-raise).
+
+        """
+        if isinstance(e, SystemExit) and e.code == ExitStatus.SUCCESS:
+            return ExitStatus.SUCCESS
+        env.stderr.write('\n')
+        if include_traceback:
+            raise
+        if isinstance(e, KeyboardInterrupt):
+            return ExitStatus.ERROR_CTRL_C
+        return ExitStatus.ERROR
+
     if include_debug_info:
         print_debug_info(env)
         if args == ['--debug']:
@@ -83,17 +100,8 @@ def raw_main(
         if include_traceback:
             raise
         exit_status = ExitStatus.ERROR
-    except KeyboardInterrupt:
-        env.stderr.write('\n')
-        if include_traceback:
-            raise
-        exit_status = ExitStatus.ERROR_CTRL_C
-    except SystemExit as e:
-        if e.code != ExitStatus.SUCCESS:
-            env.stderr.write('\n')
-            if include_traceback:
-                raise
-            exit_status = ExitStatus.ERROR
+    except (KeyboardInterrupt, SystemExit) as e:
+        exit_status = handle_interrupt_or_exit(e)
     else:
         check_updates(env)
         try:
@@ -101,17 +109,8 @@ def raw_main(
                 args=parsed_args,
                 env=env,
             )
-        except KeyboardInterrupt:
-            env.stderr.write('\n')
-            if include_traceback:
-                raise
-            exit_status = ExitStatus.ERROR_CTRL_C
-        except SystemExit as e:
-            if e.code != ExitStatus.SUCCESS:
-                env.stderr.write('\n')
-                if include_traceback:
-                    raise
-                exit_status = ExitStatus.ERROR
+        except (KeyboardInterrupt, SystemExit) as e:
+            exit_status = handle_interrupt_or_exit(e)
         except requests.Timeout:
             exit_status = ExitStatus.ERROR_TIMEOUT
             env.log_error(f'Request timed out ({parsed_args.timeout}s).')
