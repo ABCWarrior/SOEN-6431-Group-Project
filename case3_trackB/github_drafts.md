@@ -1,14 +1,14 @@
 # Case Study #3 – Track B GitHub drafts: branch, commits, issues, pull request
 
-Nothing in this file has been posted. The refactoring is in the local working tree of `case3-groupB`; no commit, push, issue or PR exists yet. Review the changes first, then follow the steps below.
+Status (2026-11-14): commits 869f1c7, d454613 and f8bda18 are pushed, issues #1 to #4 and PR #5 are open. Issue 5 (the big5 test fix) is the next step: GitHub gives it **#6**, because issues and PRs share one number sequence and PR #5 already took 5. Steps 1 to 5 below are the record of how C01–C04 were posted; Step 6 posts Issue 5.
 
 | Item | Value |
 |---|---|
 | Fork | `ABCWarrior/SOEN-6431-Group-Project` (public, fork of `httpie/cli`) |
 | Branch | `case3-groupB` (local only, based on `master` @ `5b604c3`, HTTPie 3.2.4) |
 | PR target | `master` **of the fork**, not upstream `httpie/cli` |
-| Changed files | `httpie/core.py`, `httpie/cli/argparser.py`, `httpie/manager/cli.py`, `extras/man/httpie.1` (81 insertions, 77 deletions), new `tests/test_clone_refactorings.py` |
-| Verified | `pytest`: 1031 passed, 5 skipped, 4 xfailed, 2 failed (the same 2 big5 charset tests fail before the change) |
+| Changed files | `httpie/core.py`, `httpie/cli/argparser.py`, `httpie/manager/cli.py`, `extras/man/httpie.1` (81 insertions, 77 deletions), new `tests/test_clone_refactorings.py`; Issue 5: `tests/test_encoding.py` |
+| Verified | `pytest`: 1031 passed, 5 skipped, 4 xfailed, 2 failed after C01–C04 (the same 2 big5 charset tests fail before the change); **1033 passed, 0 failed** after the Issue 5 fix |
 
 ## Before you post: two things to know
 
@@ -80,6 +80,26 @@ gh pr create -R ABCWarrior/SOEN-6431-Group-Project --base master --head case3-gr
 | §2.4 Figure G2 | screenshot of the PR "Files changed" tab |
 | §5, Chen Qian row | issue, commit and PR links |
 | "Core tasks" table, task 3 status | change to "Done" |
+
+## Step 6 — Post Issue 5 and add it to PR #5
+
+The fix and the report update are in one commit on `case3-groupB`. Pushing the branch adds it to the open PR #5.
+
+```bash
+git push origin case3-groupB
+```
+
+Create the issue (it becomes #6), using the "Issue 5" section below as the body:
+
+```bash
+gh issue create -R ABCWarrior/SOEN-6431-Group-Project --title "[Test] big5 charset-detection tests fail with charset-normalizer >= 3.4.2" --body-file -
+```
+
+Replace the PR body with the updated `pr_body.md` (it now also says "closes #6"):
+
+```bash
+gh pr edit 5 -R ABCWarrior/SOEN-6431-Group-Project --body-file case3_trackB/pr_body.md
+```
 
 ---
 
@@ -158,6 +178,31 @@ gh pr create -R ABCWarrior/SOEN-6431-Group-Project --base master --head case3-gr
 **Proposed refactoring:** *Extract Function* → `plugin_targets_argument(verb)`; regenerate the man page with `extras/scripts/generate_man_pages.py`.
 
 **Acceptance criteria:** each subcommand's help names its own verb; the man page diff touches only the two intended lines.
+
+---
+
+## Issue 5 — [Test] big5 charset-detection tests fail with charset-normalizer >= 3.4.2
+
+**GitHub number:** #6 (PR #5 took number 5)
+
+**Labels:** `bug`, `tests`, `case-study-3`
+
+**Type:** test-data defect, not a clone. Found by the baseline run before the refactoring (`pytest` at `5b604c3`: 1017 passed, 2 failed).
+
+**Location:**
+- `tests/test_encoding.py:17` (`big5` entry of `CHARSET_TEXT_PAIRS`)
+- Failing tests: `test_terminal_output_response_charset_detection[big5-…]` and `test_terminal_output_request_charset_detection[big5-…]`
+
+**Problem:** The big5 sample is two characters, 卷首, repeated (70 bytes). charset-normalizer 3.4.2 and later scores it at 20 % "uncommon CJK" (`CjkUncommonPlugin`), which is exactly the rejection threshold, so big5 is discarded. Only `johab` is left, and HTTPie prints Hangul (뻥솤…) instead of the Chinese text. `setup.cfg` allows `charset_normalizer>=2.0.0`, so a fresh install gets a version where the test fails. HTTPie's own `detect_encoding()` is not at fault; the sample is too artificial for the detector.
+
+| charset-normalizer | 2.0.12 | 3.0.1 | 3.3.2 | 3.4.0 | 3.4.1 | 3.4.2 | 3.4.3 | 3.4.4 | 3.5.0 | 3.5.1 | 3.5.2 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| old sample (卷首 × n) | big5 | big5 | big5 | big5 | big5 | johab | johab | johab | johab | johab | johab |
+| new sample (UDHR art. 1) | big5 | big5 | big5 | big5 | big5 | big5 | big5 | big5 | big5 | big5 | big5 |
+
+**Proposed fix:** Replace the sample with a real Traditional Chinese sentence: Article 1 of the Universal Declaration of Human Rights (43 characters, 86 bytes in big5). The test still checks the same thing, that HTTPie detects a big5 body that has no charset in its `Content-Type`. No change in `httpie/`.
+
+**Acceptance criteria:** `test_charset_text_pairs` still passes (sample longer than `TOO_SMALL_SEQUENCE`, not valid UTF-8); `tests/test_encoding.py` 53 passed; full suite 0 failures; the new sample is detected as big5 on every charset-normalizer version in the table.
 
 ---
 

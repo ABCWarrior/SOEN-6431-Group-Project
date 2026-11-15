@@ -35,6 +35,15 @@ Model: Claude Fable 5.2 (`claude-fable-5-2`).
 | A12 | Agent | Produce evidence figures | Captured real command output and `git diff`, and the P1 exchange from the session log, and rendered them as images | `figures/figB1…figB5` |
 | A13 | Agent | Complete the report | Updated `tools/build_report.js`; built `C3_GroupB_TrackB_Deliverable.docx` | Track B deliverable, Sections 1–5 |
 
+## Session 3 — Issue 5: big5 test fix
+
+Model: Claude Opus 5.5 (`claude-opus-5-5`). 2026-11-14.
+
+| # | Who | Prompt / instruction | Agent actions (tools) | Output |
+|---|---|---|---|---|
+| P4 | User | "because this fail test is annoying I want to fix it as issue 5 use the same format from issue and update the docx, github_draft.md and add the update this to the  pr_body.md. use one commit to update changes(including previous change in docx). make sure the PR is including this issue fix." (`pytest tests/test_encoding.py` output pasted) | Ran `charset_normalizer.from_bytes` with `explain=True` on the big5 sample; tested the old and a new sample on 11 charset-normalizer versions in scratch virtualenvs; edited `tests/test_encoding.py`; full `pytest`, `flake8` | big5 rejected by `CjkUncommonPlugin` from 3.4.2; new sample detected as big5 on all 11 versions; 1033 passed, 0 failed |
+| A14 | Agent | Record the fix | Wrote Issue 5 in `github_drafts.md`, updated `pr_body.md` and the report; one commit | Issue 5 (GitHub #6) ready to post |
+
 ## AI errors found while checking the agent's output
 
 | # | What the agent claimed or produced | What the source showed | Outcome |

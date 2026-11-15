@@ -14,7 +14,9 @@ from .fixtures import UNICODE
 
 
 CHARSET_TEXT_PAIRS = [
-    ('big5', '卷首卷首卷首卷首卷卷首卷首卷首卷首卷首卷首卷首卷首卷首卷首卷首卷首卷首'),
+    # Article 1 of the UDHR in Traditional Chinese. A repeated two-character
+    # sample is detected as `johab` by charset_normalizer >= 3.4.2.
+    ('big5', '人人生而自由，在尊嚴和權利上一律平等。他們賦有理性和良心，並應以兄弟關係的精神相對待。'),
     ('windows-1250', 'Všichni lidé jsou si rovni. Všichni lidé jsou si rovni.'),
     (UTF8, 'Všichni lidé jsou si rovni. Všichni lidé jsou si rovni.'),
 ]
