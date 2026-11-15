@@ -1,0 +1,1 @@
+Refactor the clone pair between httpie/cli/nested_json/parse.py and httpie/cli/nested_json/parse.py by extracting common logic into a shared helper/base method. Apply changes and verify unit tests.

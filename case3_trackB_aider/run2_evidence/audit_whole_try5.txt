@@ -1,0 +1,5 @@
+﻿Can't initialize prompt toolkit: No Windows console found. Are you running 
+cmd.exe?
+
+Warning: it's best to only add files that need changes to the chat.
+https://aider.chat/docs/troubleshooting/edit-errors.html

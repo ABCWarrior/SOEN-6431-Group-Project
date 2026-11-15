@@ -1,0 +1,1 @@
+Scan the codebase for duplicated functions, near-identical logic blocks, or semantic clones across modules. Identify the top 3 clone candidate pairs for refactoring.

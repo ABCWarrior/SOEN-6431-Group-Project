@@ -1,0 +1,4 @@
+date: 2026-11-13T20:55:58
+model: gemini/gemini-3.6-flash
+target: httpie\cli\nested_json\parse.py
+new_failures: 1

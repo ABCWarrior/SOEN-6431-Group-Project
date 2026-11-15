@@ -1,0 +1,22 @@
+﻿python.exe : [2026-11-13 20:50:55,165] WARNING in core: flasgger is not installed; serving the static landing page at / and skipping the Swagger UI and /spec.json.
+所在位置 D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2_phaseB.ps1:109 字符: 1
++ & $pyt -m pytest tests/test_json.py -q --tb=short -p no:cacheprovider ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([2026-11-13 20:...and /spec.json.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+........................................................................ [ 73%]
+........................................................................ [ 97%]
+......                                                                   [100%]
+============================== warnings summary ===============================
+tests/test_json.py::test_duplicate_keys_support_from_input_file
+tests/test_json.py::test_simple_json_arguments_with_non_json[1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\cli\argparser.py:159: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\Canada\\Concordia\\Courses\\Fall 2026\\Software Maintenance\\Case Study\\Case Study 3\\run2\\tests\\fixtures\\test_with_dupe_keys.json'>
+    self.args, no_options = super().parse_known_args(args, namespace)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+294 passed, 2 warnings in 26.28s

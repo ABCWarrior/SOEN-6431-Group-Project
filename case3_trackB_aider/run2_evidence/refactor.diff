@@ -1,0 +1,36 @@
+﻿diff --git a/httpie/cli/nested_json/parse.py b/httpie/cli/nested_json/parse.py
+index 323a22e..96c3a9e 100644
+--- a/httpie/cli/nested_json/parse.py
++++ b/httpie/cli/nested_json/parse.py
+@@ -66,6 +66,9 @@ def parse(source: str) -> Iterator[Path]:
+         message = f'Expecting {suffix}'
+         raise NestedJSONSyntaxError(source, token, message)
+ 
++    def expect_right_bracket(target_list: list):
++        target_list.append(expect(TokenKind.RIGHT_BRACKET))
++
+     # noinspection PyShadowingNames
+     def parse_root():
+         tokens = []
+@@ -87,7 +90,7 @@ def parse(source: str) -> Iterator[Path]:
+             if token.kind is TokenKind.NUMBER:
+                 action = PathAction.INDEX
+                 value = token.value
+-                tokens.append(expect(TokenKind.RIGHT_BRACKET))
++                expect_right_bracket(tokens)
+             elif token.kind is TokenKind.RIGHT_BRACKET:
+                 action = PathAction.APPEND
+                 value = None
+@@ -114,10 +117,10 @@ def parse(source: str) -> Iterator[Path]:
+             path = Path(PathAction.APPEND, tokens=path_tokens)
+         elif token.kind is TokenKind.TEXT:
+             path = Path(PathAction.KEY, token.value, tokens=path_tokens)
+-            path_tokens.append(expect(TokenKind.RIGHT_BRACKET))
++            expect_right_bracket(path_tokens)
+         elif token.kind is TokenKind.NUMBER:
+             path = Path(PathAction.INDEX, token.value, tokens=path_tokens)
+-            path_tokens.append(expect(TokenKind.RIGHT_BRACKET))
++            expect_right_bracket(path_tokens)
+         else:
+             assert_cant_happen()
+         # noinspection PyUnboundLocalVariable

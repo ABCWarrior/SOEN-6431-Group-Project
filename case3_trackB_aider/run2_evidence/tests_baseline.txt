@@ -1,0 +1,478 @@
+﻿python.exe : [2026-11-12 09:37:42,888] WARNING in core: flasgger is not installed; serving the static landing page at / and skipping the Swagger UI and /spec.json.
+所在位置 D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2_phaseA.ps1:56 字符: 5
++     & $pyt -m pytest tests -q --tb=no -rfE -p no:cacheprovider 2>&1 | ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([2026-11-12 09:...and /spec.json.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+......................................s................................. [  7%]
+......................s................................................. [ 14%]
+............................F......s.sss................................ [ 21%]
+..............................................F......................... [ 28%]
+.......F................................................................ [ 35%]
+........................................................................ [ 42%]
+........................................................................ [ 49%]
+........................................................................ [ 56%]
+........................................................................ [ 63%]
+.......................................xxx.............................. [ 70%]
+........................................................................ [ 77%]
+.......................s....x..ssss.s................................... [ 84%]
+..................................................s..................... [ 91%]
+...............................sssss.................s.................. [ 98%]
+....................                                                     [100%]
+============================== warnings summary ===============================
+.venv-test\Lib\site-packages\_pytest\python.py:144
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\python.py:144: PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.
+  Test: tests/test_httpie_cli.py::test_httpie_sessions_upgrade, argvalues type: zip
+  Please convert to a list or tuple.
+  See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators
+    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)
+
+tests/test_downloads.py::TestDownloads::test_actual_download[http]
+tests/test_httpie.py::test_raw_POST_key_values_supplied
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\cli\argparser.py:159: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\Canada\\Concordia\\Courses\\Fall 2026\\Software Maintenance\\Case Study\\Case Study 3\\run2\\tests\\fixtures\\test.txt'>
+    self.args, no_options = super().parse_known_args(args, namespace)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_auth.py::test_digest_auth[https---auth-type]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:260: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\Canada\\Concordia\\Courses\\Fall 2026\\Software Maintenance\\Case Study\\Case Study 3\\run2\\tests\\fixtures\\test.txt'>
+    def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_errors.py::test_max_headers_limit[https]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:458: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\Canada\\Concordia\\Courses\\Fall 2026\\Software Maintenance\\Case Study\\Case Study 3\\run2\\tests\\fixtures\\test.txt'>
+    result = self._make(_map(kwds.pop, field_names, self))
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_httpie.py::test_headers_unset[https]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:446: ResourceWarning: unclosed file <_io.FileIO name='D:\\Canada\\Concordia\\Courses\\Fall 2026\\Software Maintenance\\Case Study\\Case Study 3\\run2\\tests\\fixtures\\test.txt' mode='rb' closefd=True>
+    def __exit__(self, exctype, excinst, exctb):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_httpie.py::test_headers_multiple_values_repeated[https]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:449: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrah64oq6q' mode='w+t' encoding='utf-8'>
+    result = tuple_new(cls, iterable)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_cli_ui.py::test_naked_invocation[args3-expected_msg3]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:449: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.bin'>
+    result = tuple_new(cls, iterable)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_cookie.py::TestIntegration::test_cookie_parser
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\tests\test_cookie.py:19: DeprecationWarning: setDaemon() is deprecated, set the daemon attribute instead
+    self.mock_server_thread.setDaemon(True)
+
+tests/test_cookie_on_redirects.py::test_server_set_cookie_on_redirect_different_domain[True]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2892, family=2, type=1, proto=0, laddr=('127.0.0.1', 63371)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_cookie_on_redirects.py::test_server_set_cookie_on_redirect_different_domain[False]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2960, family=2, type=1, proto=0, laddr=('127.0.0.1', 63374)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_downloads.py::TestDownloads::test_download_with_redirect_original_url_used_for_filename
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\core.py:100: ResourceWarning: unclosed file <_io.FileIO name='1.json' mode='ab+' closefd=True>
+    exit_status = main_program(
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_encoding.py::test_terminal_output_response_charset_detection[windows-1250-V\u0161ichni lid\xe9 jsou si rovni. V\u0161ichni lid\xe9 jsou si rovni.]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\functools.py:54: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrrjqu_1je' mode='w+t' encoding='utf-8'>
+    pass
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_encoding.py: 12 warnings
+tests/test_stream.py: 8 warnings
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\responses\__init__.py:611: DeprecationWarning: stream argument is deprecated. Use stream parameter in request directly
+    warn(
+
+tests/test_httpie.py::test_response_headers_multiple
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2056, family=2, type=1, proto=0, laddr=('127.0.0.1', 63444)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_httpie.py::test_response_headers_multiple_repeated
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2720, family=2, type=1, proto=0, laddr=('127.0.0.1', 63446)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_httpie.py::test_response_headers_multiple_representation[format]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2508, family=2, type=1, proto=0, laddr=('127.0.0.1', 63448)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_httpie.py::test_response_headers_multiple_representation[none]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1280, family=2, type=1, proto=0, laddr=('127.0.0.1', 63450)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_json.py::test_duplicate_keys_support_from_input_file
+tests/test_json.py::test_simple_json_arguments_with_non_json[1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\cli\argparser.py:159: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\Canada\\Concordia\\Courses\\Fall 2026\\Software Maintenance\\Case Study\\Case Study 3\\run2\\tests\\fixtures\\test_with_dupe_keys.json'>
+    self.args, no_options = super().parse_known_args(args, namespace)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_offline.py::test_offline_chunked
+tests/test_uploads.py::TestMultipartFormDataFileUpload::test_multipart_preserve_order
+tests/test_uploads.py::TestRequestBodyFromFilePath::test_request_body_from_file_by_path
+tests/test_uploads.py::TestRequestBodyFromFilePath::test_request_body_from_file_by_path_no_data_items_allowed
+tests/test_uploads.py::TestRequestBodyFromFilePath::test_multiple_request_bodies_from_file_by_path
+tests/test_windows.py::TestFakeWindows::test_output_file_pretty_not_allowed_on_windows
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\cli\argparser.py:159: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.txt'>
+    self.args, no_options = super().parse_known_args(args, namespace)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet[quiet_flags0]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:383: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderr6tfrmyqd' mode='rb+' closefd=True>
+    yield _encoder(key)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet[quiet_flags0]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:383: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderr3_ii_z7s' mode='rb+' closefd=True>
+    yield _encoder(key)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet_with_check_status_non_zero
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:1014: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderr5wlf_8tw' mode='rb+' closefd=True>
+    pass
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet_with_check_status_non_zero
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:1014: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrjy0kqvoi' mode='rb+' closefd=True>
+    pass
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet_with_check_status_non_zero
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:1014: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrw245jg94' mode='rb+' closefd=True>
+    pass
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet_with_explicit_output_options[-p=hH-quiet_flags1]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:354: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrfr4dixk9' mode='rb+' closefd=True>
+    items = sorted(dct.items())
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet_with_explicit_output_options[-p=hH-quiet_flags1]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:354: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrmurjqavn' mode='rb+' closefd=True>
+    items = sorted(dct.items())
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::TestQuietFlag::test_quiet_with_explicit_output_options[-p=hH-quiet_flags1]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:354: ResourceWarning: unclosed file <_io.FileIO name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderr5fxw5r8y' mode='rb+' closefd=True>
+    items = sorted(dct.items())
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[-auto]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2848, family=2, type=1, proto=0, laddr=('127.0.0.1', 50523)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[-pie]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2152, family=2, type=1, proto=0, laddr=('127.0.0.1', 50525)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[-pie-dark]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1060, family=2, type=1, proto=0, laddr=('127.0.0.1', 50527)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[-pie-light]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2340, family=2, type=1, proto=0, laddr=('127.0.0.1', 50529)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[-solarized]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1940, family=2, type=1, proto=0, laddr=('127.0.0.1', 50531)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ -auto]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2600, family=2, type=1, proto=0, laddr=('127.0.0.1', 50533)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ -pie]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1892, family=2, type=1, proto=0, laddr=('127.0.0.1', 50535)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ -pie-dark]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2684, family=2, type=1, proto=0, laddr=('127.0.0.1', 50537)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ -pie-light]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2404, family=2, type=1, proto=0, laddr=('127.0.0.1', 53412)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ -solarized]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2836, family=2, type=1, proto=0, laddr=('127.0.0.1', 53414)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK-auto]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=3060, family=2, type=1, proto=0, laddr=('127.0.0.1', 55795)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK-pie]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1564, family=2, type=1, proto=0, laddr=('127.0.0.1', 55797)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK-pie-dark]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2804, family=2, type=1, proto=0, laddr=('127.0.0.1', 55799)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK-pie-light]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1160, family=2, type=1, proto=0, laddr=('127.0.0.1', 55801)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK-solarized]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2604, family=2, type=1, proto=0, laddr=('127.0.0.1', 55803)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK -auto]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2900, family=2, type=1, proto=0, laddr=('127.0.0.1', 57181)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK -pie]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1812, family=2, type=1, proto=0, laddr=('127.0.0.1', 57183)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK -pie-dark]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1936, family=2, type=1, proto=0, laddr=('127.0.0.1', 57185)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK -pie-light]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2152, family=2, type=1, proto=0, laddr=('127.0.0.1', 57189)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ OK -solarized]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1372, family=2, type=1, proto=0, laddr=('127.0.0.1', 57191)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ CUSTOM -auto]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2988, family=2, type=1, proto=0, laddr=('127.0.0.1', 57193)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ CUSTOM -pie]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2828, family=2, type=1, proto=0, laddr=('127.0.0.1', 57195)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ CUSTOM -pie-dark]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1640, family=2, type=1, proto=0, laddr=('127.0.0.1', 57197)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ CUSTOM -pie-light]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1728, family=2, type=1, proto=0, laddr=('127.0.0.1', 57200)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_output.py::test_ensure_status_code_is_shown_on_all_themes[ CUSTOM -solarized]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1788, family=2, type=1, proto=0, laddr=('127.0.0.1', 57202)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_sessions.py::TestSession::test_session_with_cookie_followed_by_another_header
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\werkzeug\routing\matcher.py:170: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.txt'>
+    rv = _match(self._root, [domain, *path.split("/")], [])
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_sessions.py::TestSession::test_download_in_session
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\core.py:100: ResourceWarning: unclosed file <_io.FileIO name='get.json' mode='ab+' closefd=True>
+    exit_status = main_program(
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_sessions.py::test_secure_cookies_on_localhost[localhost_http_server-expected_cookies0]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1480, family=2, type=1, proto=0, laddr=('127.0.0.1', 52429)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_ssl.py::test_ssl_version[tls1]
+tests/test_ssl.py::test_ssl_version[tls1.1]
+tests/test_ssl.py::test_ssl_version[tls1.2]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\httpie\ssl_.py:76: FutureWarning: 'ssl_version' option is deprecated and will be removed in urllib3 v3.0. Instead use 'ssl_minimum_version'
+    ssl_context = create_urllib3_context(
+
+tests/test_ssl.py::test_ssl_version[tls1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\urllib3\util\ssl_.py:258: DeprecationWarning: ssl.TLSVersion.TLSv1 is deprecated
+    context.minimum_version = ssl_minimum_version
+
+tests/test_ssl.py::test_ssl_version[tls1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\urllib3\util\ssl_.py:263: DeprecationWarning: ssl.TLSVersion.TLSv1 is deprecated
+    context.maximum_version = ssl_maximum_version
+
+tests/test_ssl.py::test_ssl_version[tls1.1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\urllib3\util\ssl_.py:258: DeprecationWarning: ssl.TLSVersion.TLSv1_1 is deprecated
+    context.minimum_version = ssl_minimum_version
+
+tests/test_ssl.py::test_ssl_version[tls1.1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\urllib3\util\ssl_.py:263: DeprecationWarning: ssl.TLSVersion.TLSv1_1 is deprecated
+    context.maximum_version = ssl_maximum_version
+
+tests/test_ssl.py::TestServerCert::test_verify_no_OK
+tests/test_ssl.py::TestServerCert::test_verify_false_OK[false]
+tests/test_ssl.py::TestServerCert::test_verify_false_OK[fALse]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\urllib3\connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+    warnings.warn(
+
+tests/test_stream.py::test_auto_streaming[extras0-3]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=900, family=2, type=1, proto=0, laddr=('127.0.0.1', 60916)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_stream.py::test_auto_streaming[extras1-3]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1584, family=2, type=1, proto=0, laddr=('127.0.0.1', 60918)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_stream.py::test_auto_streaming[extras2-1]
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=1228, family=2, type=1, proto=0, laddr=('127.0.0.1', 62397)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_stream.py::test_streaming_encoding_detection
+  D:\Canada\Concordia\Courses\Fall 2026\Software Maintenance\Case Study\Case Study 3\run2\.venv-test\Lib\site-packages\_pytest\fixtures.py:1083: ResourceWarning: unclosed <socket.socket fd=2416, family=2, type=1, proto=0, laddr=('127.0.0.1', 62399)>
+    next(it)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_update_warnings.py::test_cli_check_updates_not_shown[lower_build_channel]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\unittest\mock.py:2217: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrge6b3at2' mode='w+t' encoding='utf-8'>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_update_warnings.py::test_cli_check_updates_not_shown[lower_build_channel]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\unittest\mock.py:2217: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrrel1poa9' mode='w+t' encoding='utf-8'>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_update_warnings.py::test_cli_check_updates_not_shown[lower_build_channel]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\unittest\mock.py:2217: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderr1ii51_yl' mode='w+t' encoding='utf-8'>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_update_warnings.py::test_cli_check_updates_not_shown[lower_build_channel]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\unittest\mock.py:2217: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrbazo7xte' mode='w+t' encoding='utf-8'>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_update_warnings.py::test_cli_check_updates_not_shown[lower_build_channel]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\unittest\mock.py:2217: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderrsj6ax0j_' mode='w+t' encoding='utf-8'>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_update_warnings.py::test_cli_check_updates_not_shown[lower_build_channel]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\unittest\mock.py:2217: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Yourun\\AppData\\Local\\Temp\\httpie_stderra79gw8n_' mode='w+t' encoding='utf-8'>
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_uploads.py::TestMultipartFormDataFileUpload::test_upload_multiple_fields_with_the_same_name
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py:334: ResourceWarning: unclosed file <_io.FileIO name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.txt' mode='rb' closefd=True>
+    def _iterencode_dict(dct, _current_indent_level):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_uploads.py::TestMultipartFormDataFileUpload::test_multipart
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:458: ResourceWarning: unclosed file <_io.FileIO name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.txt' mode='rb' closefd=True>
+    result = self._make(_map(kwds.pop, field_names, self))
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_uploads.py::TestRequestBodyFromFilePath::test_request_body_from_file_by_path_no_field_name_allowed
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:449: ResourceWarning: unclosed file <_io.FileIO name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.txt' mode='rb' closefd=True>
+    result = tuple_new(cls, iterable)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_xml.py::test_invalid_xml[file6]
+tests/test_xml.py::test_invalid_xml[file6]
+tests/test_xml.py::test_invalid_xml[file6]
+  C:\Users\Yourun\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py:449: ResourceWarning: unclosed file <_io.BufferedReader name='D:\\\\\\Canada\\\\\\Concordia\\\\\\Courses\\\\\\Fall 2026\\\\\\Software Maintenance\\\\\\Case Study\\\\\\Case Study 3\\\\\\run2\\\\\\tests\\\\\\fixtures\\\\\\test.txt'>
+    result = tuple_new(cls, iterable)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_cli_ui.py::test_naked_invocation[args3-expected_msg3] - Ass...
+FAILED tests/test_encoding.py::test_terminal_output_response_charset_detection[big5-\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996]
+FAILED tests/test_encoding.py::test_terminal_output_request_charset_detection[big5-\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996\u5377\u9996]
+3 failed, 1002 passed, 19 skipped, 4 xfailed, 107 warnings in 217.15s (0:03:37)

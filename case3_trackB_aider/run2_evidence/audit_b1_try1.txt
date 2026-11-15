@@ -1,0 +1,104 @@
+﻿Can't initialize prompt toolkit: No Windows console found. Are you running 
+cmd.exe?
+
+Aider v0.86.2
+Model: gemini/gemini-3.7-flash with ask edit format
+Git repo: .git with 265 files
+Repo-map: using 4096 tokens, auto refresh
+Added httpie\cli\__init__.py to the chat.
+Added httpie\cli\argparser.py to the chat.
+Added httpie\cli\argtypes.py to the chat.
+Added httpie\cli\constants.py to the chat.
+
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 0.2 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 0.5 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 1.0 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 2.0 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 4.0 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 8.0 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 16.0 seconds...
+litellm.ServiceUnavailableError: GeminiException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in 
+demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+The API provider's servers are down or overloaded.
+Retrying in 32.0 seconds...
+litellm.Timeout: Connection timed out after None seconds.
+The API provider timed out without returning a response. They may be down or 
+overloaded.
+

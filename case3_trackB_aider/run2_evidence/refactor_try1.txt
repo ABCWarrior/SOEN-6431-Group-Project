@@ -1,0 +1,74 @@
+﻿Can't initialize prompt toolkit: No Windows console found. Are you running 
+cmd.exe?
+
+Aider v0.86.2
+Model: gemini/gemini-3.6-flash with whole edit format
+Git repo: .git with 265 files
+Repo-map: using 4096 tokens, auto refresh
+Added httpie\cli\nested_json\parse.py to the chat.
+
+In `httpie/cli/nested_json/parse.py`, the `parse()` generator function contains
+repetitive logic when matching a `RIGHT_BRACKET` after parsing key or index 
+path components in both `parse_root` and the non-root path loop. We can extract
+a helper function `_expect_right_bracket(expect, tokens)` to reduce redundancy.
+
+
+
+Here is the updated file:
+
+
+
+httpie/cli/nested_json/parse.py
+
+```diff
+@@ -64,10 +64,13 @@
+             suffix = ', '.join(kind.to_name() for kind in kinds[:-1])
+             suffix += ' or ' + kinds[-1].to_name()
+         message = f'Expecting {suffix}'
+         raise NestedJSONSyntaxError(source, token, message)
+ 
++    def expect_right_bracket(target_list: list):
++        target_list.append(expect(TokenKind.RIGHT_BRACKET))
++
+     # noinspection PyShadowingNames
+     def parse_root():
+         tokens = []
+         if not can_advance():
+             return Path(
+@@ -85,11 +88,11 @@
+             token = expect(TokenKind.NUMBER, TokenKind.RIGHT_BRACKET)
+             tokens.append(token)
+             if token.kind is TokenKind.NUMBER:
+                 action = PathAction.INDEX
+                 value = token.value
+-                tokens.append(expect(TokenKind.RIGHT_BRACKET))
++                expect_right_bracket(tokens)
+             elif token.kind is TokenKind.RIGHT_BRACKET:
+                 action = PathAction.APPEND
+                 value = None
+             else:
+                 assert_cant_happen()
+@@ -112,14 +115,14 @@
+         path_tokens.append(token)
+         if token.kind is TokenKind.RIGHT_BRACKET:
+             path = Path(PathAction.APPEND, tokens=path_tokens)
+         elif token.kind is TokenKind.TEXT:
+             path = Path(PathAction.KEY, token.value, tokens=path_tokens)
+-            path_tokens.append(expect(TokenKind.RIGHT_BRACKET))
++            expect_right_bracket(path_tokens)
+         elif token.kind is TokenKind.NUMBER:
+             path = Path(PathAction.INDEX, token.value, tokens=path_tokens)
+-            path_tokens.append(expect(TokenKind.RIGHT_BRACKET))
++            expect_right_bracket(path_tokens)
+         else:
+             assert_cant_happen()
+         # noinspection PyUnboundLocalVariable
+         yield path
+ 
+```
+
+
+Tokens: 6.8k sent, 1.6k received. Cost: $0.01 message, $0.01 session.
+Applied edit to httpie/cli/nested_json/parse.py
+Commit 2a1b7fc refactor: extract expect_right_bracket helper in nested JSON 
+parser
