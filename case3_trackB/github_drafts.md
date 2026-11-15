@@ -110,6 +110,7 @@ gh pr edit 5 -R ABCWarrior/SOEN-6431-Group-Project --body-file case3_trackB/pr_b
 **Clone type:** Type 1 (exact) · 51 tokens × 2 · 11 lines × 2
 
 **Location:**
+
 - `httpie/core.py:86-96` (argument-parsing phase)
 - `httpie/core.py:104-114` (program-execution phase)
 
@@ -130,6 +131,7 @@ gh pr edit 5 -R ABCWarrior/SOEN-6431-Group-Project --body-file case3_trackB/pr_b
 **Clone type:** Type 3 (gapped/modified) · 110 / 113 tokens · 17 lines × 2
 
 **Location:**
+
 - `httpie/cli/argparser.py:90-106` (`BaseHTTPieArgumentParser.parse_args`)
 - `httpie/cli/argparser.py:151-167` (`HTTPieArgumentParser.parse_args`)
 
@@ -150,6 +152,7 @@ gh pr edit 5 -R ABCWarrior/SOEN-6431-Group-Project --body-file case3_trackB/pr_b
 **Clone type:** Type 3 · 59 / 71 tokens · 11–12 lines
 
 **Location:**
+
 - `httpie/cli/argparser.py:59-69` (`HTTPieHelpFormatter.add_usage`)
 - `httpie/cli/argparser.py:580-591` (`HTTPieArgumentParser.print_usage`)
 
@@ -190,6 +193,7 @@ gh pr edit 5 -R ABCWarrior/SOEN-6431-Group-Project --body-file case3_trackB/pr_b
 **Type:** test-data defect, not a clone. Found by the baseline run before the refactoring (`pytest` at `5b604c3`: 1017 passed, 2 failed).
 
 **Location:**
+
 - `tests/test_encoding.py:17` (`big5` entry of `CHARSET_TEXT_PAIRS`)
 - Failing tests: `test_terminal_output_response_charset_detection[big5-…]` and `test_terminal_output_request_charset_detection[big5-…]`
 
