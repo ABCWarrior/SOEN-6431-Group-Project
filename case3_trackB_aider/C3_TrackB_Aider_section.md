@@ -175,6 +175,8 @@ Sentence to adjust in the §4.1 "Observation" paragraph: *The Claude Code agent,
 - Run 1 commit: https://github.com/ABCWarrior/SOEN-6431-Group-Project/commit/0806f6fd37de55be7bae18bd4dbe637a5f9166f2
 - Run 2 branch: https://github.com/ABCWarrior/SOEN-6431-Group-Project/tree/case3-groupB-aider-v2
 - Run 2 commit: https://github.com/ABCWarrior/SOEN-6431-Group-Project/commit/2a1b7fcf4400266cb27491b9d461a8c88b5736ce
+- Issue C17 (#8): https://github.com/ABCWarrior/SOEN-6431-Group-Project/issues/8
+- Issue C18 / C19 (#9): https://github.com/ABCWarrior/SOEN-6431-Group-Project/issues/9
 - Run 2 pull request (#7, open, not merged): https://github.com/ABCWarrior/SOEN-6431-Group-Project/pull/7
 - Role rotation evidence (Track A in Case Study #2): https://github.com/ABCWarrior/SOEN-6431-Group-Project/commit/77dae91c9b4ef8e51308526121caf09963ce52ff
 
