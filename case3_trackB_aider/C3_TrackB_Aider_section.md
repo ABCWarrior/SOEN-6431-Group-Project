@@ -177,14 +177,14 @@ Sentence to adjust in the §4.1 "Observation" paragraph: *The Claude Code agent,
 - Run 2 commit: https://github.com/ABCWarrior/SOEN-6431-Group-Project/commit/2a1b7fcf4400266cb27491b9d461a8c88b5736ce
 - Issue C17 (#8): https://github.com/ABCWarrior/SOEN-6431-Group-Project/issues/8
 - Issue C18 / C19 (#9): https://github.com/ABCWarrior/SOEN-6431-Group-Project/issues/9
-- Run 2 pull request (#7, open, not merged): https://github.com/ABCWarrior/SOEN-6431-Group-Project/pull/7
+- Run 2 pull request (#10, open, not merged, 20 checks passed): https://github.com/ABCWarrior/SOEN-6431-Group-Project/pull/10
 - Role rotation evidence (Track A in Case Study #2): https://github.com/ABCWarrior/SOEN-6431-Group-Project/commit/77dae91c9b4ef8e51308526121caf09963ce52ff
 
 **Sentences to add to the AI tool usage disclosure** (and replace "No commit, push, issue or pull request was made by the agent" with "The Claude Code agent made no commit, push, issue or pull request"): I ran Aider CLI 0.86.2 with Google Gemini Flash models (gemini-3.8-flash in run 1, gemini-3.6-flash in run 2) on the assignment prompts, and used other AI assistants (Google Gemini, DeepSeek, and Claude in a chat session) to plan run 2, to check the Aider output against the source and the tests, and to revise this section. Aider committed its own edits through its auto-commit (0806f6f in run 1, 2a1b7fc in run 2, both with a Co-authored-by trailer for Aider); the pushes and pull requests are human. All claims about the Aider runs were checked against the source and the transcripts, and its errors are listed in §4.1 (AI-6 to AI-9).
 
 ---
 
-**CI note for §2.4 / §2.6.** GitHub Actions on the fork reported failures on all jobs within 5 to 12 s of starting (code style and the Python 3.7, 3.8 and 3.9 test jobs). The runs were not inspected; the local test results of §2.6 are the evidence used in this report.
+**CI note for §2.4 / §2.6.** PR #10 (case3-groupB-aider-v3 to case3-groupB) holds one commit, d99ddc8, which is the Aider commit 2a1b7fc cherry-picked onto the CI-fixed case3-groupB. All 20 GitHub Actions checks passed (code style, coverage and the test matrix); the pull request is open, not merged. An earlier PR #7 on the unfixed branch case3-groupB-base failed on all jobs at start-up, because of the old Python versions in the workflow; the same change passes on the fixed branch, so those failures were not caused by the patch. #7 is superseded. The local test results of §2.6 remain the main evidence.
 
 ---
 
