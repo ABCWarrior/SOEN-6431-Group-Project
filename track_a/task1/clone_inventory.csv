@@ -1,0 +1,15 @@
+id,source,tokens,lines,occurrences,files_affected,scope,duplicated_lines,max_threshold_detected,locations,enclosing_units,first_line
+CG01,CPD,51,11,2,1,intra-file,11,50,httpie/core.py:86-96; httpie/core.py:104-114,raw_main(); raw_main(),except KeyboardInterrupt:
+CG02,CPD,44,5,2,1,intra-file,5,35,httpie/cli/argparser.py:59-63; httpie/cli/argparser.py:580-584,HTTPieHelpFormatter.add_usage(); HTTPieArgumentParser.print_usage(),"_, exception, _ = sys.exc_info()"
+CG03,CPD,33,6,2,1,intra-file,6,25,httpie/cli/argparser.py:97-102; httpie/cli/argparser.py:159-164,BaseHTTPieArgumentParser.parse_args(); HTTPieArgumentParser.parse_args(),"self.args, no_options = self.parse_known_args(args, namespace)"
+CG04,CPD,33,5,2,1,intra-file,5,25,httpie/output/lexers/metadata.py:39-43; httpie/output/lexers/metadata.py:50-54,class MetadataLexer; class MetadataLexer,"fr'({ELAPSED_TIME_LABEL})( *)(:)( *)(\d+\.\d+)(s)', pygments.lexer.bygroups("
+CG05,CPD,31,4,2,2,cross-file,4,25,httpie/core.py:146-149; httpie/manager/__main__.py:32-32,main(); main(),def main(
+CG06,CPD,30,8,2,1,intra-file,8,25,httpie/cli/argparser.py:90-97; httpie/cli/argparser.py:151-158,BaseHTTPieArgumentParser.parse_args(); HTTPieArgumentParser.parse_args(),def parse_args(
+CG07,CPD,30,5,3,3,cross-file,10,25,httpie/output/formatters/headers.py:4-8; httpie/output/formatters/json.py:6-10; httpie/output/formatters/xml.py:53-57,class HeadersFormatter; class JSONFormatter; class XMLFormatter,class HeadersFormatter(FormatterPlugin):
+CG08,CPD,30,4,2,1,intra-file,4,25,httpie/output/ui/rich_progress.py:62-65; httpie/output/ui/rich_progress.py:97-100,class StatusDisplay; class ProgressDisplay,class StatusDisplay(BaseDisplay):
+CG09,CPD,28,8,2,1,intra-file,8,25,httpie/cli/argparser.py:431-438; httpie/cli/argparser.py:459-464,HTTPieArgumentParser._guess_method(); HTTPieArgumentParser._parse_items(),except argparse.ArgumentTypeError as e:
+CG10,CPD,26,3,3,1,intra-file,6,25,httpie/output/ui/rich_progress.py:14-16; httpie/output/ui/rich_progress.py:63-65; httpie/output/ui/rich_progress.py:98-100,BaseDisplay.start(); StatusDisplay.start(); ProgressDisplay.start(),def start(
+CG11,CPD,25,4,2,1,intra-file,4,25,httpie/uploads.py:149-152; httpie/uploads.py:195-198,_prepare_file_for_upload(); prepare_request_body(),"callback: CallbackT,"
+CG12,CPD,25,3,2,2,cross-file,3,25,httpie/config.py:97-99; httpie/sessions.py:183-185,class BaseConfigDict; class Session,return data
+SG13,symilar,,5,2,2,cross-file,5,,httpie/legacy/v3_1_0_session_cookie_format.py [68:76]; httpie/legacy/v3_2_0_session_header_format.py [50:59],,
+SG14,symilar,,4,2,2,cross-file,4,,httpie/__main__.py [6:13]; httpie/manager/__main__.py [51:56],,

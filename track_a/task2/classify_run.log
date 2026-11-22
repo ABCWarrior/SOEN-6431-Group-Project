@@ -1,0 +1,39 @@
+consistency check passed: all 12 CPD groups mapped to clone regions
+CPD --minimum-tokens 25 : 7/12 groups are true clones -> precision 58 %
+CPD --minimum-tokens 35 : 2/2 clones true (clone ids: CL01, CL02)
+CPD --minimum-tokens 50 : 1/1 clones true (clone ids: CL01)
+symilar -d 3            : 2/2 pairs true
+AST scan blind>=0.75            : 10/47 pairs true -> precision 21 %
+AST scan blind>=0.75 & raw>=0.60: 10/18 pairs true -> precision 56 %
+AST scan blind>=0.90            : 6/8 pairs true -> precision 75 %
+AST scan true clone ids: CL06, CL12, CL13, CL15, CL16, CL17, CL18, CL19; lost by raw>=0.60 filter: none
+
+Confirmed true clones: 17  |  false positives: 5
+  Type 1: 1  (CL01)
+  Type 2: 4  (CL06, CL08, CL15, CL16)
+  Type 3: 9  (CL02, CL03, CL04, CL12, CL13, CL14, CL17, CL18, CL19)
+  Type 4: 3  (CL20, CL21, CL22)
+
+Recall of each Track A tool over the confirmed true clones (union = reference set):
+  CPD (t=25)       : 6/17
+  symilar (d=3)    : 2/17
+  AST scan         : 8/17
+  any Track A tool : 14/17
+  Type 1: CPD 1/1, any Track A tool 1/1
+  Type 2: CPD 2/4, any Track A tool 4/4
+  Type 3: CPD 3/9, any Track A tool 9/9
+  Type 4: CPD 0/3, any Track A tool 0/3
+
+Confirmed-clone hotspots:
+  httpie/cli/argparser.py                              4 clones (CL02 CL03 CL08 CL19), 79 lines, 16.22 %
+  httpie/legacy/v3_1_0_session_cookie_format.py        2 clones (CL12 CL13), 44 lines, 53.66 %
+  httpie/legacy/v3_2_0_session_header_format.py        2 clones (CL12 CL13), 37 lines, 67.27 %
+  httpie/uploads.py                                    2 clones (CL17 CL20), 25 lines, 12.25 %
+  httpie/output/formatters/colors.py                   2 clones (CL15 CL21), 20 lines, 6.15 %
+  httpie/output/formatters/json.py                     2 clones (CL06 CL21), 10 lines, 37.04 %
+  httpie/core.py                                       1 clones (CL01), 22 lines, 8.56 %
+  httpie/output/lexers/metadata.py                     1 clones (CL04), 19 lines, 38.78 %
+  httpie/output/ui/rich_progress.py                    1 clones (CL18), 19 lines, 16.81 %
+  httpie/config.py                                     1 clones (CL22), 13 lines, 9.92 %
+
+covered lines total: 333 of 7813 code lines (4.26 %)

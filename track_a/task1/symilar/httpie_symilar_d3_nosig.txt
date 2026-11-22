@@ -1,0 +1,11 @@
+
+4 similar lines in 2 files
+==httpie/__main__.py:[6:13]
+==httpie/manager/__main__.py:[51:56]
+       try:
+           exit_status = main()
+       except KeyboardInterrupt:
+           exit_status = ExitStatus.ERROR_CTRL_C
+
+TOTAL lines=9817 duplicates=4 percent=0.04
+

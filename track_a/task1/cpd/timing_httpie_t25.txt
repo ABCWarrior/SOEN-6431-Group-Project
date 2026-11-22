@@ -1,0 +1,4 @@
+run 1: 1240 ms
+run 2: 1238 ms
+run 3: 1210 ms
+httpie+tests: 1276 ms

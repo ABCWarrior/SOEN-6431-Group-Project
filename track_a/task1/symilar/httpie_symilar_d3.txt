@@ -1,0 +1,24 @@
+
+5 similar lines in 2 files
+==httpie/legacy/v3_1_0_session_cookie_format.py:[68:76]
+==httpie/legacy/v3_2_0_session_header_format.py:[50:59]
+       *,
+       original_type: Type[Any]
+   ) -> Any:
+       """Deserialize given header store into the original form it was
+       used in."""
+
+       if issubclass(original_type, dict):
+           # For the legacy behavior, preserve the last value.
+           return {
+
+4 similar lines in 2 files
+==httpie/__main__.py:[6:13]
+==httpie/manager/__main__.py:[51:56]
+       try:
+           exit_status = main()
+       except KeyboardInterrupt:
+           exit_status = ExitStatus.ERROR_CTRL_C
+
+TOTAL lines=9817 duplicates=9 percent=0.09
+

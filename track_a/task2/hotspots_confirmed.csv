@@ -1,0 +1,19 @@
+file,code_loc,true_clones,clone_ids,cloned_lines,clone_density_pct
+httpie/cli/argparser.py,487,4,CL02 CL03 CL08 CL19,79,16.22
+httpie/legacy/v3_1_0_session_cookie_format.py,82,2,CL12 CL13,44,53.66
+httpie/legacy/v3_2_0_session_header_format.py,55,2,CL12 CL13,37,67.27
+httpie/uploads.py,204,2,CL17 CL20,25,12.25
+httpie/output/formatters/colors.py,325,2,CL15 CL21,20,6.15
+httpie/output/formatters/json.py,27,2,CL06 CL21,10,37.04
+httpie/core.py,257,1,CL01,22,8.56
+httpie/output/lexers/metadata.py,49,1,CL04,19,38.78
+httpie/output/ui/rich_progress.py,113,1,CL18,19,16.81
+httpie/config.py,131,1,CL22,13,9.92
+httpie/__main__.py,14,1,CL14,9,64.29
+httpie/manager/__main__.py,43,1,CL14,7,16.28
+httpie/models.py,185,1,CL20,7,3.78
+httpie/internal/update_warnings.py,120,1,CL22,7,5.83
+httpie/ssl_.py,80,1,CL16,6,7.5
+httpie/output/formatters/headers.py,14,1,CL06,3,21.43
+httpie/output/formatters/xml.py,55,1,CL06,3,5.45
+httpie/client.py,311,1,CL20,3,0.96

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><pmd-cpd pmdVersion="7.29.0" timestamp="2026-11-21T22:39:18.3409766-05:00" version="1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://pmd-code.org/schema/cpd-report https://pmd.github.io/schema/cpd-report_1_0_0.xsd" xmlns="https://pmd-code.org/schema/cpd-report">
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\__init__.py" totalNumberOfTokens="13"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\__main__.py" totalNumberOfTokens="52"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\adapters.py" totalNumberOfTokens="61"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py" totalNumberOfTokens="3056"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argtypes.py" totalNumberOfTokens="1042"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\constants.py" totalNumberOfTokens="334"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\definition.py" totalNumberOfTokens="1990"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\dicts.py" totalNumberOfTokens="275"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\exceptions.py" totalNumberOfTokens="7"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\nested_json\__init__.py" totalNumberOfTokens="33"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\nested_json\errors.py" totalNumberOfTokens="131"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\nested_json\interpret.py" totalNumberOfTokens="734"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\nested_json\parse.py" totalNumberOfTokens="850"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\nested_json\tokens.py" totalNumberOfTokens="356"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\options.py" totalNumberOfTokens="1271"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\requestitems.py" totalNumberOfTokens="1031"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\utils.py" totalNumberOfTokens="449"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\client.py" totalNumberOfTokens="1597"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\compat.py" totalNumberOfTokens="424"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\config.py" totalNumberOfTokens="731"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\context.py" totalNumberOfTokens="960"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cookies.py" totalNumberOfTokens="77"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py" totalNumberOfTokens="1302"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\downloads.py" totalNumberOfTokens="1412"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\encoding.py" totalNumberOfTokens="140"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\internal\__build_channel__.py" totalNumberOfTokens="3"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\internal\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\internal\daemon_runner.py" totalNumberOfTokens="213"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\internal\daemons.py" totalNumberOfTokens="452"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\internal\update_warnings.py" totalNumberOfTokens="665"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\legacy\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\legacy\v3_1_0_session_cookie_format.py" totalNumberOfTokens="309"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\legacy\v3_2_0_session_header_format.py" totalNumberOfTokens="243"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\__main__.py" totalNumberOfTokens="279"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\cli.py" totalNumberOfTokens="597"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\compat.py" totalNumberOfTokens="271"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\core.py" totalNumberOfTokens="173"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\tasks\__init__.py" totalNumberOfTokens="59"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\tasks\check_updates.py" totalNumberOfTokens="64"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\tasks\export_args.py" totalNumberOfTokens="114"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\tasks\plugins.py" totalNumberOfTokens="1284"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\tasks\sessions.py" totalNumberOfTokens="406"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\models.py" totalNumberOfTokens="948"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\colors.py" totalNumberOfTokens="2276"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\headers.py" totalNumberOfTokens="103"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\json.py" totalNumberOfTokens="158"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\xml.py" totalNumberOfTokens="369"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\common.py" totalNumberOfTokens="31"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\http.py" totalNumberOfTokens="480"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\json.py" totalNumberOfTokens="88"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\metadata.py" totalNumberOfTokens="257"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\models.py" totalNumberOfTokens="220"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\processing.py" totalNumberOfTokens="277"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\streams.py" totalNumberOfTokens="1061"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\__init__.py" totalNumberOfTokens="0"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\man_pages.py" totalNumberOfTokens="135"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\palette.py" totalNumberOfTokens="1142"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_help.py" totalNumberOfTokens="1005"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_palette.py" totalNumberOfTokens="360"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_progress.py" totalNumberOfTokens="600"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_utils.py" totalNumberOfTokens="131"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\utils.py" totalNumberOfTokens="129"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\writer.py" totalNumberOfTokens="820"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\plugins\__init__.py" totalNumberOfTokens="25"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\plugins\base.py" totalNumberOfTokens="235"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\plugins\builtin.py" totalNumberOfTokens="305"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\plugins\manager.py" totalNumberOfTokens="635"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\plugins\registry.py" totalNumberOfTokens="78"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\sessions.py" totalNumberOfTokens="1426"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\ssl_.py" totalNumberOfTokens="443"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\status.py" totalNumberOfTokens="100"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\uploads.py" totalNumberOfTokens="1148"/>
+    <file path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\utils.py" totalNumberOfTokens="1102"/>
+    <duplication lines="11" tokens="51">
+        <file begintoken="15901" column="5" endcolumn="43" endline="96" endtoken="15951" line="86" path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py"/>
+        <file begintoken="15973" column="9" endcolumn="47" endline="114" endtoken="16023" line="104" path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py"/>
+        <codefragment><![CDATA[    except KeyboardInterrupt:
+        env.stderr.write('\n')
+        if include_traceback:
+            raise
+        exit_status = ExitStatus.ERROR_CTRL_C
+    except SystemExit as e:
+        if e.code != ExitStatus.SUCCESS:
+            env.stderr.write('\n')
+            if include_traceback:
+                raise
+            exit_status = ExitStatus.ERROR
+]]></codefragment>
+    </duplication>
+    <duplication lines="5" tokens="44">
+        <file begintoken="345" column="9" endcolumn="63" endline="63" endtoken="388" line="59" path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py"/>
+        <file begintoken="3031" column="9" endcolumn="63" endline="584" endtoken="3074" line="580" path="C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py"/>
+        <codefragment><![CDATA[        _, exception, _ = sys.exc_info()
+        if (
+            isinstance(exception, argparse.ArgumentError)
+            and len(exception.args) >= 1
+            and isinstance(exception.args[0], argparse.Action)
+]]></codefragment>
+    </duplication>
+</pmd-cpd>

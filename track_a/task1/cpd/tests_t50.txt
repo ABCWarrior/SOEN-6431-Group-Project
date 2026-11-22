@@ -1,0 +1,58 @@
+Found a 10 line (76 tokens) duplication in the following files: 
+Starting at line 247 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_cli.py
+Starting at line 259 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_cli.py
+
+        self.parser.args.url = 'http://example.com/'
+        self.parser.args.request_items = []
+        self.parser.args.ignore_stdin = False
+        self.parser.env = MockEnvironment()
+        self.parser._guess_method()
+        assert self.parser.args.method == 'GET'
+        assert self.parser.args.url == 'http://example.com/'
+        assert self.parser.args.request_items == []
+
+    def test_guess_when_method_not_set(self):
+
+=====================================================================
+Found a 7 line (63 tokens) duplication in the following files: 
+Starting at line 248 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_cli.py
+Starting at line 289 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_cli.py
+
+        self.parser.args.request_items = []
+        self.parser.args.ignore_stdin = False
+        self.parser.env = MockEnvironment()
+        self.parser._guess_method()
+        assert self.parser.args.method == 'GET'
+        assert self.parser.args.url == 'http://example.com/'
+        assert self.parser.args.request_items == []
+
+=====================================================================
+Found a 7 line (63 tokens) duplication in the following files: 
+Starting at line 260 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_cli.py
+Starting at line 289 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_cli.py
+
+        self.parser.args.request_items = []
+        self.parser.args.ignore_stdin = False
+        self.parser.env = MockEnvironment()
+        self.parser._guess_method()
+        assert self.parser.args.method == 'GET'
+        assert self.parser.args.url == 'http://example.com/'
+        assert self.parser.args.request_items == []
+
+=====================================================================
+Found a 11 line (50 tokens) duplication in the following files: 
+Starting at line 147 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_uploads.py
+Starting at line 163 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\tests\test_uploads.py
+
+    with stdin_processes(httpbin) as (process_1, process_2):
+        # Wait before sending any data
+        time.sleep(1)
+        process_1.communicate(timeout=0.1, input=b"bleh\n")
+
+        try:
+            _, errs = process_2.communicate(timeout=MAX_RESPONSE_WAIT_TIME)
+        except subprocess.TimeoutExpired:
+            errs = b''
+
+        assert b'> warning: no stdin data read in 0.1s' in errs
+

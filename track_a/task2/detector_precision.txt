@@ -1,0 +1,24 @@
+CPD --minimum-tokens 25 : 7/12 groups are true clones -> precision 58 %
+CPD --minimum-tokens 35 : 2/2 clones true (clone ids: CL01, CL02)
+CPD --minimum-tokens 50 : 1/1 clones true (clone ids: CL01)
+symilar -d 3            : 2/2 pairs true
+AST scan blind>=0.75            : 10/47 pairs true -> precision 21 %
+AST scan blind>=0.75 & raw>=0.60: 10/18 pairs true -> precision 56 %
+AST scan blind>=0.90            : 6/8 pairs true -> precision 75 %
+AST scan true clone ids: CL06, CL12, CL13, CL15, CL16, CL17, CL18, CL19; lost by raw>=0.60 filter: none
+
+Confirmed true clones: 17  |  false positives: 5
+  Type 1: 1  (CL01)
+  Type 2: 4  (CL06, CL08, CL15, CL16)
+  Type 3: 9  (CL02, CL03, CL04, CL12, CL13, CL14, CL17, CL18, CL19)
+  Type 4: 3  (CL20, CL21, CL22)
+
+Recall of each Track A tool over the confirmed true clones (union = reference set):
+  CPD (t=25)       : 6/17
+  symilar (d=3)    : 2/17
+  AST scan         : 8/17
+  any Track A tool : 14/17
+  Type 1: CPD 1/1, any Track A tool 1/1
+  Type 2: CPD 2/4, any Track A tool 4/4
+  Type 3: CPD 3/9, any Track A tool 9/9
+  Type 4: CPD 0/3, any Track A tool 0/3

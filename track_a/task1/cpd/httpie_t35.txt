@@ -1,0 +1,27 @@
+Found a 11 line (51 tokens) duplication in the following files: 
+Starting at line 86 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py
+Starting at line 104 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py
+
+    except KeyboardInterrupt:
+        env.stderr.write('\n')
+        if include_traceback:
+            raise
+        exit_status = ExitStatus.ERROR_CTRL_C
+    except SystemExit as e:
+        if e.code != ExitStatus.SUCCESS:
+            env.stderr.write('\n')
+            if include_traceback:
+                raise
+            exit_status = ExitStatus.ERROR
+
+=====================================================================
+Found a 5 line (44 tokens) duplication in the following files: 
+Starting at line 59 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py
+Starting at line 580 of C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py
+
+        _, exception, _ = sys.exc_info()
+        if (
+            isinstance(exception, argparse.ArgumentError)
+            and len(exception.args) >= 1
+            and isinstance(exception.args[0], argparse.Action)
+

@@ -1,0 +1,8 @@
+package,files,code_loc,clone_groups,cloned_lines,clone_density_pct
+httpie/cli,15,2549,4,51,2.0
+httpie (top-level modules),17,2314,4,40,1.73
+httpie/output,23,1708,4,36,2.11
+httpie/manager,10,579,1,1,0.17
+httpie/internal,5,240,0,0,0.0
+httpie/legacy,3,137,0,0,0.0
+httpie/plugins,5,286,0,0,0.0

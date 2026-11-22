@@ -1,0 +1,13 @@
+lines,tokens,occurrences
+11,51,2,86,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py",104,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py"
+5,44,2,59,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py",580,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py"
+6,33,2,97,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py",159,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py"
+5,33,2,39,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\metadata.py",50,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\lexers\metadata.py"
+4,31,2,146,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\core.py",32,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\manager\__main__.py"
+8,30,2,90,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py",151,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py"
+5,30,3,4,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\headers.py",6,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\json.py",53,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\formatters\xml.py"
+4,30,2,62,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_progress.py",97,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_progress.py"
+8,28,2,431,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py",459,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\cli\argparser.py"
+3,26,3,14,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_progress.py",63,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_progress.py",98,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\output\ui\rich_progress.py"
+3,25,2,97,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\config.py",183,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\sessions.py"
+4,25,2,149,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\uploads.py",195,"C:\Users\itste\IdeaProjects\SOEN-6431-Group-Project\httpie\uploads.py"

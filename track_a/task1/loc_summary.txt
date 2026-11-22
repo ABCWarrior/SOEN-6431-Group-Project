@@ -1,0 +1,12 @@
+Source tree: httpie/  (78 .py files)
+ physical lines: 9817
+    blank lines: 1824
+  comment lines: 445
+     code lines: 7813
+CPD tokens (all files): 39547
+CPD --minimum-tokens  25: 12 clone groups, 74 duplicated lines
+CPD --minimum-tokens  35:  2 clone groups, 16 duplicated lines
+CPD --minimum-tokens  50:  1 clone groups, 11 duplicated lines
+CPD --minimum-tokens  75:  0 clone groups, 0 duplicated lines
+CPD --minimum-tokens 100:  0 clone groups, 0 duplicated lines
+Lines covered by CPD(t=25) clone occurrences: 128 (1.64 % of code lines)
