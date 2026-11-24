@@ -406,6 +406,15 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
                        '--ignore-stdin to let key/value take priority. '
                        'See https://httpie.io/docs#scripting for details.')
 
+    def _handle_parse_error(self, error):
+        """Report a parsing error or re-raise it in traceback mode.
+
+        Must be called from within an exception handler.
+        """
+        if self.args.traceback:
+            raise
+        self.error(error.args[0])
+
     def _guess_method(self):
         """Set `args.method` if not specified to either POST or GET
         based on whether the request has data or not.
@@ -429,9 +438,7 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
                     *SEPARATOR_GROUP_ALL_ITEMS).__call__(self.args.url))
 
             except argparse.ArgumentTypeError as e:
-                if self.args.traceback:
-                    raise
-                self.error(e.args[0])
+                self._handle_parse_error(e)
 
             else:
                 # Set the URL correctly
@@ -457,9 +464,7 @@ class HTTPieArgumentParser(BaseHTTPieArgumentParser):
                 request_type=self.args.request_type,
             )
         except ParseError as e:
-            if self.args.traceback:
-                raise
-            self.error(e.args[0])
+            self._handle_parse_error(e)
         else:
             self.args.headers = request_items.headers
             self.args.data = request_items.data
