@@ -78,12 +78,15 @@ class ColorFormatter(FormatterPlugin):
         self.http_lexer = http_lexer
         self.metadata_lexer = MetadataLexer(precise=precise)
 
-    def format_headers(self, headers: str) -> str:
+    def _highlight_and_strip(self, text: str, lexer: Lexer) -> str:
         return pygments.highlight(
-            code=headers,
-            lexer=self.http_lexer,
+            code=text,
+            lexer=lexer,
             formatter=self.header_formatter,
         ).strip()
+
+    def format_headers(self, headers: str) -> str:
+        return self._highlight_and_strip(headers, self.http_lexer)
 
     def format_body(self, body: str, mime: str) -> str:
         lexer = self.get_lexer_for_body(mime, body)
@@ -96,11 +99,7 @@ class ColorFormatter(FormatterPlugin):
         return body
 
     def format_metadata(self, metadata: str) -> str:
-        return pygments.highlight(
-            code=metadata,
-            lexer=self.metadata_lexer,
-            formatter=self.header_formatter,
-        ).strip()
+        return self._highlight_and_strip(metadata, self.metadata_lexer)
 
     def get_lexer_for_body(
         self, mime: str,
